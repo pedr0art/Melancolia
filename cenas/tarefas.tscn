@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvqumutxak831"]
 
-[ext_resource type="Script" path="res://scripts/tarefas.gd" id="1_j32mq"]
+[ext_resource type="Script" path="res://scripts/tarefas.gd" id="1_b40au"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m04uf"]
 size = Vector2(48, 19)
 
 [node name="tarefas" type="Node2D"]
-script = ExtResource("1_j32mq")
+script = ExtResource("1_b40au")
 
 [node name="chatDetection" type="Area2D" parent="."]
 

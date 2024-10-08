@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://du5bgqknsnbka"]
 
-[ext_resource type="Script" path="res://scripts/post-it.gd" id="1_y3cho"]
+[ext_resource type="Script" path="res://scripts/post-it.gd" id="1_73kax"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8bvj"]
 radius = 6.0
 
 [node name="postit" type="Node2D"]
-script = ExtResource("1_y3cho")
+script = ExtResource("1_73kax")
 
 [node name="chatDetection" type="Area2D" parent="."]
 

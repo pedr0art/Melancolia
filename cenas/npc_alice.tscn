@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1xgekvh6maks"]
 
+[ext_resource type="Script" path="res://scripts/npc_alice.gd" id="1_dvn72"]
 [ext_resource type="Texture2D" uid="uid://8guw45qdobtj" path="res://Images/F_02 1.png" id="1_gdmnl"]
-[ext_resource type="Script" path="res://scripts/npc_alice.gd" id="1_t63lu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ehd2v"]
 radius = 13.0
 
 [node name="npc_alice" type="Node2D"]
-script = ExtResource("1_t63lu")
+script = ExtResource("1_dvn72")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_gdmnl")
