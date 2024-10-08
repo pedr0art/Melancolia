@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://hav1c0f5xy8b"]
 
-[ext_resource type="Script" path="res://CollisionShape2D.gd" id="1_2kjqh"]
-[ext_resource type="Script" path="res://cafeteira.gd" id="1_nvmx2"]
+[ext_resource type="Script" path="res://scripts/CollisionShape2D.gd" id="1_2kjqh"]
+[ext_resource type="Script" path="res://scripts/cafeteira.gd" id="1_nvmx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kga4s"]
 size = Vector2(41, 31)

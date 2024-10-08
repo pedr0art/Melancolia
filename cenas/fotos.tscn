@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://byhlop8t3d5vl"]
 
-[ext_resource type="Script" path="res://fotos.gd" id="1_ctaif"]
+[ext_resource type="Script" path="res://scripts/fotos.gd" id="1_ctaif"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxtfb"]
 radius = 6.0

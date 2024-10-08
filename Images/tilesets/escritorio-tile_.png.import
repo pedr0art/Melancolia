@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ma6pn5qshqdv"
-path="res://.godot/imported/escritorio-tile.png-48371aa29db72542bc00eeff11500d94.ctex"
+uid="uid://ddwoyycyl4wfw"
+path="res://.godot/imported/escritorio-tile_.png-ddfe899db9ab61827bdae6ed98fd8214.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escritorio-tile.png"
-dest_files=["res://.godot/imported/escritorio-tile.png-48371aa29db72542bc00eeff11500d94.ctex"]
+source_file="res://Images/tilesets/escritorio-tile_.png"
+dest_files=["res://.godot/imported/escritorio-tile_.png-ddfe899db9ab61827bdae6ed98fd8214.ctex"]
 
 [params]
 

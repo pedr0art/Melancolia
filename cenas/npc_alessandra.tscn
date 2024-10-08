@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://fwn3fqs1u5go"]
 
 [ext_resource type="Texture2D" uid="uid://bcqtyqhlsko7b" path="res://Images/F_01 1.png" id="1_hnfte"]
-[ext_resource type="Script" path="res://npc_alessandra.gd" id="1_taqaq"]
+[ext_resource type="Script" path="res://scripts/npc_alessandra.gd" id="1_taqaq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_euwle"]
 radius = 23.0868

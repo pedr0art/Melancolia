@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ew6xobkbva8i"]
 
-[ext_resource type="Script" path="res://funcionariomes.gd" id="1_jliwe"]
+[ext_resource type="Script" path="res://scripts/funcionariomes.gd" id="1_jliwe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdb6"]
 size = Vector2(34, 20)

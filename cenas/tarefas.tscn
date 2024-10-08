@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cvqumutxak831"]
 
-[ext_resource type="Script" path="res://tarefas.gd" id="1_j32mq"]
+[ext_resource type="Script" path="res://scripts/tarefas.gd" id="1_j32mq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m04uf"]
 size = Vector2(48, 19)

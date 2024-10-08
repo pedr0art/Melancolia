@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dialogo"
-run/main_scene="res://inicio.tscn"
+run/main_scene="res://cenas/inicio.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 StaticData="*res://Dados/Singetons/StaticData.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Globals="*res://Globals.gd"
+Globals="*res://scripts/Globals.gd"
 
 [dialogic]
 
@@ -34,7 +34,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "alice": "res://Dialogue/timeline/alice.dtl",
-"cafe": "res://cafe.dtl",
+"cafe": "res://Dialogue/timeline/cafe.dtl",
 "chefe": "res://Dialogue/timeline/chefe.dtl",
 "conversapsico": "res://Dialogue/timeline/conversapsico.dtl",
 "fotos": "res://Dialogue/timeline/fotos.dtl",
@@ -44,7 +44,7 @@ directories/dtl_directory={
 "teste2": "res://Dialogue/timeline/enzodialogue.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://normal_style.tres", "res://bubblestyle.tres", "res://Dialogue/assets/npcnormalstyle.tres", "res://default.tres", "res://defautnpc.tres"]
+layout/style_list=["res://dialogic data/normal_style.tres", "res://dialogic data/bubblestyle.tres", "res://Dialogue/assets/npcnormalstyle.tres", "res://dialogic data/default.tres", "res://dialogic data/defautnpc.tres"]
 layout/default_style="res://normal_style.tres"
 variables={
 "Respostas": {
