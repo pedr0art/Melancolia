@@ -1,2 +1,2 @@
-# Melancollia
- Repositório para o jogo Meancolia
+# Melancolia
+ Repositório para o jogo Melancolia.
