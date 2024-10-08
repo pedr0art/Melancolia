@@ -1,0 +1,20 @@
+[
+	{
+		"item_id": "espada_madeira",
+		"item_nome": "Espada de madeira",
+		"item_dano": "10",
+		"item_defesa": "2"
+	},
+	{
+		"item_id": "picareta",
+		"item_nome": "Picareta",
+		"item_dano": "5",
+		"item_defesa": "1"
+	},
+	{
+		"item_id": "escudo",
+		"item_nome": "Escudo",
+		"item_dano": "2",
+		"item_defesa": "10"
+	}
+]

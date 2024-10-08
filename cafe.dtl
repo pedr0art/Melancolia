@@ -1,0 +1,33 @@
+if {Respostas.cafe} == "":
+	if {pontos} >= 1:
+		- Não gostei daquele recado
+			tabataingame: Depois daquele recado no meu quadro só um café pra aliviar minha angústia…
+			set {Respostas.cafe} = "P"
+			set {pontos} -= 1
+			[signal arg="ande"]
+		- Pegar a xicara e beber
+			tabataingame: Cafeteira da empresa
+			set {Respostas.cafe} = "G"
+			[signal arg="ande"]
+		- Amo café
+			tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
+			set {Respostas.cafe} = "N"
+			[signal arg="ande"]
+	else:
+		- Pegar a xicara e beber
+			tabataingame: Cafeteira da empresa
+			set {Respostas.cafe} = "G"
+			[signal arg="ande"]
+		- Amo café
+			tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
+			set {Respostas.cafe} = "N"
+			[signal arg="ande"]
+elif {Respostas.cafe} == "G":
+	tabataingame: Cafeteira da empresa
+	[signal arg="ande"]
+elif {Respostas.cafe} == "N":
+	tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
+	[signal arg="ande"]
+elif {Respostas.cafe} == "P":
+	tabataingame: Depois daquele recado no meu quadro só um café pra aliviar minha angústia…
+	[signal arg="ande"]

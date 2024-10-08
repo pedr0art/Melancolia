@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ew6xobkbva8i"]
+
+[ext_resource type="Script" path="res://funcionariomes.gd" id="1_jliwe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikdb6"]
+size = Vector2(34, 20)
+
+[node name="funcionariomes" type="Node2D"]
+script = ExtResource("1_jliwe")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_ikdb6")
+debug_color = Color(0.756257, 0.454705, 0.0362731, 0.42)
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

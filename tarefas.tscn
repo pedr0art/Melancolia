@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvqumutxak831"]
+
+[ext_resource type="Script" path="res://tarefas.gd" id="1_j32mq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m04uf"]
+size = Vector2(48, 19)
+
+[node name="tarefas" type="Node2D"]
+script = ExtResource("1_j32mq")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_m04uf")
+debug_color = Color(0.54969, 0.412118, 0.977475, 0.42)
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

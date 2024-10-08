@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://brvu1qnu0ejg5"]
+
+[ext_resource type="Script" path="res://Management/points_manager.gd" id="1_xne5k"]
+[ext_resource type="Texture2D" uid="uid://w55utb5rpari" path="res://Images/key_01d.png" id="2_r1emb"]
+[ext_resource type="FontFile" uid="uid://c5dol8282coae" path="res://Dialogue/Fonts/RevMiniPixel.ttf" id="3_k5k8q"]
+
+[node name="HUDContador" type="CanvasLayer"]
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xne5k")
+
+[node name="container" type="MarginContainer" parent="control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="contador_container" type="HBoxContainer" parent="control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="contador_icon" type="TextureRect" parent="control/container/contador_container"]
+layout_mode = 2
+texture = ExtResource("2_r1emb")
+
+[node name="X" type="Label" parent="control/container/contador_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_k5k8q")
+theme_override_font_sizes/font_size = 16
+text = "X"
+
+[node name="contador" type="Label" parent="control/container/contador_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_k5k8q")
+theme_override_font_sizes/font_size = 16
+text = "0000"

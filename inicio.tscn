@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://i3dmbxrae8k0"]
+
+[ext_resource type="Script" path="res://inicio.gd" id="1_2pdbf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2pdbf")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -55.0
+offset_top = -15.0
+offset_right = 670.0
+offset_bottom = 389.0
+color = Color(0.497474, 0.497474, 0.497474, 1)

@@ -1,0 +1,34 @@
+if {Respostas.postit} == "":
+	if {pontos} >= 1:
+		psicoingame: "Oii Tabatinha, está tudo bem ? Percebi que tem alguns prazos a cumprir da semana passada, e sei que você não atrasa nada, vamos lá hein, não perca o foco!"
+		- É isso, não posso dar moleza
+			tabataingame: A minha chefe sempre me cobra o meu máximo, e eu sempre faço o possível para cumprir com suas expectativas, afinal é para isso que estou aqui.
+			set {Respostas.postit} = "N"
+			[signal arg="ande"]
+		- Será que alguém se sente bem aqui?
+			tabataingame: Essa mulher bem que poderia me deixar em paz, me exigindo mais do que eu posso fazer, com a desculpa de que “eu sou a melhor daqui”.
+			set {Respostas.postit} = "P"
+			set {pontos} -= 1
+			[signal arg="ande"]
+		- Ok...
+			tabataingame: Um recado que minha chefe deixou no meu quadro
+			set {Respostas.postit} = "G"
+			[signal arg="ande"]
+	else:
+		- É isso, não posso dar moleza
+			tabataingame: A minha chefe sempre me cobra o meu máximo, e eu sempre faço o possível para cumprir com suas expectativas, afinal é para isso que estou aqui.
+			set {Respostas.postit} = "N"
+			[signal arg="ande"]
+		- Ok...
+			tabataingame: Um recado que minha chefe deixou no meu quadro
+			set {Respostas.postit} = "G"
+			[signal arg="ande"]
+elif {Respostas.postit} == "G":
+	tabataingame: Um recado que minha chefe deixou no meu quadro
+	[signal arg="ande"]
+elif {Respostas.postit} == "N":
+	tabataingame: A minha chefe sempre me cobra o meu máximo, e eu sempre faço o possível para cumprir com suas expectativas, afinal é para isso que estou aqui.
+	[signal arg="ande"]
+elif {Respostas.postit} == "P":
+	tabataingame: Essa mulher bem que poderia me deixar em paz, me exigindo mais do que eu posso fazer, com a desculpa de que “eu sou a melhor daqui”.
+	[signal arg="ande"]

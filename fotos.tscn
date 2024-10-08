@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://byhlop8t3d5vl"]
+
+[ext_resource type="Script" path="res://fotos.gd" id="1_ctaif"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxtfb"]
+radius = 6.0
+
+[node name="fotos" type="Node2D"]
+script = ExtResource("1_ctaif")
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+shape = SubResource("CapsuleShape2D_cxtfb")
+debug_color = Color(0.921863, 0.163915, 0.562757, 0.42)
+
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
