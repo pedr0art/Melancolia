@@ -2,7 +2,7 @@ if {Respostas.cafe} == "":
 	if {pontos} >= 1:
 		tabataingame: Cafeteira da empresa
 		- Não gostei daquele recado
-			Hmmm... café!
+			tabataingame: Hmmm... café!
 			tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?
 			tabataingame: Ainda mais depois daquele recado no meu quadro, só um café pra aliviar minha angústia…
 			set {Respostas.cafe} = "P"

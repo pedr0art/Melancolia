@@ -9,7 +9,7 @@ if {Respostas.funcionariomes} == "":
 		- A custo de não viver minha vida em paz, com certeza
 			tabataingame: Meh...
 			tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
-			tabataingame: Funcionária do mês, de novo, claro, mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
+			tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
 			set {Respostas.funcionariomes} = "P"
 			set {pontos} -= 1
 			[signal arg="ande"]
@@ -30,7 +30,7 @@ if {Respostas.funcionariomes} == "":
 			[signal arg="ande"]
 elif {Respostas.funcionariomes} == "G":
 	tabataingame: "Melhor funcionária do mês."
-	Meh...
+	tabataingame: Meh...
 	[signal arg="ande"]
 elif {Respostas.funcionariomes} == "N":
 	tabataingame: "Melhor funcionária do mês."
@@ -40,6 +40,6 @@ elif {Respostas.funcionariomes} == "N":
 elif {Respostas.funcionariomes} == "P":
 	tabataingame: "Melhor funcionária do mês."
 	tabataingame: Meh...
-	Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
-	tabataingame: Funcionária do mês, de novo, claro, mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
+	tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
+	tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
 	[signal arg="ande"]

@@ -7,12 +7,12 @@ if {Respostas.fotos} == "":
 			[signal arg="ande"]
 		- (Suspiro...) Será que é bom ser tão atarefada?
 			tabataingame: Uma foto com meus amigos de infância...
-			tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
+			tabataingame: Quase nunca falo com eles. mas mesmo se morassem aqui seria difícil para a gente se encontrar, minha agenda é lotada.
 			set {Respostas.fotos} = "N"
 			[signal arg="ande"]
 		- Qual foi a ultima vez que tive tempo para mim?
 			tabataingame: Uma foto com meus amigos de infância...
-			tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
+			tabataingame: Quase nunca falo com eles. mas mesmo se morassem aqui seria difícil para a gente se encontrar, minha agenda é lotada.
 			tabataingame: Sinto falta deles, as vezes eu reflito se nosso afastamento foi realmente só pela questão da distância física ou fui eu que não tenho mais tempo pra nada.
 			set {Respostas.fotos} = "P"
 			set {pontos} -= 1
@@ -25,7 +25,7 @@ if {Respostas.fotos} == "":
 			[signal arg="ande"]
 		- (Suspiro...) Será que é bom ser tão atarefada?
 			tabataingame: Uma foto com meus amigos de infância...
-			tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
+			tabataingame: Quase nunca falo com eles. mas mesmo se morassem aqui seria difícil para a gente se encontrar, minha agenda é lotada.
 			set {Respostas.fotos} = "N"
 			[signal arg="ande"]
 elif {Respostas.fotos} == "G":
@@ -35,11 +35,11 @@ elif {Respostas.fotos} == "G":
 elif {Respostas.fotos} == "N":
 	tabataingame: Porta retrato na mesa.
 	tabataingame: Uma foto com meus amigos de infância.
-	tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
+	tabataingame: Quase nunca falo com eles. mas mesmo se morassem aqui seria difícil para a gente se encontrar, minha agenda é lotada.
 	[signal arg="ande"]
 elif {Respostas.fotos} == "P":
 	tabataingame: Porta retrato na mesa.
 	tabataingame: Uma foto com meus amigos de infância.
-	tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
+	tabataingame: Quase nunca falo com eles. mas mesmo se morassem aqui seria difícil para a gente se encontrar, minha agenda é lotada.
 	tabataingame: Sinto falta deles, as vezes eu reflito se nosso afastamento foi realmente só pela questão da distância física ou fui eu que não tenho mais tempo pra nada.
 	[signal arg="ande"]

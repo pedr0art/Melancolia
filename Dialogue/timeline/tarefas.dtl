@@ -28,7 +28,7 @@ if {Respostas.tarefas} == "":
 			set {Respostas.tarefas} = "N"
 			[signal arg="ande"]
 elif {Respostas.tarefas} == "G":
-	Lista de tarefas do dia
+	tabataingame: Lista de tarefas do dia
 	tabataingame: (dá de ombros)
 	[signal arg="ande"]
 elif {Respostas.tarefas} == "N":
