@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cls5rdr88ampt"]
+
+[ext_resource type="Texture2D" uid="uid://d0bxbsx51efvu" path="res://Images/Teste/6.png" id="1_h8oq2"]
+[ext_resource type="Script" path="res://insight/slot.gd" id="1_rmmsb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfyku"]
+atlas = ExtResource("1_h8oq2")
+region = Rect2(0, -0.615108, 50.6833, 50.9905)
+
+[node name="slot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmmsb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_sfyku")

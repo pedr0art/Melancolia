@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3667dt00ugur"]
+
+[ext_resource type="Texture2D" uid="uid://duwxg7n8wcaew" path="res://Images/Teste/4.png" id="1_5tx8w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82kv5"]
+atlas = ExtResource("1_5tx8w")
+region = Rect2(-0.375145, -0.375715, 50.3751, 50.3757)
+
+[node name="4" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_82kv5")

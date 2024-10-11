@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsqmqijcm4ivv"]
+
+[ext_resource type="PackedScene" uid="uid://cls5rdr88ampt" path="res://insight/slot.tscn" id="1_wtqki"]
+[ext_resource type="PackedScene" uid="uid://cvu4rcqfffn5d" path="res://insight/escolhas.tscn" id="2_ctyqr"]
+
+[node name="Teste" type="Node2D"]
+
+[node name="slot" parent="." instance=ExtResource("1_wtqki")]
+offset_left = 112.0
+offset_top = 187.0
+offset_right = 112.0
+offset_bottom = 187.0
+
+[node name="escolhas" parent="." instance=ExtResource("2_ctyqr")]
