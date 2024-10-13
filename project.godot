@@ -54,6 +54,7 @@ variables={
 "postit": "",
 "tarefas": ""
 },
+"interacoes": 0.0,
 "pontos": 0.0
 }
 extensions_folder="res://addons/dialogic_additions"

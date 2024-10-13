@@ -5,6 +5,7 @@ if {Respostas.funcionariomes} == "":
 			tabataingame: Meh...
 			tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
 			set {Respostas.funcionariomes} = "N"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- A custo de não viver minha vida em paz, com certeza
 			tabataingame: Meh...
@@ -12,10 +13,12 @@ if {Respostas.funcionariomes} == "":
 			tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
 			set {Respostas.funcionariomes} = "P"
 			set {pontos} -= 1
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Tanto faz...
 			tabataingame: Meh...
 			set {Respostas.funcionariomes} = "G"
+			set {interacoes} = 1
 			[signal arg="ande"]
 	else:
 		tabataingame: "Melhor funcionária do mês."
@@ -23,10 +26,12 @@ if {Respostas.funcionariomes} == "":
 			tabataingame: Meh...
 			tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
 			set {Respostas.funcionariomes} = "N"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Tanto faz...
 			tabataingame: Meh...
 			set {Respostas.funcionariomes} = "G"
+			set {interacoes} += 1
 			[signal arg="ande"]
 elif {Respostas.funcionariomes} == "G":
 	tabataingame: "Melhor funcionária do mês."
