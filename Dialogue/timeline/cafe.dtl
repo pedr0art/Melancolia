@@ -4,28 +4,23 @@ if {Respostas.cafe} == "":
 			tabataingame: Depois daquele recado no meu quadro só um café pra aliviar minha angústia…
 			set {Respostas.cafe} = "P"
 			set {pontos} -= 1
-			set {interacoes} += 1
 			[signal arg="ande"]
 		- Pegar a xicara e beber
 			tabataingame: Cafeteira da empresa
 			set {Respostas.cafe} = "G"
-			set {interacoes} += 1
 			[signal arg="ande"]
 		- Amo café
 			tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
 			set {Respostas.cafe} = "N"
-			set {interacoes} += 1
 			[signal arg="ande"]
 	else:
 		- Pegar a xicara e beber
 			tabataingame: Cafeteira da empresa
 			set {Respostas.cafe} = "G"
-			set {interacoes} += 1
 			[signal arg="ande"]
 		- Amo café
 			tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
 			set {Respostas.cafe} = "N"
-			set {interacoes} += 1
 			[signal arg="ande"]
 elif {Respostas.cafe} == "G":
 	tabataingame: Cafeteira da empresa
