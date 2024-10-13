@@ -3,20 +3,24 @@ if {Respostas.fotos} == "":
 		- O que será que estão fazendo...
 			tabataingame: Um retrato com meus amigos de infância
 			set {Respostas.fotos} = "G"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- (Suspiro...) Será que é bom ser tão atarefada?
 			tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
 			set {Respostas.fotos} = "N"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Qual foi a ultima vez que tive tempo para mim?
 			tabataingame: Sinto falta deles, as vezes eu reflito se nosso afastamento foi realmente só pela questão da distância física ou fui eu que não tenho mais tempo pra nada.
 			set {Respostas.fotos} = "P"
 			set {pontos} -= 1
+			set {interacoes} += 1
 			[signal arg="ande"]
 	else:
 		- O que será que estão fazendo...
 			tabataingame: Um retrato com meus amigos de infância
 			set {Respostas.fotos} = "G"
+			set {interacoes} = 0
 			[signal arg="ande"]
 		- (Suspiro...) Será que é bom ser tão atarefada?
 			tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.

@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://cxjmnlknxdlwb"]
+
+[ext_resource type="PackedScene" uid="uid://46wh1meesxbh" path="res://cenas/insight/object.tscn" id="1_af87v"]
+[ext_resource type="Script" path="res://cenas/insight/insight.gd" id="1_gia3b"]
+[ext_resource type="Texture2D" uid="uid://uguikjjrexf8" path="res://Images/Teste/1.png" id="2_w7jkx"]
+[ext_resource type="Texture2D" uid="uid://ci1olwpkw730q" path="res://Images/Teste/2.png" id="3_viv2w"]
+[ext_resource type="Texture2D" uid="uid://crhex6k2m3jfb" path="res://Images/Teste/3.png" id="4_acyc0"]
+[ext_resource type="Texture2D" uid="uid://duwxg7n8wcaew" path="res://Images/Teste/4.png" id="5_xnkrc"]
+[ext_resource type="Texture2D" uid="uid://by4pu285sxd7b" path="res://Images/Teste/5.png" id="6_f3exo"]
+[ext_resource type="PackedScene" uid="uid://dsp6rn38n38d6" path="res://cenas/insight/button.tscn" id="7_xgijt"]
+
+[node name="insight" type="CanvasLayer"]
+script = ExtResource("1_gia3b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 330.0
+offset_top = 6.0
+offset_right = 629.0
+offset_bottom = 72.0
+mouse_filter = 2
+color = Color(0.0980392, 0.0980392, 0.0980392, 0.494118)
+
+[node name="object" parent="." instance=ExtResource("1_af87v")]
+position = Vector2(373, 39)
+num_obj = 1
+sprite_texture = ExtResource("2_w7jkx")
+
+[node name="object2" parent="." instance=ExtResource("1_af87v")]
+position = Vector2(428, 39)
+num_obj = 2
+sprite_texture = ExtResource("3_viv2w")
+
+[node name="object3" parent="." instance=ExtResource("1_af87v")]
+position = Vector2(482, 39)
+num_obj = 3
+sprite_texture = ExtResource("4_acyc0")
+
+[node name="object4" parent="." instance=ExtResource("1_af87v")]
+position = Vector2(537, 39)
+num_obj = 4
+sprite_texture = ExtResource("5_xnkrc")
+
+[node name="object5" parent="." instance=ExtResource("1_af87v")]
+position = Vector2(592, 39)
+num_obj = 5
+sprite_texture = ExtResource("6_f3exo")
+
+[node name="button" parent="." node_paths=PackedStringArray("objetos", "slots") instance=ExtResource("7_xgijt")]
+position = Vector2(593, 318)
+scale = Vector2(3, 3)
+objetos = [NodePath("../object"), NodePath("../object2"), NodePath("../object3"), NodePath("../object4"), NodePath("../object5")]
+slots = [null, null, null, null, null]
