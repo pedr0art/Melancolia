@@ -1,33 +1,50 @@
 if {Respostas.cafe} == "":
 	if {pontos} >= 1:
+		tabataingame: Cafeteira da empresa
 		- Não gostei daquele recado
-			tabataingame: Depois daquele recado no meu quadro só um café pra aliviar minha angústia…
+			tabataingame: Hmmm... café!
+			tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?
+			tabataingame: Ainda mais depois daquele recado no meu quadro, só um café pra aliviar minha angústia…
 			set {Respostas.cafe} = "P"
 			set {pontos} -= 1
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Pegar a xicara e beber
-			tabataingame: Cafeteira da empresa
+			tabataingame: Hmmm... café!
 			set {Respostas.cafe} = "G"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Amo café
-			tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
+			tabataingame: Hmmm... café!
+			tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?
 			set {Respostas.cafe} = "N"
+			set {interacoes} += 1
 			[signal arg="ande"]
 	else:
+		tabataingame: Cafeteira da empresa
 		- Pegar a xicara e beber
-			tabataingame: Cafeteira da empresa
+			tabataingame: Hmmm... café!
 			set {Respostas.cafe} = "G"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Amo café
-			tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
+			tabataingame: Hmmm... café!
+			tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?
 			set {Respostas.cafe} = "N"
+			set {interacoes} += 1
 			[signal arg="ande"]
 elif {Respostas.cafe} == "G":
 	tabataingame: Cafeteira da empresa
+	tabataingame: Hmmm... café!
 	[signal arg="ande"]
 elif {Respostas.cafe} == "N":
-	tabataingame: Adoro a cafeteria, sou viciada em café, mas quem não é?
+	tabataingame: Cafeteira da empresa
+	tabataingame: Hmmm... café!
+	tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?
 	[signal arg="ande"]
 elif {Respostas.cafe} == "P":
-	tabataingame: Depois daquele recado no meu quadro só um café pra aliviar minha angústia…
+	tabataingame: Cafeteira da empresa
+	tabataingame: Hmmm... café!
+	tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?
+	tabataingame: Ainda mais depois daquele recado no meu quadro, só um café pra aliviar minha angústia…
 	[signal arg="ande"]

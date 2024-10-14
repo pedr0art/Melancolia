@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://jpehxmggu557"]
+[gd_scene load_steps=29 format=3 uid="uid://jpehxmggu557"]
 
 [ext_resource type="Script" path="res://Management/level.gd" id="1_11txa"]
 [ext_resource type="Texture2D" uid="uid://ma6pn5qshqdv" path="res://Images/tilesets/escritorio-tile.png" id="2_11vjj"]
@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://brvu1qnu0ejg5" path="res://cenas/hud_contador.tscn" id="16_455d4"]
 [ext_resource type="PackedScene" uid="uid://d1xgekvh6maks" path="res://cenas/npc_alice.tscn" id="17_jk1ri"]
 [ext_resource type="PackedScene" uid="uid://fwn3fqs1u5go" path="res://cenas/npc_alessandra.tscn" id="18_rdqun"]
+[ext_resource type="PackedScene" uid="uid://cxjmnlknxdlwb" path="res://cenas/insight/insight.tscn" id="19_0cq1j"]
+[ext_resource type="PackedScene" uid="uid://cgv3d0hj1xw3v" path="res://cenas/insight/platform.tscn" id="20_bsu1t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sydxj"]
 texture = ExtResource("2_11vjj")
@@ -1116,3 +1118,9 @@ scale = Vector2(1.5, 1.5)
 [node name="npc_alessandra" parent="." instance=ExtResource("18_rdqun")]
 position = Vector2(69, 86)
 scale = Vector2(1.5, 1.5)
+
+[node name="insight" parent="." instance=ExtResource("19_0cq1j")]
+
+[node name="platform" parent="." instance=ExtResource("20_bsu1t")]
+position = Vector2(292.658, 143.716)
+scale = Vector2(1.01689, 1.00808)

@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://b3msw5u80ooqr"]
+
+[ext_resource type="PackedScene" uid="uid://46wh1meesxbh" path="res://cenas/insight/object.tscn" id="1_ccm85"]
+[ext_resource type="Texture2D" uid="uid://uguikjjrexf8" path="res://Images/Teste/1.png" id="2_2awy7"]
+[ext_resource type="Texture2D" uid="uid://ci1olwpkw730q" path="res://Images/Teste/2.png" id="3_t5hsq"]
+[ext_resource type="Texture2D" uid="uid://crhex6k2m3jfb" path="res://Images/Teste/3.png" id="4_0pts0"]
+[ext_resource type="Texture2D" uid="uid://duwxg7n8wcaew" path="res://Images/Teste/4.png" id="5_l6r6v"]
+[ext_resource type="Texture2D" uid="uid://by4pu285sxd7b" path="res://Images/Teste/5.png" id="6_2xore"]
+[ext_resource type="PackedScene" uid="uid://c2hr25a7ubad0" path="res://cenas/insight/botao.tscn" id="7_jy3hs"]
+
+[node name="cena_insight" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 329.0
+offset_top = 6.0
+offset_right = 628.0
+offset_bottom = 72.0
+mouse_filter = 2
+color = Color(0.0980392, 0.0980392, 0.0980392, 0.494118)
+
+[node name="object" parent="." instance=ExtResource("1_ccm85")]
+position = Vector2(368, 37)
+num_obj = 1
+sprite_texture = ExtResource("2_2awy7")
+
+[node name="object2" parent="." instance=ExtResource("1_ccm85")]
+position = Vector2(423, 38)
+num_obj = 2
+sprite_texture = ExtResource("3_t5hsq")
+
+[node name="object3" parent="." instance=ExtResource("1_ccm85")]
+position = Vector2(480, 38)
+num_obj = 3
+sprite_texture = ExtResource("4_0pts0")
+
+[node name="object4" parent="." instance=ExtResource("1_ccm85")]
+position = Vector2(537, 38)
+num_obj = 4
+sprite_texture = ExtResource("5_l6r6v")
+
+[node name="object5" parent="." instance=ExtResource("1_ccm85")]
+position = Vector2(593, 38)
+num_obj = 5
+sprite_texture = ExtResource("6_2xore")
+
+[node name="botao" parent="." instance=ExtResource("7_jy3hs")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 596.0
+offset_top = 324.0
+offset_right = 596.0
+offset_bottom = 324.0
+grow_horizontal = 1
+grow_vertical = 1

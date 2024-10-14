@@ -2,33 +2,48 @@ if {Respostas.tarefas} == "":
 	if {pontos} >= 1:
 		tabataingame: Lista de Tarefas
 		- Quadro com afazeres do dia
-			tabataingame: (dá de ombros) Não sei
+			tabataingame: (dá de ombros)
 			set {Respostas.tarefas} = "G"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Impressionante como o meu quadro de tarefas sempre está lotado.
+			tabataingame: (dá de ombros) Não sei
 			tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 			set {Respostas.tarefas} = "N"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer, mas quanto mais me ocupo, menos preciso pensar.
+			tabataingame: (dá de ombros) Não sei
+			tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 			tabataingame: Eu preciso fazer isso mesmo? Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer, mas quanto mais me ocupo, menos preciso pensar.
 			set {Respostas.tarefas} = "P"
 			set {pontos} -= 1
+			set {interacoes} += 1
 			[signal arg="ande"]
 	else:
 		- Quadro com afazeres do dia
-			tabataingame: (dá de ombros) Não sei
+			tabataingame: (dá de ombros)
 			set {Respostas.tarefas} = "G"
+			set {interacoes} += 1
 			[signal arg="ande"]
 		- Impressionante como o meu quadro de tarefas sempre está lotado.
+			tabataingame: (dá de ombros)
 			tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 			set {Respostas.tarefas} = "N"
+			set {interacoes} += 0
 			[signal arg="ande"]
 elif {Respostas.tarefas} == "G":
-	tabataingame: (dá de ombros) Não sei
+	tabataingame: Lista de tarefas do dia
+	tabataingame: (dá de ombros)
 	[signal arg="ande"]
 elif {Respostas.tarefas} == "N":
+	tabataingame: Lista de tarefas do dia
+	tabataingame: (dá de ombros)
 	tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 	[signal arg="ande"]
 elif {Respostas.tarefas} == "P":
+	tabataingame: Lista de tarefas do dia
+	tabataingame: (dá de ombros)
+	tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 	tabataingame: Eu preciso fazer isso mesmo? Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer, mas quanto mais me ocupo, menos preciso pensar.
 	[signal arg="ande"]
