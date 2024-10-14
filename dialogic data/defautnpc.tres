@@ -24,7 +24,9 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_103y0"]
 script = ExtResource("2_e344j")
 scene = ExtResource("4_4kf8f")
-overrides = {}
+overrides = {
+"disabled": "true"
+}
 
 [sub_resource type="Resource" id="Resource_xmaiy"]
 script = ExtResource("2_e344j")
@@ -78,4 +80,4 @@ script = ExtResource("10_ir8jn")
 name = "defautnpc"
 base_overrides = {}
 layers = Array[ExtResource("2_e344j")]([SubResource("Resource_se6vx"), SubResource("Resource_34427"), SubResource("Resource_103y0"), SubResource("Resource_xmaiy"), SubResource("Resource_k5jjj"), SubResource("Resource_jl8i4"), SubResource("Resource_is28f"), SubResource("Resource_h4fak")])
-metadata/_latest_layer = 3
+metadata/_latest_layer = 2

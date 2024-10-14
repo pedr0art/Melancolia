@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy81r6hvwwn6d"]
+
+[ext_resource type="Script" path="res://cenas/cutscene.gd" id="1_ldbcc"]
+[ext_resource type="PackedScene" uid="uid://cxjmnlknxdlwb" path="res://cenas/insight/insight.tscn" id="3_pen3u"]
+[ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="4_3f3af"]
+
+[node name="cutscene" type="Node2D"]
+script = ExtResource("1_ldbcc")
+
+[node name="character" parent="." instance=ExtResource("4_3f3af")]
+position = Vector2(32, 41)
+
+[node name="insight" parent="." instance=ExtResource("3_pen3u")]

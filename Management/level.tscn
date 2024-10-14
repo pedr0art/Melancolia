@@ -18,8 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://brvu1qnu0ejg5" path="res://cenas/hud_contador.tscn" id="16_455d4"]
 [ext_resource type="PackedScene" uid="uid://d1xgekvh6maks" path="res://cenas/npc_alice.tscn" id="17_jk1ri"]
 [ext_resource type="PackedScene" uid="uid://fwn3fqs1u5go" path="res://cenas/npc_alessandra.tscn" id="18_rdqun"]
-[ext_resource type="PackedScene" uid="uid://cxjmnlknxdlwb" path="res://cenas/insight/insight.tscn" id="19_0cq1j"]
-[ext_resource type="PackedScene" uid="uid://cgv3d0hj1xw3v" path="res://cenas/insight/platform.tscn" id="20_bsu1t"]
+[ext_resource type="PackedScene" uid="uid://cxjmnlknxdlwb" path="res://cenas/insight/insight.tscn" id="19_gv4pi"]
+[ext_resource type="PackedScene" uid="uid://cgv3d0hj1xw3v" path="res://cenas/insight/platform.tscn" id="20_14fqf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sydxj"]
 texture = ExtResource("2_11vjj")
@@ -1084,8 +1084,6 @@ layer_2/name = "acessorios"
 layer_2/tile_data = PackedInt32Array(589844, 262144, 7, 589847, 262144, 7, 589850, 262144, 7, 262169, 262144, 7, 262167, 262144, 7, 262164, 262144, 7, -262121, 720896, 2, 524307, 393216, 5, 458773, 458752, 4, -262119, 524288, 2, -262125, 458752, 5, 262161, 262144, 7, 524308, 524288, 4, 524311, 589824, 4, 524314, 589824, 4, 524313, 524288, 4, 196625, 524288, 4, 196631, 524288, 4, 196628, 589824, 4, 196633, 589824, 4, 196634, 327680, 4, -131060, 589824, 3, 917523, 589824, 1, -262111, 327680, 5, -262109, 2, 0, -196573, 2, 1, -262108, 65538, 0, -196572, 65538, 1, -196571, 327680, 4, -262141, 327680, 6, -262130, 327680, 6)
 metadata/_edit_lock_ = true
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
 [node name="NPC" parent="." instance=ExtResource("3_imveq")]
 position = Vector2(596, 54)
 scale = Vector2(2, 2)
@@ -1110,6 +1108,8 @@ position = Vector2(314, -27)
 position = Vector2(584, -6)
 
 [node name="HUDContador" parent="." instance=ExtResource("16_455d4")]
+process_mode = 4
+layer = 2
 
 [node name="npc_alice" parent="." instance=ExtResource("17_jk1ri")]
 position = Vector2(207, 50)
@@ -1119,8 +1119,7 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(69, 86)
 scale = Vector2(1.5, 1.5)
 
-[node name="insight" parent="." instance=ExtResource("19_0cq1j")]
+[node name="insight" parent="." instance=ExtResource("19_gv4pi")]
 
-[node name="platform" parent="." instance=ExtResource("20_bsu1t")]
-position = Vector2(292.658, 143.716)
-scale = Vector2(1.01689, 1.00808)
+[node name="platform" parent="." instance=ExtResource("20_14fqf")]
+position = Vector2(255, 190)

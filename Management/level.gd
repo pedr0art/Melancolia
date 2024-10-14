@@ -1,4 +1,7 @@
 extends Node2D
+
+func _ready():
+	pass
 #class_name Level
 #
 #const _DIALOG_SCREEN: PackedScene = preload("res://Dialogue/dialogue_screen.tscn")
