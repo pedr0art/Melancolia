@@ -18,9 +18,7 @@ overrides = {}
 [sub_resource type="Resource" id="Resource_pfukh"]
 script = ExtResource("2_4a76t")
 scene = ExtResource("3_gpyfe")
-overrides = {
-"disabled": "true"
-}
+overrides = {}
 
 [sub_resource type="Resource" id="Resource_g8bso"]
 script = ExtResource("2_4a76t")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://du5bgqknsnbka"]
+[gd_scene load_steps=4 format=3 uid="uid://du5bgqknsnbka"]
 
 [ext_resource type="Script" path="res://scripts/post-it.gd" id="1_73kax"]
+[ext_resource type="Texture2D" uid="uid://c5g4mepie4ahx" path="res://Images/insight/postit.png" id="2_hcjy1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8bvj"]
 radius = 6.0
@@ -8,10 +9,15 @@ radius = 6.0
 [node name="postit" type="Node2D"]
 script = ExtResource("1_73kax")
 
-[node name="chatDetection" type="Area2D" parent="."]
+[node name="Postit" type="Sprite2D" parent="."]
+position = Vector2(-2, -24)
+texture = ExtResource("2_hcjy1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+[node name="chatDetection" type="Area2D" parent="Postit"]
+position = Vector2(2, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Postit/chatDetection"]
 shape = SubResource("CapsuleShape2D_v8bvj")
 
-[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
-[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="body_entered" from="Postit/chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="Postit/chatDetection" to="." method="_on_chat_detection_body_exited"]

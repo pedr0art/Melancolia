@@ -9,9 +9,7 @@
 [sub_resource type="Resource" id="Resource_bav24"]
 script = ExtResource("3_n40g7")
 scene = ExtResource("2_dnjm4")
-overrides = {
-"disabled": "true"
-}
+overrides = {}
 
 [sub_resource type="Resource" id="Resource_lkuje"]
 script = ExtResource("3_n40g7")

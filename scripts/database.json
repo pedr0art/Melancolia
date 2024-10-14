@@ -1,0 +1,17 @@
+{
+	"0" : {
+		"texture" : "fotos.png"
+	},
+	"1" : {
+		"texture" : "cafeteira.png"
+	},
+	"2" : {
+		"texture" : "funcmes.png"
+	},
+	"3" : {
+		"texture" : "postit.png"
+	},
+	"4" : {
+		"texture" : "tarefas.png"
+	}
+}

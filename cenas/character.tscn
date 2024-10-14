@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dwqaeghhtvl8f" path="res://Images/F_05 1.png" id="2_c52mo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wte3"]
-size = Vector2(8, 10)
+size = Vector2(4, 10)
 
 [node name="character" type="Node2D"]
 
@@ -27,7 +27,7 @@ zoom = Vector2(1.5, 1.5)
 limit_left = 0
 limit_top = -87
 limit_right = 640
-limit_bottom = 360
+limit_bottom = 446
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 rotation_smoothing_enabled = true

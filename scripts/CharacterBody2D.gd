@@ -4,6 +4,7 @@ var is_chatting = false
 ###Movimentação do Personagem
 @export var speed: int = 200
 ###@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var hud_contador = $HUDContador
 
 	
 

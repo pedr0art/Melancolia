@@ -1,10 +1,12 @@
 extends Node2D
 
 var player_in_area = false
+var sprite_texture: Texture2D
+@export var ID = "3"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
 	Dialogic.signal_event.connect(DialogicSignal)
+	sprite_texture = load("res://Images/insight/" + ItemData.get_texture(ID))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,6 +14,8 @@ func _process(delta):
 		if player_in_area and !Globals.is_chatting: 
 			if Input.is_action_just_pressed("ui_interact"):
 				run_dialogue("postit")
+			elif Input.is_action_just_pressed("F"):
+				get_parent().find_child("Inventory").add_item(ID)
 			
 
 func run_dialogue(dialogue_string):

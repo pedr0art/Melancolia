@@ -1,18 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://byhlop8t3d5vl"]
+[gd_scene load_steps=5 format=3 uid="uid://byhlop8t3d5vl"]
 
 [ext_resource type="Script" path="res://scripts/fotos.gd" id="1_hh8rg"]
+[ext_resource type="Texture2D" uid="uid://bsqtcjmho7p45" path="res://Images/insight/fotos.png" id="2_c0n0m"]
+[ext_resource type="Script" path="res://cenas/sprite_fotos.gd" id="3_ceusq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxtfb"]
 radius = 6.0
 
-[node name="fotos" type="Node2D"]
+[node name="fotos" type="Node2D" groups=["collectible"]]
 script = ExtResource("1_hh8rg")
 
-[node name="chatDetection" type="Area2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -13)
+texture = ExtResource("2_c0n0m")
+script = ExtResource("3_ceusq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+[node name="chatDetection" type="Area2D" parent="Sprite2D"]
+position = Vector2(0, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/chatDetection"]
 shape = SubResource("CapsuleShape2D_cxtfb")
 debug_color = Color(0.921863, 0.163915, 0.562757, 0.42)
 
-[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
-[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="body_entered" from="Sprite2D/chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_entered" from="Sprite2D/chatDetection" to="Sprite2D" method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="Sprite2D/chatDetection" to="." method="_on_chat_detection_body_exited"]
