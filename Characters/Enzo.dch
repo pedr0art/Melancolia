@@ -28,7 +28,7 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"\""
+"image": "\"res://Images/portraits/enzoport.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

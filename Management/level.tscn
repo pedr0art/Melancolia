@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://jpehxmggu557"]
+[gd_scene load_steps=39 format=3 uid="uid://jpehxmggu557"]
 
 [ext_resource type="Script" path="res://Management/level.gd" id="1_11txa"]
 [ext_resource type="Texture2D" uid="uid://ma6pn5qshqdv" path="res://Images/tilesets/escritorio-tile.png" id="2_11vjj"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://fwn3fqs1u5go" path="res://cenas/npc_alessandra.tscn" id="18_rdqun"]
 [ext_resource type="Script" path="res://cenas/hud.gd" id="19_k574j"]
 [ext_resource type="PackedScene" uid="uid://da3js0gfbn33b" path="res://cenas/insight/test_scene.tscn" id="22_f1dmd"]
+[ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="23_4ee8h"]
+[ext_resource type="AudioStream" uid="uid://c3ru1evlexui8" path="res://sounds/musics/office-ambience-24734.mp3" id="24_mlnmk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_wbugf"]
 
@@ -3930,6 +3932,66 @@ sources/6 = SubResource("TileSetAtlasSource_mcfov")
 sources/7 = SubResource("TileSetAtlasSource_gpsqk")
 sources/9 = SubResource("TileSetAtlasSource_pk6lv")
 
+[sub_resource type="Animation" id="Animation_8d0x7"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_s3sy8"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
+_data = {
+"fade_in": SubResource("Animation_8d0x7"),
+"fade_out": SubResource("Animation_s3sy8")
+}
+
 [node name="Level" type="Node2D"]
 script = ExtResource("1_11txa")
 
@@ -3954,7 +4016,7 @@ metadata/_edit_lock_ = true
 
 [node name="NPC" parent="." instance=ExtResource("3_imveq")]
 position = Vector2(596, 54)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 
 [node name="postit" parent="." instance=ExtResource("11_t6rb6")]
 position = Vector2(344.973, 141.054)
@@ -3977,7 +4039,6 @@ scale = Vector2(1.5, 1.5)
 
 [node name="npc_alessandra" parent="." instance=ExtResource("18_rdqun")]
 position = Vector2(69, 86)
-scale = Vector2(1.5, 1.5)
 
 [node name="Character" parent="." instance=ExtResource("2_pnlqk")]
 position = Vector2(273.461, 156.479)
@@ -3989,3 +4050,29 @@ script = ExtResource("19_k574j")
 
 [node name="insight" parent="HUDContador" instance=ExtResource("22_f1dmd")]
 position = Vector2(-40.1348, 85.954)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("23_4ee8h")
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_mlnmk")
+autoplay = true
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6r25w")
+}
+
+[node name="ColorRect(QUANDO FOR TESTAR CENA DEIXA ISSO VISIVEL)" type="ColorRect" parent="Transition"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -29.0
+offset_right = 38.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
