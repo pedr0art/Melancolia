@@ -1,39 +1,30 @@
 extends Control
 
-@export var objetos: Array[Node2D]
-@export var slots: Array[Node]
-var ativou = false
-func _ready():
-	pass
 
-func _on_button_pressed():
-	var all_aligned = true
-	var first_value = null
-	var all_equal = true
-	var all_correct = true
-	
-	for i in range(objetos.size()):
-		var obj = objetos[i]
-		var slot = slots[i]
+@onready var button = $Button  # Acesse o botão
+@export var slots_container: Node  # Acesse o nó que contém os slots
+
+
+func _on_confirmar_pressed():
+	print("Verificando posições dos itens...")
+
+	for i in range(5):  # Supondo que você tenha 5 slots
+		var slot = slots_container.get_child(i)  # Referência ao container de slots
 		
-		if not obj.has_method("is_aligned") or not obj.is_aligned():
-			all_aligned = false
-			print(obj.name, "não está alinhado.")  # Obtém o slot correspondente
-			
-		if obj.num_obj != slot.num_plataforma:
-			all_correct = false
-			print(obj.name, "não corresponde ao slot", slot.num_plataforma)
+		if slot.filled:
+			var item_position = slot.get_pos()
+			print("Slot ", slot.num_slot, " - Posição do item: ", item_position)
 
-	if all_aligned and all_correct:
-		print("Tudo certo! Todos os objetos estão encaixados e correspondem aos slots.")
-	elif not all_aligned:
-		print("Alguns objetos não estão nencaixados corretamente.")
+			# Verificar se o num_slot e a posição do item são iguais
+			if slot.num_slot == int(item_position):  # Altere 'x' conforme necessário
+				Globals.is_correct = true # Se não forem iguais, defina como false
+				
+		else:
+			print("Slot ", slot.num_slot, " - Vazio")
+			Globals.is_correct = false  # Se um slot estiver vazio, também é incorreto
+
+	# Verificação final
+	if Globals.is_correct:
+		print("Todos os slots estão corretos.")
 	else:
-		print("Os objetos estão encaixados,mas não correspondem aos slots.")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
-func apertou_bot():
-	if Input.is_action_just_pressed("mb"):
-		ativou = true
+		print("Alguns slots estão incorretos.")

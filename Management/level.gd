@@ -39,6 +39,8 @@ func _ready():
 #
 func _process(_delta: float) -> void:
 	sair_do_jogo()
+	if Globals.is_correct:
+		print("DEU CERTO PORRA")
 	#if Input.is_action_just_pressed("ui_interact"):
 		#var _new_dialog: DialogScreen = _DIALOG_SCREEN.instantiate()
 		#_new_dialog.data = _dialog_data

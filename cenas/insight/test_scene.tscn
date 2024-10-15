@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://da3js0gfbn33b"]
+[gd_scene load_steps=4 format=3 uid="uid://da3js0gfbn33b"]
 
 [ext_resource type="Script" path="res://cenas/insight/Inventory.gd" id="1_5v57d"]
 [ext_resource type="PackedScene" uid="uid://bxbju38qf630b" path="res://cenas/insight/slot.tscn" id="1_bbolu"]
+[ext_resource type="Script" path="res://cenas/insight/botao.gd" id="3_mdvmw"]
 
 [node name="TestScene" type="Node2D"]
 
@@ -13,24 +14,48 @@ offset_bottom = 40.0
 
 [node name="Inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
-offset_left = 223.0
-offset_top = 131.0
-offset_right = 439.0
-offset_bottom = 173.0
-columns = 5
+offset_left = 162.0
+offset_top = 193.0
+offset_right = 383.0
+offset_bottom = 238.0
+columns = 6
 script = ExtResource("1_5v57d")
 
 [node name="slot" parent="UI/Inventory" instance=ExtResource("1_bbolu")]
 layout_mode = 2
+num_slot = 1
 
 [node name="slot2" parent="UI/Inventory" instance=ExtResource("1_bbolu")]
 layout_mode = 2
+num_slot = 2
 
 [node name="slot3" parent="UI/Inventory" instance=ExtResource("1_bbolu")]
 layout_mode = 2
+num_slot = 3
 
 [node name="slot4" parent="UI/Inventory" instance=ExtResource("1_bbolu")]
 layout_mode = 2
+num_slot = 4
 
 [node name="slot5" parent="UI/Inventory" instance=ExtResource("1_bbolu")]
 layout_mode = 2
+num_slot = 5
+
+[node name="botao" type="Control" parent="UI" node_paths=PackedStringArray("slots_container")]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_mdvmw")
+slots_container = NodePath("../Inventory")
+
+[node name="confirmar" type="Button" parent="UI/botao"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 392.0
+offset_top = 193.0
+offset_right = 492.0
+offset_bottom = 233.0
+text = "Confirmar"
+
+[connection signal="pressed" from="UI/botao/confirmar" to="UI/Inventory" method="_on_confirmar_pressed"]
+[connection signal="pressed" from="UI/botao/confirmar" to="UI/botao" method="_on_confirmar_pressed"]

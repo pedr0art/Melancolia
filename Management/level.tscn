@@ -3930,8 +3930,8 @@ position = Vector2(552.819, -1.99095)
 [node name="HUDContador" parent="." instance=ExtResource("16_455d4")]
 layer = 2
 
-[node name="TestScene" parent="HUDContador" instance=ExtResource("22_f1dmd")]
-position = Vector2(-52.0711, 145.562)
+[node name="insight" parent="HUDContador" instance=ExtResource("22_f1dmd")]
+position = Vector2(25.8409, 88.6263)
 
 [node name="npc_alice" parent="." instance=ExtResource("17_jk1ri")]
 position = Vector2(266.704, 261.906)

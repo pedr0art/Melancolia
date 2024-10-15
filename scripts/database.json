@@ -1,17 +1,22 @@
 {
 	"0" : {
-		"texture" : "fotos.png"
+		"texture" : "tarefas.png",
+		"pos" : 1
 	},
 	"1" : {
-		"texture" : "cafeteira.png"
+		"texture" : "postit.png",
+		"pos" : 2
 	},
 	"2" : {
-		"texture" : "funcmes.png"
+		"texture" : "cafeteira.png",
+		"pos" : 3
 	},
 	"3" : {
-		"texture" : "postit.png"
+		"texture" : "fotos.png",
+		"pos" : 4
 	},
 	"4" : {
-		"texture" : "tarefas.png"
+		"texture" : "funcmes.png",
+		"pos" : 5
 	}
 }

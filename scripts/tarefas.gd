@@ -2,7 +2,8 @@ extends Node2D
 
 var player_in_area = false
 var sprite_texture: Texture2D
-@export var ID = "4"
+@export var ID = "0"
+var ja_foi = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -14,8 +15,9 @@ func _process(delta):
 		if player_in_area and !Globals.is_chatting:
 			if Input.is_action_just_pressed("ui_interact"):
 				run_dialogue("tarefas")
-			elif Input.is_action_just_pressed("F"):
+			elif Input.is_action_just_pressed("F") and !ja_foi:
 				get_parent().find_child("Inventory").add_item(ID)
+				ja_foi = true
 
 func run_dialogue(dialogue_string):
 	Globals.is_chatting = true

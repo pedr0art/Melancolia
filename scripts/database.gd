@@ -11,3 +11,6 @@ func _ready():
 	
 func get_texture(ID = "0"):
 	return content[ID]["texture"]
+	
+func get_pos(ID = "0"):
+	return content[ID]["pos"]
