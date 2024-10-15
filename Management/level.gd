@@ -7,7 +7,7 @@ func _ready():
 func _process(_delta: float) -> void:
 	sair_do_jogo()
 	if Globals.is_correct:
-		print("DEU CERTO PORRA")
+		print("DEU CERTO")
 
 func sair_do_jogo() -> void:
 	if Input.is_action_just_pressed("esc"):
