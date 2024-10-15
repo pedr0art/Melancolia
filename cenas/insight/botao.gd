@@ -4,6 +4,12 @@ extends Control
 @onready var button = $Button  # Acesse o botão
 @export var slots_container: Node  # Acesse o nó que contém os slots
 
+func _process(delta):
+	if !Globals.all_in:
+		%confirmar.disabled = true
+	else:
+		%confirmar.disabled = false
+
 
 func _on_confirmar_pressed():
 	print("Verificando posições dos itens...")

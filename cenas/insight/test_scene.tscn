@@ -1,8 +1,61 @@
-[gd_scene load_steps=4 format=3 uid="uid://da3js0gfbn33b"]
+[gd_scene load_steps=10 format=3 uid="uid://da3js0gfbn33b"]
 
 [ext_resource type="Script" path="res://cenas/insight/Inventory.gd" id="1_5v57d"]
 [ext_resource type="PackedScene" uid="uid://bxbju38qf630b" path="res://cenas/insight/slot.tscn" id="1_bbolu"]
+[ext_resource type="Texture2D" uid="uid://di6wwuqaqnomx" path="res://Images/insight/UI books & more.png" id="1_y45rr"]
 [ext_resource type="Script" path="res://cenas/insight/botao.gd" id="3_mdvmw"]
+[ext_resource type="FontFile" uid="uid://bdmxedf82gkad" path="res://Dialogue/Fonts/atascii.ttf" id="4_5v3sm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adp3q"]
+bg_color = Color(0.263325, 0.303299, 0.358269, 1)
+border_width_bottom = 5
+border_color = Color(0.12618, 0.149867, 0.182435, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+shadow_offset = Vector2(2, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_po6qy"]
+bg_color = Color(0.211765, 0.247059, 0.294118, 1)
+border_width_bottom = 5
+border_color = Color(0.12549, 0.14902, 0.184314, 0.568627)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+shadow_offset = Vector2(2, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qg5rr"]
+bg_color = Color(0.145544, 0.17167, 0.20759, 1)
+border_width_bottom = 5
+border_color = Color(0.12618, 0.149867, 0.182435, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+shadow_offset = Vector2(2, 2)
+anti_aliasing = false
+
+[sub_resource type="Theme" id="Theme_n4qqb"]
+Button/fonts/font = ExtResource("4_5v3sm")
+Button/styles/hover = SubResource("StyleBoxFlat_adp3q")
+Button/styles/normal = SubResource("StyleBoxFlat_po6qy")
+Button/styles/pressed = SubResource("StyleBoxFlat_qg5rr")
 
 [node name="TestScene" type="Node2D"]
 
@@ -12,13 +65,60 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="TextureRect" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 183.0
+offset_right = 190.0
+offset_bottom = 243.0
+size_flags_horizontal = 4
+texture = ExtResource("1_y45rr")
+
+[node name="TextureRect2" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 183.0
+offset_right = 251.0
+offset_bottom = 243.0
+size_flags_horizontal = 4
+texture = ExtResource("1_y45rr")
+
+[node name="TextureRect3" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 183.0
+offset_right = 312.0
+offset_bottom = 243.0
+size_flags_horizontal = 4
+texture = ExtResource("1_y45rr")
+
+[node name="TextureRect4" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 183.0
+offset_right = 373.0
+offset_bottom = 243.0
+size_flags_horizontal = 4
+texture = ExtResource("1_y45rr")
+
+[node name="TextureRect5" type="TextureRect" parent="UI"]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 183.0
+offset_right = 434.0
+offset_bottom = 243.0
+size_flags_horizontal = 4
+texture = ExtResource("1_y45rr")
+
 [node name="Inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
-offset_left = 162.0
+offset_left = 140.0
 offset_top = 193.0
-offset_right = 383.0
+offset_right = 424.0
 offset_bottom = 238.0
-columns = 6
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 21
+columns = 5
 script = ExtResource("1_5v57d")
 
 [node name="slot" parent="UI/Inventory" instance=ExtResource("1_bbolu")]
@@ -42,20 +142,22 @@ layout_mode = 2
 num_slot = 5
 
 [node name="botao" type="Control" parent="UI" node_paths=PackedStringArray("slots_container")]
+layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme = SubResource("Theme_n4qqb")
 script = ExtResource("3_mdvmw")
 slots_container = NodePath("../Inventory")
 
 [node name="confirmar" type="Button" parent="UI/botao"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 392.0
-offset_top = 193.0
-offset_right = 492.0
-offset_bottom = 233.0
+offset_left = 444.0
+offset_top = 191.0
+offset_right = 588.0
+offset_bottom = 231.0
+size_flags_horizontal = 4
 text = "Confirmar"
 
-[connection signal="pressed" from="UI/botao/confirmar" to="UI/Inventory" method="_on_confirmar_pressed"]
 [connection signal="pressed" from="UI/botao/confirmar" to="UI/botao" method="_on_confirmar_pressed"]

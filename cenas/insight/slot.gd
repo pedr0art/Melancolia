@@ -3,6 +3,8 @@ extends Control
 @onready var texture_rect = $TextureRect
 @export var num_slot : int
 var filled : bool = false
+
+
 func _get_drag_data(at_position):
 	
 	set_drag_preview(get_preview())
@@ -10,7 +12,8 @@ func _get_drag_data(at_position):
 	return texture_rect
 	
 func _can_drop_data(at_position, data):
-	return data is TextureRect
+	if Globals.all_in:
+		return data is TextureRect
 	
 func _drop_data(at_position, data):
 	var temp = texture_rect.property
@@ -40,4 +43,3 @@ func set_property(data):
 		filled = false
 	else: 
 		filled = true
-

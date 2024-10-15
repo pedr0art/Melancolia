@@ -37,5 +37,3 @@ func _on_chat_detection_body_entered(body):
 func _on_chat_detection_body_exited(body):
 	if body.has_method("player"): 
 		player_in_area = false
-		
-

@@ -36,11 +36,15 @@ overrides = {
 "name_label_box_modulate": "Color(0, 0, 0, 0.6)",
 "name_label_box_use_global_color": "false",
 "name_label_custom_color": "Color(0.760263, 0.558716, 0.777344, 1)",
-"name_label_custom_font_size": "12.0",
+"name_label_custom_font_size": "8.0",
+"name_label_font": "\"res://Dialogue/Fonts/atascii.ttf\"",
 "name_label_use_global_color": "false",
+"name_label_use_global_font": "false",
 "name_label_use_global_font_size": "false",
 "next_indicator_size": "Vector2(10, 10)",
-"text_size": "12.0",
+"normal_font": "\"res://Dialogue/Fonts/atascii.ttf\"",
+"text_size": "8.0",
+"text_use_global_font": "false",
 "text_use_global_size": "false",
 "typing_sounds_mode": "2"
 }
@@ -57,8 +61,10 @@ overrides = {
 "boxes_offset": "Vector2(0, -40)",
 "boxes_stylebox_normal": "\"choice_panel_normal.tres\"",
 "boxes_v_separation": "5.0",
-"font_size_custom": "10.0",
-"font_size_use_global": "false"
+"font_custom": "\"res://Dialogue/Fonts/atascii.ttf\"",
+"font_size_custom": "8.0",
+"font_size_use_global": "false",
+"font_use_global": "false"
 }
 
 [sub_resource type="Resource" id="Resource_4mf75"]
@@ -76,4 +82,4 @@ script = ExtResource("10_y0dfg")
 name = "default"
 base_overrides = {}
 layers = Array[ExtResource("2_635vv")]([SubResource("Resource_010mb"), SubResource("Resource_anvu8"), SubResource("Resource_hvl1l"), SubResource("Resource_60v5x"), SubResource("Resource_llvs8"), SubResource("Resource_o5g7y"), SubResource("Resource_4mf75"), SubResource("Resource_tl8nq")])
-metadata/_latest_layer = 2
+metadata/_latest_layer = 5
