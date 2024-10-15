@@ -17,7 +17,7 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://Images/tabata.png\""
+"image": "\"res://Images/portraits/mel_port-Sheet 1 (1).png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

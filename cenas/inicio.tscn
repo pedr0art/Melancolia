@@ -1,6 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://i3dmbxrae8k0"]
+[gd_scene load_steps=6 format=3 uid="uid://i3dmbxrae8k0"]
 
 [ext_resource type="Script" path="res://scripts/inicio.gd" id="1_qujh3"]
+[ext_resource type="AudioStream" uid="uid://chrdpbdq0skn6" path="res://sounds/musics/Meditative Moment (mp3cut.net) (1).mp3" id="2_j1anf"]
+
+[sub_resource type="Animation" id="Animation_8d0x7"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_s3sy8"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
+_data = {
+"fade_in": SubResource("Animation_8d0x7"),
+"fade_out": SubResource("Animation_s3sy8")
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qujh3")
@@ -18,3 +79,25 @@ offset_top = -15.0
 offset_right = 670.0
 offset_bottom = 389.0
 color = Color(0.497474, 0.497474, 0.497474, 1)
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6r25w")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_j1anf")
+volume_db = -17.802
+autoplay = true
+bus = &"Music"
+
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

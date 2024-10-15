@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://brvu1qnu0ejg5"]
 
 [ext_resource type="Script" path="res://Management/points_manager.gd" id="1_xne5k"]
-[ext_resource type="Texture2D" uid="uid://w55utb5rpari" path="res://Images/key_01d.png" id="2_r1emb"]
+[ext_resource type="Texture2D" uid="uid://erbutqk32dmc" path="res://Images/brain.png" id="2_rw7nd"]
 [ext_resource type="FontFile" uid="uid://c5dol8282coae" path="res://Dialogue/Fonts/RevMiniPixel.ttf" id="3_k5k8q"]
 
 [node name="HUDContador" type="CanvasLayer"]
@@ -34,7 +34,7 @@ size_flags_vertical = 0
 
 [node name="contador_icon" type="TextureRect" parent="control/container/contador_container"]
 layout_mode = 2
-texture = ExtResource("2_r1emb")
+texture = ExtResource("2_rw7nd")
 
 [node name="X" type="Label" parent="control/container/contador_container"]
 layout_mode = 2

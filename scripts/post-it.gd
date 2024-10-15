@@ -15,7 +15,6 @@ func _process(delta):
 		if player_in_area and !Globals.is_chatting: 
 			if Input.is_action_just_pressed("ui_interact"):
 				run_dialogue("postit")
-			elif Input.is_action_just_pressed("F") and !ja_foi:
 				get_parent().find_child("Inventory").add_item(ID)
 				ja_foi = true
 			
@@ -31,8 +30,14 @@ func DialogicSignal(arg: String):
 func _on_chat_detection_body_entered(body):
 	if body.has_method("player"): 
 		player_in_area = true
+		var animated_sprite = body.get_node("AnimatedSprite2D")
+		if animated_sprite:
+			animated_sprite.visible = true # Torna a sprite visível
 
 
 func _on_chat_detection_body_exited(body):
 	if body.has_method("player"): 
 		player_in_area = false
+		var animated_sprite = body.get_node("AnimatedSprite2D")
+		if animated_sprite:
+			animated_sprite.visible = false

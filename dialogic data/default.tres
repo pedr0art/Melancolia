@@ -34,6 +34,7 @@ overrides = {
 "box_color_use_global": "false",
 "box_size": "Vector2(500, 120)",
 "name_label_box_modulate": "Color(0, 0, 0, 0.6)",
+"name_label_box_offset": "Vector2(0, 10)",
 "name_label_box_use_global_color": "false",
 "name_label_custom_color": "Color(0.760263, 0.558716, 0.777344, 1)",
 "name_label_custom_font_size": "8.0",
@@ -82,4 +83,4 @@ script = ExtResource("10_y0dfg")
 name = "default"
 base_overrides = {}
 layers = Array[ExtResource("2_635vv")]([SubResource("Resource_010mb"), SubResource("Resource_anvu8"), SubResource("Resource_hvl1l"), SubResource("Resource_60v5x"), SubResource("Resource_llvs8"), SubResource("Resource_o5g7y"), SubResource("Resource_4mf75"), SubResource("Resource_tl8nq")])
-metadata/_latest_layer = 5
+metadata/_latest_layer = 3
