@@ -1,50 +1,25 @@
+tabataingame: Quadro de melhor funcionário do mês. No caso, eu. Novamente.
 if {Respostas.funcionariomes} == "":
-	if {pontos} >= 1:
-		tabataingame: "Melhor funcionária do mês."
-		- Realmente, me lembro na escola, eu sempre fui boa
-			tabataingame: Meh...
-			tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
-			set {Respostas.funcionariomes} = "N"
-			set {interacoes} += 1
-			[signal arg="ande"]
-		- A custo de não viver minha vida em paz, com certeza
-			tabataingame: Meh...
-			tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
-			tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
-			set {Respostas.funcionariomes} = "P"
-			set {pontos} -= 1
-			set {interacoes} += 1
-			[signal arg="ande"]
-		- Tanto faz...
-			tabataingame: Meh...
-			set {Respostas.funcionariomes} = "G"
-			set {interacoes} = 1
-			[signal arg="ande"]
-	else:
-		tabataingame: "Melhor funcionária do mês."
-		- Realmente, me lembro na escola, eu sempre fui boa
-			tabataingame: Meh...
-			tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
-			set {Respostas.funcionariomes} = "N"
-			set {interacoes} += 1
-			[signal arg="ande"]
-		- Tanto faz...
-			tabataingame: Meh...
-			set {Respostas.funcionariomes} = "G"
-			set {interacoes} += 1
-			[signal arg="ande"]
-elif {Respostas.funcionariomes} == "G":
-	tabataingame: "Melhor funcionária do mês."
-	tabataingame: Meh...
-	[signal arg="ande"]
-elif {Respostas.funcionariomes} == "N":
-	tabataingame: "Melhor funcionária do mês."
-	tabataingame: Meh...
+	- Isso me lembra da escola.
+		tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho. Sempre com as melhores notas.
+		set {Respostas.funcionariomes} = "N"
+		set {interacoes} += 1
+		[signal arg="ande"]
+	- Hum...
+		tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho. Sempre com as melhores notas.
+		set {Respostas.funcionariomes} = "N"
+		set {interacoes} += 1
+		[signal arg="ande"]
+	- A custo de não viver minha vida em paz, com certeza | [if {pontos} >=1] [else="disable"]
+		tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
+		tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
+		set {Respostas.funcionariomes} = "P"
+		set {pontos} -= 1
+		set {interacoes} += 1
+		[signal arg="ande"]
+else:
+	tabataingame: Quadro de melhor funcionário do mês. No caso, eu. Novamente.
 	tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
-	[signal arg="ande"]
-elif {Respostas.funcionariomes} == "P":
-	tabataingame: "Melhor funcionária do mês."
-	tabataingame: Meh...
-	tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
-	tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
-	[signal arg="ande"]
+	if {Respostas.funcionariomes} == "P":
+		tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
+		[signal arg="ande"]
