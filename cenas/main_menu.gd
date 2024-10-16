@@ -5,16 +5,18 @@ var prox_level = preload("res://cenas/inicio.tscn")
 
 @onready var transition = $Transition
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	if Globals.restart:
-		get_tree().reload_current_scene()
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	sair_do_jogo()
+	if Input.is_action_just_pressed("ENTER"):
+		get_tree().change_scene_to_packed(prox_level)
 
 
 func _on_start_pressed():
@@ -26,7 +28,9 @@ func _on_sair_pressed():
 	get_tree().quit()
 
 
-
+func sair_do_jogo() -> void:
+	if Input.is_action_just_pressed("esc"):
+		get_tree().quit()
 
 
 

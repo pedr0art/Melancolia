@@ -74,9 +74,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HUDContador" parent="." instance=ExtResource("2_6qsxm")]
-visible = false
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_j1anf")
 volume_db = -17.802
@@ -105,5 +102,7 @@ color = Color(0, 0, 0, 1)
 offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("4_c2lhn")
+
+[node name="HUDContador" parent="." instance=ExtResource("2_6qsxm")]
 
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

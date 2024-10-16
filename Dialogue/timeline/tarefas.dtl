@@ -5,11 +5,13 @@ if {Respostas.tarefas} == "":
 		set {Respostas.tarefas} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Impressionante como o meu quadro de tarefas sempre está lotado.
 		tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 		set {Respostas.tarefas} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer. | [if {pontos} >=1] [else="disable"]
 		tabataingame: (dá de ombros)
 		tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
@@ -17,6 +19,7 @@ if {Respostas.tarefas} == "":
 		set {Respostas.tarefas} = "P"
 		set {pontos} -= 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 else:
 	tabataingame: (dá de ombros)
 	tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.

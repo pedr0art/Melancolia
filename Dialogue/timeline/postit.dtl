@@ -5,11 +5,13 @@ if {Respostas.postit} == "":
 		set {Respostas.postit} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Ok...
 		tabataingame: Um recado que minha chefe deixou no meu quadro
 		set {Respostas.postit} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Será que alguém se sente bem aqui? | [if {pontos} >=1] [else="disable"]
 		tabataingame: Um recado que minha chefe deixou no meu quadro
 		tabataingame: A minha chefe sempre me cobra o meu máximo, e eu sempre faço o possível para cumprir com suas expectativas, afinal é para isso que estou aqui.
@@ -18,6 +20,7 @@ if {Respostas.postit} == "":
 		set {pontos} -= 1
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 else:
 	tabataingame: Um recado que minha chefe deixou no meu quadro
 	tabataingame: A minha chefe sempre me cobra o meu máximo, e eu sempre faço o possível para cumprir com suas expectativas, afinal é para isso que estou aqui.

@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://fwn3fqs1u5go"]
+[gd_scene load_steps=5 format=3 uid="uid://fwn3fqs1u5go"]
 
 [ext_resource type="Script" path="res://scripts/npc_alessandra.gd" id="1_jh6ma"]
 [ext_resource type="Texture2D" uid="uid://o3qog337hs6g" path="res://Images/chefe.png" id="2_0uqwh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7hc7d"]
+size = Vector2(10, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_euwle"]
 radius = 23.0868
@@ -9,13 +12,21 @@ radius = 23.0868
 [node name="npc_alessandra" type="Node2D"]
 script = ExtResource("1_jh6ma")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_7hc7d")
+debug_color = Color(0.90369, 0.000146317, 0.752284, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture = ExtResource("2_0uqwh")
 
-[node name="chatDetection" type="Area2D" parent="."]
+[node name="chatDetection" type="Area2D" parent="CharacterBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/chatDetection"]
 shape = SubResource("CircleShape2D_euwle")
 
-[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
-[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="body_entered" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_exited"]

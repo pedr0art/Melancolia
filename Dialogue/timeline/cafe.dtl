@@ -5,11 +5,13 @@ if {Respostas.cafe} == "":
 		set {Respostas.cafe} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Amo café
 		tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é? Só assim para dar conta de tanto trabalho.
 		set {Respostas.cafe} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Não gostei daquele recado | [if {pontos} >=1] [else="disable"]
 		tabataingame: Hmmm... café!
 		tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é? Só assim para dar conta de tanto trabalho.
@@ -18,6 +20,7 @@ if {Respostas.cafe} == "":
 		set {pontos} -= 1
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 else:
 	tabataingame: Hmmm... café!
 	tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?

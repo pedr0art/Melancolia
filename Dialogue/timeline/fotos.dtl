@@ -1,22 +1,24 @@
 tabataingame: Um retrato com meus amigos de infância
 if {Respostas.fotos} == "":
 	- O que será que estão fazendo...
-		tabataingame: Não sei bem o que sinto sobre eles..
+		tabataingame: Não sei bem o que sinto sobre eles...
 		set {Respostas.fotos} = "N"
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- (Suspiro...) Será que é bom ser tão atarefada?
 		tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
 		set {Respostas.fotos} = "N"
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Qual foi a ultima vez que tive tempo para mim? | [if {pontos} >=1] [else="disable"]
 		tabataingame: Sinto falta deles, as vezes eu reflito se nosso afastamento foi realmente só pela questão da distância física ou fui eu que não tenho mais tempo pra nada.
 		set {Respostas.fotos} = "P"
 		set {pontos} -= 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 else:
-    tabataingame: Não sei bem o que sinto sobre eles..
-    tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
-    if {Respostas.fotos} == "P":
-        tabataingame: Sinto falta deles, as vezes eu reflito se nosso afastamento foi realmente só pela questão da distância física ou fui eu que não tenho mais tempo pra nada.
-    [signal arg="ande"]       
-    
+	tabataingame: Não sei bem o que sinto sobre eles..
+	tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
+	if {Respostas.fotos} == "P":
+		tabataingame: Sinto falta deles, as vezes eu reflito se nosso afastamento foi realmente só pela questão da distância física ou fui eu que não tenho mais tempo pra nada.
+[signal arg="ande"]

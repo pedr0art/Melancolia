@@ -5,11 +5,13 @@ if {Respostas.funcionariomes} == "":
 		set {Respostas.funcionariomes} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- Hum...
 		tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho. Sempre com as melhores notas.
 		set {Respostas.funcionariomes} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 	- A custo de não viver minha vida em paz, com certeza | [if {pontos} >=1] [else="disable"]
 		tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
 		tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
@@ -17,6 +19,7 @@ if {Respostas.funcionariomes} == "":
 		set {pontos} -= 1
 		set {interacoes} += 1
 		[signal arg="ande"]
+		[signal arg="prim"]
 else:
 	tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
 	if {Respostas.funcionariomes} == "P":

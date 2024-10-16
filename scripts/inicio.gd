@@ -27,4 +27,4 @@ func _on_transition_animation_finished(anim_name):
 	if anim_name == "fade_out_cuts":
 		get_tree().change_scene_to_packed(prox_level)
 	elif anim_name == "fade_in_cuts":
-		hud_contador.visible
+		pass

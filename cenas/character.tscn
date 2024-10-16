@@ -6,9 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://lvkn4fbwk5q2" path="res://Images/tabata-Sheet.png" id="3_tlj1m"]
 [ext_resource type="Texture2D" uid="uid://bukookcet1snb" path="res://Images/TECLA_EDOWN.png" id="4_v006d"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wte3"]
-size = Vector2(16, 29)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_ax4ep"]
 animations = [{
 "frames": [{
@@ -178,6 +175,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wte3"]
+size = Vector2(16, 29)
+
 [node name="character" type="Node2D"]
 script = ExtResource("1_awcbn")
 
@@ -185,22 +185,18 @@ script = ExtResource("1_awcbn")
 collision_mask = 6
 script = ExtResource("1_0mwx4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 1.5)
-shape = SubResource("RectangleShape2D_4wte3")
-
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-visible = false
 ignore_rotation = false
 zoom = Vector2(1.5, 1.5)
 limit_left = 0
-limit_top = -87
+limit_top = -50
 limit_right = 640
-limit_bottom = 446
+limit_bottom = 447
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 rotation_smoothing_enabled = true
 editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 visible = false
@@ -215,3 +211,8 @@ frame_progress = 0.681989
 sprite_frames = SubResource("SpriteFrames_nwqpf")
 animation = &"idle_front"
 frame_progress = 0.905694
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+light_mask = 2
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_4wte3")

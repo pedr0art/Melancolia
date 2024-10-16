@@ -14,7 +14,7 @@ enum States { IDLE, MOVE }
 var currentState = States.IDLE
 
 func _physics_process(delta):
-	if !Globals.cuts:
+	if !Globals.cuts and !Globals.is_chatting:
 		handle_state_transitions()
 		perform_state_actions(delta)
 		move_and_slide()
@@ -36,7 +36,10 @@ func perform_state_actions(delta):
 			if dir != Vector2.ZERO:
 				last_dir = dir
 
-			if dir.x < 0 and dir.y == 0:
+			if Globals.is_chatting and last_dir.y < 0:
+				animation.play("idle_up")
+				
+			elif dir.x < 0 and dir.y == 0:
 				animation.play("walk_left")
 				
 			elif dir.x > 0 and dir.y == 0:
@@ -48,6 +51,8 @@ func perform_state_actions(delta):
 			elif dir.y > 0:
 				animation.play("walk_front")
 				
+
+				
 			velocity = dir * speed * delta
 		
 		States.IDLE:
@@ -58,7 +63,7 @@ func perform_state_actions(delta):
 				animation.play("idle_left")
 			elif last_dir.x > 0:
 				animation.play("idle_right")
-			elif last_dir.y < 0:
+			elif last_dir.y < 0  or Globals.is_chatting:
 				animation.play("idle_up")
 			else:
 				animation.play("idle_front")

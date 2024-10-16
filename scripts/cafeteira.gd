@@ -28,7 +28,7 @@ func run_dialogue(dialogue_string):
 func DialogicSignal(arg: String):
 	if arg == "ande":
 		Globals.is_chatting = false
-		if Globals.primeiro:
+	elif arg == "prim" and Globals.primeiro:
 			run_dialogue("TAB")
 			Globals.primeiro = false
 

@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6sooyboa2pds"]
+[gd_scene load_steps=5 format=3 uid="uid://b6sooyboa2pds"]
 
 [ext_resource type="Script" path="res://scripts/npc.gd" id="1_76c6m"]
 [ext_resource type="Texture2D" uid="uid://cnn2v5ctpo45x" path="res://Images/ENZO.png" id="2_b63gl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_whfto"]
+size = Vector2(6, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_njreh"]
 radius = 10.0499
@@ -9,14 +12,23 @@ radius = 10.0499
 [node name="npc" type="Node2D"]
 script = ExtResource("1_76c6m")
 
-[node name="Rectangle368" type="Sprite2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_whfto")
+debug_color = Color(0.93097, 2.83971e-05, 0.65465, 0.42)
+
+[node name="Rectangle368" type="Sprite2D" parent="CharacterBody2D"]
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("2_b63gl")
 
-[node name="chatDetection" type="Area2D" parent="."]
+[node name="chatDetection" type="Area2D" parent="CharacterBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/chatDetection"]
 shape = SubResource("CircleShape2D_njreh")
 
-[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
-[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]
+[connection signal="body_entered" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_exited"]

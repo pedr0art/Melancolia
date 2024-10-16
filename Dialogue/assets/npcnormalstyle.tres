@@ -47,6 +47,7 @@ script = ExtResource("2_4a76t")
 scene = ExtResource("6_bgfpf")
 overrides = {
 "boxes_offset": "Vector2(-110, -40)",
+"boxes_v_separation": "5.0",
 "font_custom": "\"res://Dialogue/Fonts/atascii.ttf\"",
 "font_size_custom": "8.0",
 "font_size_use_global": "false",
@@ -74,4 +75,4 @@ base_overrides = {
 "global_font_size": "12.0"
 }
 layers = Array[ExtResource("2_4a76t")]([SubResource("Resource_lxbyv"), SubResource("Resource_pfukh"), SubResource("Resource_g8bso"), SubResource("Resource_5c5yw"), SubResource("Resource_j34bs"), SubResource("Resource_1t3at"), SubResource("Resource_03buv")])
-metadata/_latest_layer = -1
+metadata/_latest_layer = 4
