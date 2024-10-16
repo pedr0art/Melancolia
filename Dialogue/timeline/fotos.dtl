@@ -8,7 +8,7 @@ if {Respostas.fotos} == "":
 		tabataingame: Quase nunca falo com eles. mas mesmo que morassem seria difícil para a gente se encontrar, minha agenda é lotada.
 		set {Respostas.fotos} = "N"
 		[signal arg="ande"]
-	- Qual foi a ultima vez que tive tempo para mim? | [if {pontos} >=1] [else="disable" alt_text="Qual foi a ultima vez que tive tempo para mim?"]
+	- Qual foi a ultima vez que tive tempo para mim? | [if {pontos} >=1] [else="disable"]
 		tabataingame: Sinto falta deles, as vezes eu reflito se nosso afastamento foi realmente só pela questão da distância física ou fui eu que não tenho mais tempo pra nada.
 		set {Respostas.fotos} = "P"
 		set {pontos} -= 1

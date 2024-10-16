@@ -1,4 +1,4 @@
-tabataingame: Quadro de melhor funcionário do mês. No caso, eu. Novamente.
+tabataingame: Quadro de melhor funcionário do mês. No caso, eu. Novamente. 
 if {Respostas.funcionariomes} == "":
 	- Isso me lembra da escola.
 		tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho. Sempre com as melhores notas.
