@@ -3855,13 +3855,13 @@ position = Vector2(344.973, 141.054)
 position = Vector2(314.189, 141.27)
 
 [node name="tarefas" parent="." instance=ExtResource("13_o72uh")]
-position = Vector2(258.198, 90.6925)
+position = Vector2(242.841, -22.8043)
 
 [node name="funcionariomes" parent="." instance=ExtResource("14_ecu85")]
-position = Vector2(273.529, 164.119)
+position = Vector2(232.171, 219.282)
 
 [node name="Node2D" parent="." instance=ExtResource("15_sv1sp")]
-position = Vector2(383.99, 161.169)
+position = Vector2(552.172, -1.17136)
 
 [node name="NPC" parent="." instance=ExtResource("3_imveq")]
 position = Vector2(596, 54)
