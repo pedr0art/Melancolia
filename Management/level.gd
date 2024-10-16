@@ -13,10 +13,11 @@ func _ready():
 
 func _process(_delta: float) -> void:
 	sair_do_jogo()
+	if Globals.is_wrong:
+		get_tree().change_scene_to_packed(fim_lev)
 	if Globals.is_correct:
 		transition.play("fade_out_cuts")
-	elif Globals.is_wrong:
-		get_tree().change_scene_to_packed(fim_lev)
+
 	if Globals.all_in and !Globals.is_chatting:
 		if !foi:
 			run_dialogue("explicacao_insight")

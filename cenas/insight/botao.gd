@@ -11,6 +11,7 @@ func _process(delta):
 		%confirmar.disabled = false
 
 
+
 func _on_confirmar_pressed():
 
 	for i in range(5):  # Supondo que você tenha 5 slots
@@ -22,7 +23,10 @@ func _on_confirmar_pressed():
 			# Verificar se o num_slot e a posição do item são iguais
 			if slot.num_slot == int(item_position):  # Altere 'x' conforme necessário
 				Globals.is_correct = true # Se não forem iguais, defina como false
+			else: 
+				Globals.is_wrong = true
 				
 		else:
-			Globals.is_wrong = true  # Se um slot estiver vazio, também é incorreto
+			Globals.is_correct = false  # Se um slot estiver vazio, também é incorreto# Se um slot estiver vazio, também é incorreto
+
 

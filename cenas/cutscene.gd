@@ -1,7 +1,7 @@
 extends Node2D
 @onready var cutscene = $cutscene
 @onready var transition = $Transition
-var prox_level = preload("res://cenas/fim.tscn")
+var prox_level = preload("res://cenas/main_menu.gd")
 # Called when the node enters the scene tree for the first time.
 var comeca = false
 func _ready():

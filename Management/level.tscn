@@ -3855,18 +3855,13 @@ position = Vector2(344.973, 141.054)
 position = Vector2(314.189, 141.27)
 
 [node name="tarefas" parent="." instance=ExtResource("13_o72uh")]
-position = Vector2(233, -29)
+position = Vector2(258.198, 90.6925)
 
 [node name="funcionariomes" parent="." instance=ExtResource("14_ecu85")]
-position = Vector2(233.841, 218.296)
+position = Vector2(273.529, 164.119)
 
 [node name="Node2D" parent="." instance=ExtResource("15_sv1sp")]
-position = Vector2(552.819, -1.99095)
-
-[node name="Character" parent="." instance=ExtResource("2_pnlqk")]
-position = Vector2(304.106, 407.617)
-camera_limit_top = -62
-camera_limit_bottom = 447
+position = Vector2(383.99, 161.169)
 
 [node name="NPC" parent="." instance=ExtResource("3_imveq")]
 position = Vector2(596, 54)
@@ -3877,6 +3872,11 @@ position = Vector2(266.704, 261.906)
 
 [node name="npc_alessandra" parent="." instance=ExtResource("18_rdqun")]
 position = Vector2(88.6001, -16.2382)
+
+[node name="Character" parent="." instance=ExtResource("2_pnlqk")]
+position = Vector2(304.106, 407.617)
+camera_limit_top = -62
+camera_limit_bottom = 447
 
 [node name="HUDContador" parent="." instance=ExtResource("16_455d4")]
 layer = 0
