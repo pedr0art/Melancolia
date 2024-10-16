@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://hav1c0f5xy8b"]
+[gd_scene load_steps=6 format=3 uid="uid://hav1c0f5xy8b"]
 
 [ext_resource type="Script" path="res://scripts/CollisionShape2D.gd" id="1_2kjqh"]
 [ext_resource type="Script" path="res://scripts/cafeteira.gd" id="1_nvmx2"]
 [ext_resource type="Texture2D" uid="uid://d3savqmqfniyp" path="res://Images/insight/cafeteira.png" id="3_0gd3u"]
+[ext_resource type="AudioStream" uid="uid://coqvdpni7bijq" path="res://sounds/sfx/Arcane Beacon.wav" id="4_mcg7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kga4s"]
 size = Vector2(41, 31)
@@ -22,6 +23,10 @@ position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_kga4s")
 debug_color = Color(2.74345e-06, 0.638022, 0.384323, 0.42)
 script = ExtResource("1_2kjqh")
+
+[node name="sfx_item" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_mcg7o")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Sprite2D/chatDetection" to="." method="_on_chat_detection_body_entered"]
 [connection signal="body_entered" from="Sprite2D/chatDetection" to="Sprite2D/chatDetection/CollisionShape2D" method="_on_chat_detection_body_entered"]

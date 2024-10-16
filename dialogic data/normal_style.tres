@@ -45,12 +45,13 @@ overrides = {}
 script = ExtResource("2_x8p58")
 scene = ExtResource("6_yqjk0")
 overrides = {
-"boxes_offset": "Vector2(-50, -40)",
+"boxes_offset": "Vector2(0, -20)",
 "boxes_v_separation": "5.0",
 "font_custom": "\"res://Dialogue/Fonts/atascii.ttf\"",
 "font_size_custom": "8.0",
 "font_size_use_global": "false",
-"font_use_global": "false"
+"font_use_global": "false",
+"text_color_use_global": "false"
 }
 
 [sub_resource type="Resource" id="Resource_mu2fj"]
@@ -67,7 +68,7 @@ overrides = {}
 script = ExtResource("9_ofhor")
 name = "normal_style"
 base_overrides = {
-"global_bg_color": "Color(0, 0, 0, 0.470588)",
+"global_bg_color": "Color(0, 0, 0, 0.568627)",
 "global_font_size": "12.0"
 }
 layers = Array[ExtResource("2_x8p58")]([SubResource("Resource_rmvfl"), SubResource("Resource_6aai1"), SubResource("Resource_kalxx"), SubResource("Resource_7ts2n"), SubResource("Resource_m756j"), SubResource("Resource_mu2fj"), SubResource("Resource_ac85u")])

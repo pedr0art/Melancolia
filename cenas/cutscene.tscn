@@ -1,13 +1,280 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy81r6hvwwn6d"]
+[gd_scene load_steps=12 format=3 uid="uid://cy81r6hvwwn6d"]
 
-[ext_resource type="Script" path="res://cenas/cutscene.gd" id="1_ldbcc"]
-[ext_resource type="PackedScene" uid="uid://cxjmnlknxdlwb" path="res://cenas/insight/insight.tscn" id="3_pen3u"]
-[ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="4_3f3af"]
+[ext_resource type="Texture2D" uid="uid://brq7hlw5kjs6y" path="res://Images/cidade2.png" id="1_6t3no"]
+[ext_resource type="Script" path="res://cenas/cutscene.gd" id="1_rkjmb"]
+[ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_p56k6"]
+[ext_resource type="AudioStream" uid="uid://d33decy8ndw7x" path="res://sounds/musics/birds-and-city-ambience-65651.mp3" id="3_vp1lp"]
+
+[sub_resource type="Animation" id="Animation_rigk2"]
+resource_name = "cutscene"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(18.0587, 224.222), Vector2(203.849, 224.222)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../character")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": ["walk_right"],
+"method": &"play_anim"
+}, {
+"args": ["idle_up"],
+"method": &"play_anim"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../character")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["cutscene_cidade"],
+"method": &"run_dialogue"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_o7fkj"]
+resource_name = "cutscene_2"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 6, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(203.849, 224.222), Vector2(421.665, 224.222), Vector2(421.665, 224.222), Vector2(651.094, 224.222)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["fade_out"],
+"method": &"_play_fade_out"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("../character:camera_zoom")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1, 1.1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/path = NodePath("../character:camera_limit_bottom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [200]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../character")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": ["walk_right"],
+"method": &"play_anim"
+}, {
+"args": ["idle_up"],
+"method": &"play_anim"
+}, {
+"args": ["walk_right"],
+"method": &"play_anim"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_u7yga"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(414.361, 224.222)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../character")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../character")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cem8t"]
+_data = {
+"RESET": SubResource("Animation_u7yga"),
+"cutscene_1": SubResource("Animation_rigk2"),
+"cutscene_2": SubResource("Animation_o7fkj")
+}
+
+[sub_resource type="Animation" id="Animation_8d0x7"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_s3sy8"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
+_data = {
+"fade_in_cuts": SubResource("Animation_8d0x7"),
+"fade_out_cuts": SubResource("Animation_s3sy8")
+}
 
 [node name="cutscene" type="Node2D"]
-script = ExtResource("1_ldbcc")
+script = ExtResource("1_rkjmb")
 
-[node name="character" parent="." instance=ExtResource("4_3f3af")]
-position = Vector2(32, 41)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1.0
+offset_right = 639.0
+offset_bottom = 360.0
+texture = ExtResource("1_6t3no")
 
-[node name="insight" parent="." instance=ExtResource("3_pen3u")]
+[node name="cutscene" type="AnimationPlayer" parent="."]
+reset_on_save = false
+root_node = NodePath("../TextureRect")
+libraries = {
+"": SubResource("AnimationLibrary_cem8t")
+}
+
+[node name="character" parent="." instance=ExtResource("2_p56k6")]
+position = Vector2(203.849, 224.222)
+camera_zoom = Vector2(1, 1)
+camera_limit_top = 0
+camera_limit_bottom = 360
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vp1lp")
+autoplay = true
+bus = &"Music"
+
+[node name="Transition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6r25w")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Transition"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -46.0
+offset_top = -29.0
+offset_right = 38.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="animation_finished" from="cutscene" to="." method="_on_cutscene_animation_finished"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

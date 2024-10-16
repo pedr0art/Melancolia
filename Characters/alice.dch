@@ -17,11 +17,11 @@
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": ""
+"image": "\"res://Images/aliceport.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 1.0,
 "scene": ""
 }
 },

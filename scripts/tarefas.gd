@@ -4,6 +4,7 @@ var player_in_area = false
 var sprite_texture: Texture2D
 @export var ID = "0"
 var ja_foi = false
+@onready var sfx_item = $sfx_item
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,8 +16,10 @@ func _process(delta):
 		if player_in_area and !Globals.is_chatting:
 			if Input.is_action_just_pressed("ui_interact"):
 				run_dialogue("tarefas")
-				get_parent().find_child("Inventory").add_item(ID)
-				ja_foi = true
+				if !ja_foi:
+					sfx_item.play()
+					get_parent().find_child("Inventory").add_item(ID)
+					ja_foi = true
 
 func run_dialogue(dialogue_string):
 	Globals.is_chatting = true
@@ -25,12 +28,15 @@ func run_dialogue(dialogue_string):
 func DialogicSignal(arg: String):
 	if arg == "ande":
 		Globals.is_chatting = false
+		if Globals.primeiro:
+			run_dialogue("TAB")
+			Globals.primeiro = false
 
 func _on_chat_detection_body_entered(body):
 	if body.has_method("player"): 
 		player_in_area = true
 		var animated_sprite = body.get_node("AnimatedSprite2D")
-		if animated_sprite:
+		if animated_sprite and !Globals.is_chatting:
 			animated_sprite.visible = true # Torna a sprite visível
 
 

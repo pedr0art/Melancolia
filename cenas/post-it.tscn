@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://du5bgqknsnbka"]
+[gd_scene load_steps=5 format=3 uid="uid://du5bgqknsnbka"]
 
 [ext_resource type="Script" path="res://scripts/post-it.gd" id="1_73kax"]
 [ext_resource type="Texture2D" uid="uid://c5g4mepie4ahx" path="res://Images/insight/postit.png" id="2_hcjy1"]
+[ext_resource type="AudioStream" uid="uid://coqvdpni7bijq" path="res://sounds/sfx/Arcane Beacon.wav" id="3_5bof0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8bvj"]
 radius = 6.0
@@ -18,6 +19,9 @@ position = Vector2(2, 24)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Postit/chatDetection"]
 shape = SubResource("CapsuleShape2D_v8bvj")
+
+[node name="sfx_item" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_5bof0")
 
 [connection signal="body_entered" from="Postit/chatDetection" to="." method="_on_chat_detection_body_entered"]
 [connection signal="body_exited" from="Postit/chatDetection" to="." method="_on_chat_detection_body_exited"]

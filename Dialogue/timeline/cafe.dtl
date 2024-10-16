@@ -23,4 +23,4 @@ else:
 	tabataingame: Adoro a cafeteira, sou viciada em café, mas quem não é?
 	if {Respostas.cafe} == "P":
 		tabataingame: Ainda mais depois daquele recado no meu quadro, só um café pra aliviar minha angústia…
-	[signal arg="ande"]
+[signal arg="ande"]

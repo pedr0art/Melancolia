@@ -1,0 +1,155 @@
+[gd_scene load_steps=12 format=3 uid="uid://cgqn3vo5lruky"]
+
+[ext_resource type="Script" path="res://cenas/fim.gd" id="1_pwpd5"]
+[ext_resource type="Texture2D" uid="uid://cyymfgxx04wfc" path="res://Images/menu/menu (1).png" id="1_xtg4v"]
+[ext_resource type="FontFile" uid="uid://bdmxedf82gkad" path="res://Dialogue/Fonts/atascii.ttf" id="2_u4882"]
+[ext_resource type="Texture2D" uid="uid://dlji3fdw7x1kl" path="res://Images/menu/tabatatitle.png" id="3_kmk2p"]
+[ext_resource type="Texture2D" uid="uid://dduuv5enymtch" path="res://Images/menu/title.png" id="4_clqg5"]
+[ext_resource type="AudioStream" uid="uid://p1afbcwis0b" path="res://sounds/musics/chiphead64 - 11pm.mp3" id="5_cpmg7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_78gil"]
+texture = ExtResource("1_xtg4v")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2vnc8"]
+bg_color = Color(0.263325, 0.303299, 0.358269, 1)
+border_width_bottom = 5
+border_color = Color(0.12618, 0.149867, 0.182435, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+shadow_offset = Vector2(2, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxmqw"]
+bg_color = Color(0.211765, 0.247059, 0.294118, 1)
+border_width_bottom = 5
+border_color = Color(0.12549, 0.14902, 0.184314, 0.568627)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+shadow_offset = Vector2(2, 2)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hurc"]
+bg_color = Color(0.145544, 0.17167, 0.20759, 1)
+border_width_bottom = 5
+border_color = Color(0.12618, 0.149867, 0.182435, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 5.0
+expand_margin_top = 2.0
+expand_margin_right = 5.0
+expand_margin_bottom = 2.0
+shadow_offset = Vector2(2, 2)
+anti_aliasing = false
+
+[sub_resource type="Theme" id="Theme_lx3r8"]
+Button/fonts/font = ExtResource("2_u4882")
+Button/styles/hover = SubResource("StyleBoxFlat_2vnc8")
+Button/styles/normal = SubResource("StyleBoxFlat_kxmqw")
+Button/styles/pressed = SubResource("StyleBoxFlat_6hurc")
+
+[node name="fim" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pwpd5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_78gil")
+
+[node name="rejogar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -45.5
+offset_right = 94.0
+offset_bottom = -20.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_lx3r8")
+text = "Recomeçar"
+
+[node name="sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 326.0
+offset_right = 625.0
+offset_bottom = 351.0
+size_flags_vertical = 3
+text = "Sair"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = 12.0
+offset_right = 60.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_kmk2p")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 62.0
+offset_right = 3453.0
+offset_bottom = 676.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_clqg5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_cpmg7")
+volume_db = 9.0
+autoplay = true
+bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.5
+offset_top = -152.5
+offset_right = 73.5
+offset_bottom = -129.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_u4882")
+text = "Obrigado por jogar"
+
+[connection signal="pressed" from="rejogar" to="." method="_on_rejogar_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

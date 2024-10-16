@@ -1,45 +1,32 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkgfwmtxvoyg4"]
+[gd_scene load_steps=5 format=3 uid="uid://dkgfwmtxvoyg4"]
 
 [ext_resource type="Script" path="res://cenas/transition.gd" id="1_0n5mb"]
-
-[sub_resource type="PackedScene" id="PackedScene_x4wyn"]
-_bundled = {
-"conn_count": 0,
-"conns": PackedInt32Array(),
-"editable_instances": [],
-"names": PackedStringArray("Node2D", "Node2D", "script", "Control", "Control", "layout_mode", "anchors_preset", "offset_right", "offset_bottom", "ColorRect", "ColorRect", "layout_mode", "offset_left", "offset_top", "offset_right", "offset_bottom", "color"),
-"node_count": 0,
-"node_paths": [],
-"nodes": PackedInt32Array(),
-"variants": [],
-"version": 3
-}
 
 [sub_resource type="Animation" id="Animation_8d0x7"]
 resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/path = NodePath("Transition/ColorRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
+tracks/1/path = NodePath("Transition/ColorRect:self_modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_s3sy8"]
@@ -47,37 +34,36 @@ resource_name = "fade_out"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/0/path = NodePath("Transition/ColorRect:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transition/ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Transition/ColorRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
 _data = {
-"fade_in": SubResource("Animation_8d0x7"),
-"fade_out": SubResource("Animation_s3sy8")
+"fade_in_cuts": SubResource("Animation_8d0x7"),
+"fade_out_cuts": SubResource("Animation_s3sy8")
 }
 
 [node name="transition" type="Node2D"]
 script = ExtResource("1_0n5mb")
-prox_level = SubResource("PackedScene_x4wyn")
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {
@@ -86,6 +72,7 @@ libraries = {
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
 visible = false
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -1,4 +1,4 @@
-tabataingame: Quadro de melhor funcionário do mês. No caso, eu. Novamente. 
+tabataingame: Quadro de melhor funcionário do mês. No caso, eu. Novamente.
 if {Respostas.funcionariomes} == "":
 	- Isso me lembra da escola.
 		tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho. Sempre com as melhores notas.
@@ -18,8 +18,7 @@ if {Respostas.funcionariomes} == "":
 		set {interacoes} += 1
 		[signal arg="ande"]
 else:
-	tabataingame: Quadro de melhor funcionário do mês. No caso, eu. Novamente.
 	tabataingame: Desde que entrei aqui sempre fui a funcionária do mês, não é muito diferente de como era na escola, eu acho.
 	if {Respostas.funcionariomes} == "P":
 		tabataingame: Mas a custo de que? De quem e do que tive abrir mão para chegar no mesmo resultado?
-		[signal arg="ande"]
+[signal arg="ande"]

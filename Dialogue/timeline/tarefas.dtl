@@ -10,17 +10,16 @@ if {Respostas.tarefas} == "":
 		set {Respostas.tarefas} = "N"
 		set {interacoes} += 1
 		[signal arg="ande"]
-	- Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer, mas quanto mais me ocupo, menos preciso pensar. | [if {pontos} >=1] [else="disable"]
+	- Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer. | [if {pontos} >=1] [else="disable"]
 		tabataingame: (dá de ombros)
 		tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 		tabataingame: Eu preciso fazer isso mesmo? Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer, mas quanto mais me ocupo, menos preciso pensar.
 		set {Respostas.tarefas} = "P"
 		set {pontos} -= 1
-		set {interacoes} += 1
 		[signal arg="ande"]
 else:
 	tabataingame: (dá de ombros)
 	tabataingame: (suspiro de cansaço…) Impressionante como o meu quadro de tarefas sempre está lotado.
 	if {Respostas.tarefas} == "P":
 		tabataingame: Eu preciso fazer isso mesmo? Eu não sou obrigada a dar conta dessa lista interminável de coisas para fazer, mas quanto mais me ocupo, menos preciso pensar.
-	[signal arg="ande"]
+[signal arg="ande"]

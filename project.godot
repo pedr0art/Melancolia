@@ -30,14 +30,18 @@ directories/dch_directory={
 "Tabata": "res://Characters/Tabata.dch",
 "alessandra": "res://Characters/alessandra.dch",
 "alice": "res://Characters/alice.dch",
+"noone": "res://Characters/noone.dch",
 "psicoingame": "res://Characters/psicoingame.dch",
 "tabataingame": "res://Characters/tabataingame.dch"
 }
 directories/dtl_directory={
+"TAB": "res://Dialogue/timeline/TAB.dtl",
 "alice": "res://Dialogue/timeline/alice.dtl",
 "cafe": "res://Dialogue/timeline/cafe.dtl",
 "chefe": "res://Dialogue/timeline/chefe.dtl",
 "conversapsico": "res://Dialogue/timeline/conversapsico.dtl",
+"cutscene_cidade": "res://Dialogue/timeline/cutscene_cidade.dtl",
+"explicacao_insight": "res://Dialogue/timeline/explicacao_insight.dtl",
 "fotos": "res://Dialogue/timeline/fotos.dtl",
 "funcionariomes": "res://Dialogue/timeline/funcionariomes.dtl",
 "postit": "res://Dialogue/timeline/postit.dtl",
@@ -45,7 +49,7 @@ directories/dtl_directory={
 "teste2": "res://Dialogue/timeline/enzodialogue.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://dialogic data/normal_style.tres", "res://dialogic data/bubblestyle.tres", "res://Dialogue/assets/npcnormalstyle.tres", "res://dialogic data/default.tres", "res://dialogic data/defautnpc.tres"]
+layout/style_list=["res://dialogic data/normal_style.tres", "res://dialogic data/bubblestyle.tres", "res://Dialogue/assets/npcnormalstyle.tres", "res://dialogic data/default.tres", "res://dialogic data/defautnpc.tres", "res://Dialogue/def.tres"]
 layout/default_style="res://normal_style.tres"
 variables={
 "Respostas": {

@@ -160,4 +160,49 @@ offset_bottom = 231.0
 size_flags_horizontal = 4
 text = "Confirmar"
 
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 234.0
+offset_right = 185.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("4_5v3sm")
+text = "1"
+
+[node name="Label2" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 234.0
+offset_right = 243.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("4_5v3sm")
+text = "2"
+
+[node name="Label3" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 234.0
+offset_right = 305.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("4_5v3sm")
+text = "3"
+
+[node name="Label4" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 234.0
+offset_right = 366.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("4_5v3sm")
+text = "4"
+
+[node name="Label5" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 234.0
+offset_right = 426.0
+offset_bottom = 258.0
+theme_override_fonts/font = ExtResource("4_5v3sm")
+text = "5"
+
 [connection signal="pressed" from="UI/botao/confirmar" to="UI/botao" method="_on_confirmar_pressed"]

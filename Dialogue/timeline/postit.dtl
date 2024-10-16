@@ -19,9 +19,8 @@ if {Respostas.postit} == "":
 		set {interacoes} += 1
 		[signal arg="ande"]
 else:
-	psicoingame: "Oii Tabatinha, está tudo bem ? Percebi que tem alguns prazos a cumprir da semana passada, e sei que você não atrasa nada, vamos lá hein, não perca o foco!"
 	tabataingame: Um recado que minha chefe deixou no meu quadro
 	tabataingame: A minha chefe sempre me cobra o meu máximo, e eu sempre faço o possível para cumprir com suas expectativas, afinal é para isso que estou aqui.
 	if {Respostas.postit} == "P":
 		tabataingame: Mas essa mulher bem que poderia me deixar em paz, me exigindo mais do que eu posso fazer, com a desculpa de que “eu sou a melhor daqui”.
-	[signal arg="ande"]
+[signal arg="ande"]
