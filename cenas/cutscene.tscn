@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cy81r6hvwwn6d"]
 
 [ext_resource type="Texture2D" uid="uid://brq7hlw5kjs6y" path="res://Images/cidade2.png" id="1_6t3no"]
-[ext_resource type="Script" path="res://cenas/cutscene.gd" id="1_rkjmb"]
+[ext_resource type="Script" uid="uid://ce81vjyswib2" path="res://cenas/cutscene.gd" id="1_rkjmb"]
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_p56k6"]
 [ext_resource type="AudioStream" uid="uid://d33decy8ndw7x" path="res://sounds/musics/birds-and-city-ambience-65651.mp3" id="3_vp1lp"]
 
@@ -165,9 +165,9 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cem8t"]
 _data = {
-"RESET": SubResource("Animation_u7yga"),
-"cutscene_1": SubResource("Animation_rigk2"),
-"cutscene_2": SubResource("Animation_o7fkj")
+&"RESET": SubResource("Animation_u7yga"),
+&"cutscene_1": SubResource("Animation_rigk2"),
+&"cutscene_2": SubResource("Animation_o7fkj")
 }
 
 [sub_resource type="Animation" id="Animation_8d0x7"]
@@ -226,8 +226,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
 _data = {
-"fade_in_cuts": SubResource("Animation_8d0x7"),
-"fade_out_cuts": SubResource("Animation_s3sy8")
+&"fade_in_cuts": SubResource("Animation_8d0x7"),
+&"fade_out_cuts": SubResource("Animation_s3sy8")
 }
 
 [node name="cutscene" type="Node2D"]
@@ -243,7 +243,7 @@ texture = ExtResource("1_6t3no")
 reset_on_save = false
 root_node = NodePath("../TextureRect")
 libraries = {
-"": SubResource("AnimationLibrary_cem8t")
+&"": SubResource("AnimationLibrary_cem8t")
 }
 
 [node name="character" parent="." instance=ExtResource("2_p56k6")]
@@ -259,7 +259,7 @@ bus = &"Music"
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6r25w")
+&"": SubResource("AnimationLibrary_6r25w")
 }
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]

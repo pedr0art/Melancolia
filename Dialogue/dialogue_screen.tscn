@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dfuqqp0imtxha"]
 
-[ext_resource type="Script" path="res://Dialogue/dialogue_screen.gd" id="1_4x4tm"]
+[ext_resource type="Script" uid="uid://cyxhx25wio7on" path="res://Dialogue/dialogue_screen.gd" id="1_4x4tm"]
 [ext_resource type="Texture2D" uid="uid://dcelqp57uoskv" path="res://Dialogue/assets/faceset-b.png" id="1_hov8p"]
 [ext_resource type="FontFile" uid="uid://cpcnrfi1ts2g" path="res://Dialogue/Fonts/equipment-pro-v1.1/EquipmentPro.ttf" id="2_bdsol"]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://da3js0gfbn33b"]
 
-[ext_resource type="Script" path="res://cenas/insight/Inventory.gd" id="1_5v57d"]
+[ext_resource type="Script" uid="uid://tgvy5omeuxk6" path="res://cenas/insight/Inventory.gd" id="1_5v57d"]
 [ext_resource type="PackedScene" uid="uid://bxbju38qf630b" path="res://cenas/insight/slot.tscn" id="1_bbolu"]
 [ext_resource type="Texture2D" uid="uid://di6wwuqaqnomx" path="res://Images/insight/UI books & more.png" id="1_y45rr"]
-[ext_resource type="Script" path="res://cenas/insight/botao.gd" id="3_mdvmw"]
+[ext_resource type="Script" uid="uid://bk0cqdl4mi8tl" path="res://cenas/insight/botao.gd" id="3_mdvmw"]
 [ext_resource type="FontFile" uid="uid://bdmxedf82gkad" path="res://Dialogue/Fonts/atascii.ttf" id="4_5v3sm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adp3q"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ew6xobkbva8i"]
 
-[ext_resource type="Script" path="res://scripts/funcionariomes.gd" id="1_01py8"]
+[ext_resource type="Script" uid="uid://typkuua12lr8" path="res://scripts/funcionariomes.gd" id="1_01py8"]
 [ext_resource type="Texture2D" uid="uid://ch2d3bydg0mwi" path="res://Images/insight/funcmes.png" id="2_22l7d"]
 [ext_resource type="AudioStream" uid="uid://coqvdpni7bijq" path="res://sounds/sfx/Arcane Beacon.wav" id="3_t51v0"]
 

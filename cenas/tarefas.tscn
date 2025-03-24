@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cvqumutxak831"]
 
-[ext_resource type="Script" path="res://scripts/tarefas.gd" id="1_b40au"]
+[ext_resource type="Script" uid="uid://dmg25au11iakt" path="res://scripts/tarefas.gd" id="1_b40au"]
 [ext_resource type="Texture2D" uid="uid://doxtc2id5le1x" path="res://Images/insight/tarefas.png" id="2_jyc8b"]
 [ext_resource type="AudioStream" uid="uid://coqvdpni7bijq" path="res://sounds/sfx/Arcane Beacon.wav" id="3_ppjkx"]
 

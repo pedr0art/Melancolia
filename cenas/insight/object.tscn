@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://46wh1meesxbh"]
 
-[ext_resource type="Script" path="res://cenas/insight/object.gd" id="1_uc05r"]
+[ext_resource type="Script" uid="uid://b67wm2t4kjyq5" path="res://cenas/insight/object.gd" id="1_uc05r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ni42n"]
 size = Vector2(50, 50)

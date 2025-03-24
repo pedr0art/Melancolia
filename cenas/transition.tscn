@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dkgfwmtxvoyg4"]
 
-[ext_resource type="Script" path="res://cenas/transition.gd" id="1_0n5mb"]
+[ext_resource type="Script" uid="uid://cfic4yieildxc" path="res://cenas/transition.gd" id="1_0n5mb"]
 
 [sub_resource type="Animation" id="Animation_8d0x7"]
 resource_name = "fade_in"
@@ -58,8 +58,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
 _data = {
-"fade_in_cuts": SubResource("Animation_8d0x7"),
-"fade_out_cuts": SubResource("Animation_s3sy8")
+&"fade_in_cuts": SubResource("Animation_8d0x7"),
+&"fade_out_cuts": SubResource("Animation_s3sy8")
 }
 
 [node name="transition" type="Node2D"]
@@ -67,7 +67,7 @@ script = ExtResource("1_0n5mb")
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6r25w")
+&"": SubResource("AnimationLibrary_6r25w")
 }
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://du5bgqknsnbka"]
 
-[ext_resource type="Script" path="res://scripts/post-it.gd" id="1_73kax"]
+[ext_resource type="Script" uid="uid://bqs02cq42cyjw" path="res://scripts/post-it.gd" id="1_73kax"]
 [ext_resource type="Texture2D" uid="uid://c5g4mepie4ahx" path="res://Images/insight/postit.png" id="2_hcjy1"]
 [ext_resource type="AudioStream" uid="uid://coqvdpni7bijq" path="res://sounds/sfx/Arcane Beacon.wav" id="3_5bof0"]
 

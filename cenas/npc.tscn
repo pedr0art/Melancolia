@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b6sooyboa2pds"]
 
-[ext_resource type="Script" path="res://scripts/npc.gd" id="1_76c6m"]
+[ext_resource type="Script" uid="uid://b5lah6sdqjfuj" path="res://scripts/npc.gd" id="1_76c6m"]
 [ext_resource type="Texture2D" uid="uid://cnn2v5ctpo45x" path="res://Images/ENZO.png" id="2_b63gl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whfto"]

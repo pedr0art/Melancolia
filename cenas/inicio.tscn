@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://i3dmbxrae8k0"]
 
-[ext_resource type="Script" path="res://scripts/inicio.gd" id="1_qujh3"]
+[ext_resource type="Script" uid="uid://dua5np5waq046" path="res://scripts/inicio.gd" id="1_qujh3"]
 [ext_resource type="PackedScene" uid="uid://brvu1qnu0ejg5" path="res://cenas/hud_contador.tscn" id="2_6qsxm"]
 [ext_resource type="AudioStream" uid="uid://chrdpbdq0skn6" path="res://sounds/musics/Meditative Moment (mp3cut.net) (1).mp3" id="2_j1anf"]
 [ext_resource type="Texture2D" uid="uid://dbrujdsyj5uxo" path="res://Images/psicocutscene.png" id="4_c2lhn"]
@@ -61,8 +61,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
 _data = {
-"fade_in_cuts": SubResource("Animation_8d0x7"),
-"fade_out_cuts": SubResource("Animation_s3sy8")
+&"fade_in_cuts": SubResource("Animation_8d0x7"),
+&"fade_out_cuts": SubResource("Animation_s3sy8")
 }
 
 [node name="Node2D" type="Node2D"]

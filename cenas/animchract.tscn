@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://c81uoqibv6qux"]
 
-[ext_resource type="Script" path="res://cenas/animchract.gd" id="1_lx2tb"]
+[ext_resource type="Script" uid="uid://dfpmwwna1r5hm" path="res://cenas/animchract.gd" id="1_lx2tb"]
 [ext_resource type="Texture2D" uid="uid://lvkn4fbwk5q2" path="res://Images/tabata-Sheet.png" id="2_6vyjh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qfvga"]

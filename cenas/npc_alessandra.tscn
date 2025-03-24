@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://fwn3fqs1u5go"]
 
-[ext_resource type="Script" path="res://scripts/npc_alessandra.gd" id="1_jh6ma"]
+[ext_resource type="Script" uid="uid://cac5amjqo286u" path="res://scripts/npc_alessandra.gd" id="1_jh6ma"]
 [ext_resource type="Texture2D" uid="uid://o3qog337hs6g" path="res://Images/chefe.png" id="2_0uqwh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hc7d"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cxjmnlknxdlwb"]
 
 [ext_resource type="PackedScene" uid="uid://46wh1meesxbh" path="res://cenas/insight/object.tscn" id="1_af87v"]
-[ext_resource type="Script" path="res://cenas/insight/insight.gd" id="1_gia3b"]
+[ext_resource type="Script" uid="uid://c27dv7my513cx" path="res://cenas/insight/insight.gd" id="1_gia3b"]
 [ext_resource type="PackedScene" uid="uid://cgv3d0hj1xw3v" path="res://cenas/insight/platform.tscn" id="2_swb8j"]
 [ext_resource type="Texture2D" uid="uid://ch2d3bydg0mwi" path="res://Images/insight/funcmes.png" id="4_mj1ad"]
 [ext_resource type="Texture2D" uid="uid://bsqtcjmho7p45" path="res://Images/insight/fotos.png" id="5_7rvmp"]

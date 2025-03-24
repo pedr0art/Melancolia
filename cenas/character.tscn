@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://6ugkmcfjp3qp"]
 
-[ext_resource type="Script" path="res://scripts/CharacterBody2D.gd" id="1_0mwx4"]
-[ext_resource type="Script" path="res://cenas/character.gd" id="1_awcbn"]
+[ext_resource type="Script" uid="uid://c55xsqnr0ubaj" path="res://scripts/CharacterBody2D.gd" id="1_0mwx4"]
+[ext_resource type="Script" uid="uid://bvug7o0bgn0po" path="res://cenas/character.gd" id="1_awcbn"]
 [ext_resource type="Texture2D" uid="uid://bqfvs2os3ngue" path="res://Images/TECLA_E.png" id="3_7egy8"]
 [ext_resource type="Texture2D" uid="uid://lvkn4fbwk5q2" path="res://Images/tabata-Sheet.png" id="3_tlj1m"]
 [ext_resource type="Texture2D" uid="uid://bukookcet1snb" path="res://Images/TECLA_EDOWN.png" id="4_v006d"]
