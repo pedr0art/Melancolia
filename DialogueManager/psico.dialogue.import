@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bxfau48n8gfso"
+path="res://.godot/imported/psico.dialogue-76e66969948c95042638ba8951da0727.tres"
+
+[deps]
+
+source_file="res://DialogueManager/psico.dialogue"
+dest_files=["res://.godot/imported/psico.dialogue-76e66969948c95042638ba8951da0727.tres"]
+
+[params]
+
+defaults=true

@@ -28,5 +28,3 @@ func _on_confirmar_pressed():
 				
 		else:
 			Globals.is_correct = false  # Se um slot estiver vazio, também é incorreto# Se um slot estiver vazio, também é incorreto
-
-

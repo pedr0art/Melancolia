@@ -4,17 +4,20 @@ extends Node2D
 var prox_level = preload("res://Management/level.tscn")
 @onready var hud_contador = $HUDContador
 @onready var color_rect = $Transition/ColorRect
-
+var avanco = false
+var resource = load("res://DialogueManager/psico.dialogue")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	color_rect.visible = true
 	transition.play("fade_in_cuts")
-	Dialogic.start("conversapsico")
+	#Dialogic.start("conversapsico")
+	DialogueManager.show_dialogue_balloon(resource, "start")
 	Dialogic.signal_event.connect(Dialogic_Signal)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if avanco: transition.play("fade_out_cuts")
+		
 
 func Dialogic_Signal(arg: String):
 	if arg == "avance":

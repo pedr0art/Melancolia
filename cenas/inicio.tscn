@@ -81,7 +81,7 @@ autoplay = true
 
 [node name="Transition" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6r25w")
+&"": SubResource("AnimationLibrary_6r25w")
 }
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]

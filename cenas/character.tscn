@@ -187,11 +187,8 @@ script = ExtResource("1_0mwx4")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 ignore_rotation = false
-zoom = Vector2(1.5, 1.5)
-limit_left = 0
-limit_top = -50
-limit_right = 640
-limit_bottom = 447
+zoom = Vector2(2, 2)
+limit_bottom = 20000000
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 rotation_smoothing_enabled = true
@@ -209,8 +206,7 @@ frame_progress = 0.681989
 
 [node name="anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_nwqpf")
-animation = &"idle_front"
-frame_progress = 0.905694
+animation = &"walk_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 light_mask = 2

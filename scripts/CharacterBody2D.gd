@@ -81,4 +81,3 @@ func perform_state_actions(delta):
 	
 func player():
 	pass
-

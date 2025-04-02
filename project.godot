@@ -21,6 +21,7 @@ StaticData="*res://Dados/Singetons/StaticData.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Globals="*res://scripts/Globals.gd"
 ItemData="*res://scripts/database.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogic]
 
@@ -92,17 +93,22 @@ translation/save_mode=0
 translation/add_separator=false
 text/autoadvance_fixed_delay=1.0
 
+[dialogue_manager]
+
+runtime/balloon_path="res://DialogueManager/Balloon/balloon.tscn"
+
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
@@ -175,6 +181,10 @@ ENTER={
 ]
 }
 
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://DialogueManager/psico.dialogue")
+
 [layer_names]
 
 2d_physics/layer_1="player"
@@ -184,3 +194,4 @@ ENTER={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

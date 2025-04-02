@@ -6,10 +6,7 @@ var prox_level = preload("res://cenas/inicio.tscn")
 @onready var transition = $Transition
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-
+# Called when the node enters the scene tree for the first tim
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

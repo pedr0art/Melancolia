@@ -9,3 +9,4 @@ var segue = false
 var primeiro = true 
 var cuts = false
 var restart = false
+var alternat = false

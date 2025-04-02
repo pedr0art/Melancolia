@@ -1,0 +1,54 @@
+~ start
+Psicóloga: Olá, Tábata! Quanto tempo!
+Tábata: Olá... Senti falta de vir aqui. Estava com muito trabalho acumulado e não tinha tempo para mais nada.
+Psicóloga: Não teve tempo mesmo?
+-  Era um trabalho importante
+	Tábata: Desde que minha chefe decidiu que iríamos adquirir o selo de qualidade e produtividade tem sido assim.
+	Psicóloga: E como você se sente em relação a isso?
+	Tábata: Eu acho importante que o nosso trabalho seja reconhecido.
+- Sempre foi assim
+	Tábata: Sempre foi assim na verdade. Pensando bem, mesmo quando não estávamos nessa loucura eu não fazia muita coisa fora do trabalho. Sempre fiz mais do que me pediam, sempre tive as melhores notas.
+	Psicóloga: E mesmo assim você tinha tempo?
+	Tábata: Parece que algo mudou agora. Antes o trabalho me acalmava, mas agora tem algo que não me satisfaz mais. Não importa o quanto eu trabalhe, parece que tem algo faltando.
+- Estava muito angustiada
+	Tábata: Não é que não tive tempo, mas estava muito angustiada. Eu não conseguia fazer mais nada. Quando não estava no trabalho continuava pensando nele. Fui trabalhar até domingo.
+	Psicóloga: Mas você precisava disso?
+	Tábata: Eu sou concursada, sei que meu emprego não estava em risco, mas parecia que algo muito ruim iria acontecer. Quando tentava pensar no que eu queria fazer não me vinha nenhuma ideia e isso era ainda mais angustiante...
+- Vamos falar de outra coisa...
+	Tábata: Não sei mais o que dizer sobre isso. Podemos falar sobre outra coisa?
+Psicóloga: Já que você começou falando do seu trabalho, tem algo mais que gostaria de compartilhar? 
+Tábata: Sério que nunca havia falado antes?
+Psicóloga: Nunca como um problema.
+- Sempre foi um bom local de trabalho
+	Tábata: Não é o trabalho dos meus sonhos, mas pelo menos não é ruim. Pode demandar muito às vezes, mas pelo menos não preciso pensar ou lidar com o imprevisto.
+	Psicóloga: E qual é o trabalho dos seus sonhos então?
+	Tábata: Eu não sei… isso existe mesmo?
+- Tenho boas relações no trabalho
+	Tábata: Acho que o problema não são as pessoas. No geral me dou bem com todo mundo. Não sou amiga de ninguém, mas também não tenho antipatias. Claro, tem um ou outro colega sem-noção ou incômodo, mas nada que me perturbe de verdade.
+	Psicóloga: E tudo bem para você não ter amigos no trabalho?
+	Tábata: Sim. Pelo menos nunca fez diferença. Não estou competindo com ninguém e também não estou buscando popularidade. Tudo isso demanda muita energia…
+- Não sei qual é o problema
+	Tábata: Não sei se há um problema, ou qual é. Tem algumas coisas que me incomodam, claro, como a minha chefe. O jeito que ela fala comigo me irrita um pouco, e o fato de achar que sempre estou disponível para fazer tudo o que ela precisa.
+	Psicóloga: Mas você não disse que não se importava em trabalhar muito?
+	Tábata: E não me importo. O problema nunca foi trabalhar muito, mas como ela faz eu me sentir. Esse selo de qualidade que ela quer obter, todo o trabalho pesado veio para mim, mas parece que é apenas minha obrigação e não que estou fazendo muito mais do que os outros. Parece que minha vida sempre foi assim na verdade.
+- Não sei se isso é mesmo um problema
+	Tábata: Pode parecer que meu trabalho é um problema, mas está tudo bem, acho...
+Psicóloga: Essa não é a primeira vez que você fala que se sente sem energia.
+Tábata: É, sempre sinto isso.
+Psicóloga: Quer falar mais sobre?
+- É apenas falta de motivação
+	Tábata: Às vezes a rotina me pega de jeito, e fico sem forças para fazer a maioria das coisas, meu trabalho está sempre em primeiro lugar, isso eu tento não deixar afetar, mas em geral eu me esforço para o sucesso e isso vai demandar muito de mim, é o que deve ser feito. 
+	Psicóloga: Você sente que é assim deve ser feito ?
+	Tábata: Eu acho que sim, foi assim que fui criada, a minha rotina sempre foi agitada e me adaptei a isso,  tenho prioridades.
+- Acho que não me sinto realizada
+	Tábata: Não sei como ter energia no cotidiano, já nem sei se gosto do que estou fazendo ou não, eu só faço o que tem que ser feito, mas imagino que seja assim para maioria, né
+	Psicóloga: Você cultiva algo além do trabalho?
+	Tábata: Eu não sei ao certo, não há algo que eu pense em fazer, o tempo que eu tenho após o trabalho eu to cansada pra fazer qualquer coisa, mas mesmo assim, se for preciso revisar planilhas nesse tempo, me obrigo a fazer isso.  
+- Preciso descansar
+	Tábata: Eu sou produtiva, tenho os melhores resultados no trabalho, só preciso descansar, eu me sinto muito cansada, no meu tempo livre prefiro só ir dormir por horas. 
+	Psicóloga: Por que você escolhe ir dormir como forma de descanso?
+	Tábata: Não sei, não tenho vontade de fazer muita coisa. 
+- Na verdade não
+	Tábata: Acho que é irrelevante, às vezes estou sem energia, só isso, não tem profundidade. 
+	Psicóloga: Se é como sente, tudo bem, podemos falar sobre o que quiser. 
+=> END
