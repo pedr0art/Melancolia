@@ -178,8 +178,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wte3"]
 size = Vector2(16, 29)
 
-[node name="character" type="Node2D"]
+[node name="character" type="Node2D" groups=["Player"]]
 script = ExtResource("1_awcbn")
+camera_zoom = Vector2(2, 2)
+camera_limit_top = -10000000
+camera_limit_bottom = 10000000
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_mask = 6
@@ -187,7 +190,6 @@ script = ExtResource("1_0mwx4")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 ignore_rotation = false
-zoom = Vector2(2, 2)
 limit_bottom = 20000000
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
@@ -206,7 +208,7 @@ frame_progress = 0.681989
 
 [node name="anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_nwqpf")
-animation = &"walk_left"
+animation = &"idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 light_mask = 2

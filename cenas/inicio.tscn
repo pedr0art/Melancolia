@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://i3dmbxrae8k0"]
+[gd_scene load_steps=7 format=3 uid="uid://i3dmbxrae8k0"]
 
 [ext_resource type="Script" uid="uid://dua5np5waq046" path="res://scripts/inicio.gd" id="1_qujh3"]
-[ext_resource type="PackedScene" uid="uid://brvu1qnu0ejg5" path="res://cenas/hud_contador.tscn" id="2_6qsxm"]
 [ext_resource type="AudioStream" uid="uid://chrdpbdq0skn6" path="res://sounds/musics/Meditative Moment (mp3cut.net) (1).mp3" id="2_j1anf"]
 [ext_resource type="Texture2D" uid="uid://dbrujdsyj5uxo" path="res://Images/psicocutscene.png" id="4_c2lhn"]
 
@@ -86,7 +85,6 @@ libraries = {
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
 visible = false
-self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -102,7 +100,5 @@ color = Color(0, 0, 0, 1)
 offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("4_c2lhn")
-
-[node name="HUDContador" parent="." instance=ExtResource("2_6qsxm")]
 
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

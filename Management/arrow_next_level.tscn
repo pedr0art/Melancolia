@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6lat4wkh3sqh"]
+
+[ext_resource type="Texture2D" uid="uid://7sxckv58ukup" path="res://Images/icons/16/Down-Arrow.png" id="1_gnetd"]
+[ext_resource type="Script" uid="uid://c3cv78k0ht3nj" path="res://Management/arrow_next_level.gd" id="1_p7841"]
+[ext_resource type="Texture2D" uid="uid://drosnw274dkiy" path="res://Images/icons/16/Up-Arrow.png" id="3_qrp6w"]
+
+[sub_resource type="Animation" id="Animation_qrp6w"]
+resource_name = "arrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.500939, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_upsto"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sj3wq"]
+_data = {
+&"RESET": SubResource("Animation_upsto"),
+&"arrow": SubResource("Animation_qrp6w")
+}
+
+[sub_resource type="Animation" id="Animation_sj3wq"]
+resource_name = "arrow_cima"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.504517, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ghsvn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ks8ex"]
+_data = {
+&"RESET": SubResource("Animation_ghsvn"),
+&"arrow_cima": SubResource("Animation_sj3wq")
+}
+
+[node name="arrow_next_level" type="Area2D"]
+script = ExtResource("1_p7841")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_sj3wq")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = -100
+position = Vector2(0, 28)
+texture = ExtResource("1_gnetd")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D2")
+libraries = {
+&"": SubResource("AnimationLibrary_ks8ex")
+}
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+z_index = -100
+position = Vector2(0, -28)
+texture = ExtResource("3_qrp6w")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

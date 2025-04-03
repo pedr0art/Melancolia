@@ -1,4 +1,5 @@
 ~ start
+do wait(1.2)
 Psicóloga: Olá, Tábata! Quanto tempo!
 Tábata: Olá... Senti falta de vir aqui. Estava com muito trabalho acumulado e não tinha tempo para mais nada.
 Psicóloga: Não teve tempo mesmo?
@@ -51,4 +52,5 @@ Psicóloga: Quer falar mais sobre?
 - Na verdade não
 	Tábata: Acho que é irrelevante, às vezes estou sem energia, só isso, não tem profundidade. 
 	Psicóloga: Se é como sente, tudo bem, podemos falar sobre o que quiser. 
+set avanco = true
 => END

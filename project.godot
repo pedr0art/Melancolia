@@ -95,7 +95,7 @@ text/autoadvance_fixed_delay=1.0
 
 [dialogue_manager]
 
-runtime/balloon_path="res://DialogueManager/Balloon/balloon.tscn"
+runtime/balloon_path="uid://cgvsl73lurb3j"
 
 [display]
 
@@ -109,6 +109,10 @@ window/stretch/mode="canvas_items"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
+
+[global_group]
+
+Player=""
 
 [input]
 

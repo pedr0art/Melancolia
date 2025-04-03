@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdqcuf28vuk5v"]
+
+[node name="escritorio_principal" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(145, 87)
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+position = Vector2(145, 87)
+
+[node name="TileMapLayer3" type="TileMapLayer" parent="."]
+position = Vector2(145, 87)
+
+[node name="TileMapLayer4" type="TileMapLayer" parent="."]
+position = Vector2(145, 87)
