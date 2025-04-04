@@ -22,6 +22,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Globals="*res://scripts/Globals.gd"
 ItemData="*res://scripts/database.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+NavigationManager="*res://scripts/navigation_manager.gd"
 
 [dialogic]
 

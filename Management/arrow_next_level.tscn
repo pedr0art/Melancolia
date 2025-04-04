@@ -1,31 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6lat4wkh3sqh"]
+[gd_scene load_steps=16 format=3 uid="uid://c6lat4wkh3sqh"]
 
 [ext_resource type="Texture2D" uid="uid://7sxckv58ukup" path="res://Images/icons/16/Down-Arrow.png" id="1_gnetd"]
 [ext_resource type="Script" uid="uid://c3cv78k0ht3nj" path="res://Management/arrow_next_level.gd" id="1_p7841"]
 [ext_resource type="Texture2D" uid="uid://drosnw274dkiy" path="res://Images/icons/16/Up-Arrow.png" id="3_qrp6w"]
-
-[sub_resource type="Animation" id="Animation_qrp6w"]
-resource_name = "arrow"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.500939, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_upsto"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/path = NodePath("baixo:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -35,10 +19,41 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_qrp6w"]
+resource_name = "arrow"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("baixo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.500939, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sj3wq"]
 _data = {
 &"RESET": SubResource("Animation_upsto"),
 &"arrow": SubResource("Animation_qrp6w")
+}
+
+[sub_resource type="Animation" id="Animation_ghsvn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_sj3wq"]
@@ -57,12 +72,18 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_ghsvn"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ks8ex"]
+_data = {
+&"RESET": SubResource("Animation_ghsvn"),
+&"arrow_cima": SubResource("Animation_sj3wq")
+}
+
+[sub_resource type="Animation" id="Animation_3825p"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
+tracks/0/path = NodePath("direita:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -72,37 +93,113 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ks8ex"]
+[sub_resource type="Animation" id="Animation_ks8ex"]
+resource_name = "anim_dir"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("direita:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.502376, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0p27k"]
 _data = {
-&"RESET": SubResource("Animation_ghsvn"),
-&"arrow_cima": SubResource("Animation_sj3wq")
+&"RESET": SubResource("Animation_3825p"),
+&"anim_dir": SubResource("Animation_ks8ex")
+}
+
+[sub_resource type="Animation" id="Animation_wrauw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../esquerda:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4xftp"]
+resource_name = "anim_esq"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../esquerda:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.498994, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gitie"]
+_data = {
+&"RESET": SubResource("Animation_wrauw"),
+&"anim_esq": SubResource("Animation_4xftp")
 }
 
 [node name="arrow_next_level" type="Area2D"]
 script = ExtResource("1_p7841")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="anim_baixo" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_sj3wq")
 }
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="baixo" type="Sprite2D" parent="."]
 visible = false
 z_index = -100
-position = Vector2(0, 28)
+position = Vector2(0, 70)
 texture = ExtResource("1_gnetd")
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
-root_node = NodePath("../Sprite2D2")
+[node name="anim_cima" type="AnimationPlayer" parent="."]
+root_node = NodePath("../cima")
 libraries = {
 &"": SubResource("AnimationLibrary_ks8ex")
 }
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="direita" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(70, 0)
+rotation = 1.5708
+texture = ExtResource("3_qrp6w")
+
+[node name="esquerda" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-70, 0)
+rotation = -1.5708
+texture = ExtResource("3_qrp6w")
+
+[node name="cima" type="Sprite2D" parent="."]
 visible = false
 z_index = -100
-position = Vector2(0, -28)
+position = Vector2(0, -70)
 texture = ExtResource("3_qrp6w")
+
+[node name="anim_direita" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0p27k")
+}
+
+[node name="anim_esquerda" type="AnimationPlayer" parent="."]
+root_node = NodePath("../anim_direita")
+libraries = {
+&"": SubResource("AnimationLibrary_gitie")
+}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 var is_chatting = false
 ###Movimentação do Personagem

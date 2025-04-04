@@ -10,6 +10,7 @@ size = Vector2(6, 15)
 radius = 10.0499
 
 [node name="npc" type="Node2D"]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_76c6m")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]

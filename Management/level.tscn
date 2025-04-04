@@ -2337,7 +2337,6 @@ position = Vector2(552.172, -1.17136)
 
 [node name="NPC" parent="." instance=ExtResource("3_imveq")]
 position = Vector2(596, 54)
-scale = Vector2(1.5, 1.5)
 
 [node name="npc_alice" parent="." instance=ExtResource("17_jk1ri")]
 position = Vector2(266.704, 261.906)
