@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://cacih6dj0twvm"]
+[gd_scene load_steps=29 format=4 uid="uid://cacih6dj0twvm"]
 
 [ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_6o0oy"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_eay13"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d1xgekvh6maks" path="res://cenas/npc_alice.tscn" id="3_lqx0e"]
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="5_etmmk"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="7_e2bac"]
+[ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="9_0rn6y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lqx0e"]
 texture = ExtResource("1_eay13")
@@ -1652,6 +1653,7 @@ size = Vector2(29, 18)
 size = Vector2(28, 19)
 
 [node name="AreaCentral" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_6o0oy")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -1704,8 +1706,8 @@ shape = SubResource("RectangleShape2D_e2bac")
 [node name="Door_reuniao" parent="Doors" instance=ExtResource("7_e2bac")]
 position = Vector2(339, 410)
 prox_espaco = "res://cenas/ep_1/sala_reuniao.tscn"
-saindo_de = "principal"
-indo_para = "reuniao"
+destination_level_tag = "reuniao"
+destination_door_tag = "principal"
 
 [node name="spawn" parent="Doors/Door_reuniao" index="0"]
 position = Vector2(-2, -35)
@@ -1752,8 +1754,8 @@ position = Vector2(514, 191)
 collision_layer = 0
 collision_mask = 5
 prox_espaco = "res://cenas/ep_1/escritorio_principal.tscn"
-saindo_de = "principal"
-indo_para = "escritorio"
+destination_level_tag = "escritorio"
+destination_door_tag = "principal"
 
 [node name="spawn" parent="Doors/Door_escritorio" index="0"]
 position = Vector2(-2, 27)
@@ -1766,8 +1768,8 @@ debug_color = Color(0.94902, 0, 0.568627, 0.419608)
 [node name="Door_copa" parent="Doors" instance=ExtResource("7_e2bac")]
 position = Vector2(679, 191)
 prox_espaco = "res://cenas/ep_1/copa.tscn"
-saindo_de = "principal"
-indo_para = "copa"
+destination_level_tag = "copa"
+destination_door_tag = "principal"
 
 [node name="spawn" parent="Doors/Door_copa" index="0"]
 position = Vector2(2, 30)
@@ -1780,10 +1782,11 @@ debug_color = Color(0.94902, 0, 0.568627, 0.419608)
 [node name="Door_banheiro fem" parent="Doors" instance=ExtResource("7_e2bac")]
 position = Vector2(671, 459)
 prox_espaco = "res://cenas/ep_1/banheiro.tscn"
-saindo_de = "principal"
-indo_para = "banheiro fem"
+destination_level_tag = "banheiro fem"
+destination_door_tag = "principal"
 
 [node name="spawn" parent="Doors/Door_banheiro fem" index="0"]
+visible = false
 position = Vector2(2, -34)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_banheiro fem"]
@@ -1793,8 +1796,6 @@ debug_color = Color(0.94902, 0, 0.568627, 0.419608)
 
 [node name="Door_banheiro masc" parent="Doors" instance=ExtResource("7_e2bac")]
 position = Vector2(750, 459)
-saindo_de = "principal"
-indo_para = "banheiro masc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_banheiro masc"]
 position = Vector2(3, 0.5)
@@ -1803,6 +1804,8 @@ debug_color = Color(0.94902, 0, 0.568627, 0.419608)
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2(207, 144)
+
+[node name="gabinete_pensamento" parent="." instance=ExtResource("9_0rn6y")]
 
 [editable path="Doors/Door_reuniao"]
 [editable path="Doors/Door_escritorio"]

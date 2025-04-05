@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://cdbowq2mdso3e"]
+
+[ext_resource type="Script" uid="uid://cxmf40je88d5n" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd" id="1_70gdi"]
+[ext_resource type="PackedScene" uid="uid://b13hdbg7myxtm" path="res://scripts/gabinete_pensamento/cenas/card_slot.tscn" id="2_05uvk"]
+[ext_resource type="PackedScene" uid="uid://dkrr7ghvrqpyp" path="res://scripts/gabinete_pensamento/cenas/card_manager.tscn" id="2_syefv"]
+[ext_resource type="Texture2D" uid="uid://cotnm6bvk5ubc" path="res://Images/hud/cardslots/card_slot_yellow.png" id="3_syefv"]
+[ext_resource type="Texture2D" uid="uid://duyp1l4igh4rl" path="res://Images/hud/cardslots/card_slot_red.png" id="4_70gdi"]
+[ext_resource type="Texture2D" uid="uid://dtn8dqso2t8fd" path="res://Images/hud/cardslots/card_slot_grey.png" id="5_1tydy"]
+[ext_resource type="Texture2D" uid="uid://de7ud3ov15rhh" path="res://Images/hud/cardslots/card_slot_blue.png" id="6_3wt6p"]
+[ext_resource type="Texture2D" uid="uid://blt4q73qtqfut" path="res://Images/hud/cardslots/card_slot_orange.png" id="7_80g7x"]
+[ext_resource type="PackedScene" uid="uid://bhvxlsfyiwa3y" path="res://scripts/gabinete_pensamento/cenas/player_hand.tscn" id="9_70gdi"]
+[ext_resource type="PackedScene" uid="uid://dcvbhyda3nxx8" path="res://scripts/gabinete_pensamento/cenas/deck.tscn" id="10_1tydy"]
+[ext_resource type="PackedScene" uid="uid://dr7jgbj2xnp8l" path="res://scripts/gabinete_pensamento/cenas/input_manager.tscn" id="11_3wt6p"]
+
+[node name="gabinete_pensamento" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_70gdi")
+
+[node name="CardManager" parent="." instance=ExtResource("2_syefv")]
+
+[node name="CardSlots" type="Node2D" parent="."]
+
+[node name="CardSlot" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
+position = Vector2(139, 149)
+classe = "yellow"
+
+[node name="CardSlotImage" parent="CardSlots/CardSlot" index="0"]
+texture = ExtResource("3_syefv")
+
+[node name="CardSlot2" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
+position = Vector2(222, 90)
+classe = "red"
+
+[node name="CardSlotImage" parent="CardSlots/CardSlot2" index="0"]
+texture = ExtResource("4_70gdi")
+
+[node name="CardSlot3" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
+position = Vector2(314, 61)
+classe = "grey"
+
+[node name="CardSlotImage" parent="CardSlots/CardSlot3" index="0"]
+texture = ExtResource("5_1tydy")
+
+[node name="CardSlot4" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
+position = Vector2(412, 86)
+classe = "blue"
+
+[node name="CardSlotImage" parent="CardSlots/CardSlot4" index="0"]
+texture = ExtResource("6_3wt6p")
+
+[node name="CardSlot5" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
+position = Vector2(494, 142)
+classe = "orange"
+
+[node name="CardSlotImage" parent="CardSlots/CardSlot5" index="0"]
+texture = ExtResource("7_80g7x")
+
+[node name="PlayerHand" parent="." instance=ExtResource("9_70gdi")]
+
+[node name="Deck" parent="." instance=ExtResource("10_1tydy")]
+visible = false
+position = Vector2(37, 316)
+
+[node name="InputManager" parent="." instance=ExtResource("11_3wt6p")]
+position = Vector2(9, 0)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[editable path="CardSlots/CardSlot"]
+[editable path="CardSlots/CardSlot2"]
+[editable path="CardSlots/CardSlot3"]
+[editable path="CardSlots/CardSlot4"]
+[editable path="CardSlots/CardSlot5"]

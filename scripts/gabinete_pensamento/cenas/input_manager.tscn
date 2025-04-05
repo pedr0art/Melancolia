@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr7jgbj2xnp8l"]
+
+[ext_resource type="Script" uid="uid://chpo5miyhp6vi" path="res://scripts/gabinete_pensamento/input_manager.gd" id="1_meqho"]
+
+[node name="InputManager" type="Node2D"]
+script = ExtResource("1_meqho")

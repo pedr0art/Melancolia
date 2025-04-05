@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=4 uid="uid://bvhtkcp4rvmuk"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_g8wcl"]
-[ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_jp7df"]
+[ext_resource type="Script" uid="uid://b3hrnex6qya30" path="res://cenas/ep_1/banheiro.gd" id="1_jp7df"]
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_f1ewr"]
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="3_xj03r"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="4_jp7df"]
@@ -485,8 +485,9 @@ texture = SubResource("AtlasTexture_xj03r")
 [node name="Door_principal" parent="Doors" instance=ExtResource("4_jp7df")]
 position = Vector2(369, 129)
 prox_espaco = "res://cenas/ep_1/cenario1.tscn"
-saindo_de = "banheiro fem"
-indo_para = "principal"
+destination_level_tag = "principal"
+destination_door_tag = "banheiro fem"
+spawn_direction = "down"
 
 [node name="spawn" parent="Doors/Door_principal" index="0"]
 position = Vector2(0, 28)

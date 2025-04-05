@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://dnar1xbxp7wvh"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_bqwjn"]
-[ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_ydfp7"]
+[ext_resource type="Script" uid="uid://bang0wswux02b" path="res://cenas/ep_1/sala_chefe.gd" id="1_ydfp7"]
 [ext_resource type="Texture2D" uid="uid://bph54wajf3tr3" path="res://Images/tilesets/quarto-tile-export-export.png" id="2_b6gjh"]
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_vx0er"]
 [ext_resource type="PackedScene" uid="uid://fwn3fqs1u5go" path="res://cenas/npc_alessandra.tscn" id="3_ydfp7"]
@@ -431,11 +431,11 @@ region = Rect2(80, 272, 16, 16)
 atlas = ExtResource("1_bqwjn")
 region = Rect2(193, 209, 14, 24)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d55ms"]
-size = Vector2(25, 44)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0prqg"]
 size = Vector2(7, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d55ms"]
+size = Vector2(25, 44)
 
 [node name="sala_chefe" type="Node2D"]
 script = ExtResource("1_ydfp7")
@@ -474,7 +474,7 @@ tile_map_data = PackedByteArray("AAAWAAEAAAAHAAoAAAAWAAIAAAAHAAoAAAA=")
 tile_set = SubResource("TileSet_1bote")
 
 [node name="character" parent="." instance=ExtResource("2_vx0er")]
-position = Vector2(473, 231)
+position = Vector2(527, 239)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(360, 153)
@@ -484,21 +484,13 @@ texture = SubResource("AtlasTexture_6ph0m")
 position = Vector2(345, 116)
 texture = SubResource("AtlasTexture_hx3f8")
 
-[node name="arrow_next_level" parent="." instance=ExtResource("5_pqdx7")]
-position = Vector2(506, 239)
-pos = "direita"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow_next_level"]
-position = Vector2(31.5, 0)
-shape = SubResource("RectangleShape2D_d55ms")
-
 [node name="Doors" type="Node2D" parent="."]
 
 [node name="Door_escritorio" parent="Doors" instance=ExtResource("6_tm107")]
 position = Vector2(553, 243)
 prox_espaco = "res://cenas/ep_1/escritorio_principal.tscn"
-saindo_de = "chefe"
-indo_para = "escritorio"
+destination_level_tag = "escritorio"
+destination_door_tag = "chefe"
 spawn_direction = "left"
 
 [node name="spawn" parent="Doors/Door_escritorio" index="0"]
@@ -508,5 +500,13 @@ position = Vector2(-21, -4)
 position = Vector2(2.5, -4)
 shape = SubResource("RectangleShape2D_0prqg")
 debug_color = Color(0.969084, 0, 0.463677, 0.42)
+
+[node name="arrow_next_level" parent="Doors" instance=ExtResource("5_pqdx7")]
+position = Vector2(506, 239)
+pos = "direita"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/arrow_next_level"]
+position = Vector2(31.5, 0)
+shape = SubResource("RectangleShape2D_d55ms")
 
 [editable path="Doors/Door_escritorio"]

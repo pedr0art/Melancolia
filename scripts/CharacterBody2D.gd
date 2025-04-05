@@ -5,7 +5,6 @@ var is_chatting = false
 ###Movimentação do Personagem
 var speed: float = 5500.0
 ###@onready var animation_tree: AnimationTree = $AnimationTree
-@onready var hud_contador = $HUDContador
 @onready var animation := $anim as AnimatedSprite2D
 
 var is_moving:bool = false

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://c5porb4llemu0"]
 
-[ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_3r4ka"]
+[ext_resource type="Script" uid="uid://baf64aqvomyb5" path="res://cenas/ep_1/copa.gd" id="1_3r4ka"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_457k2"]
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_356v1"]
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="3_uwtrk"]
@@ -463,6 +463,7 @@ position = Vector2(304, 144)
 texture = SubResource("AtlasTexture_ls4uo")
 
 [node name="character" parent="." instance=ExtResource("2_356v1")]
+position = Vector2(267, 309)
 
 [node name="arrow_next_level" parent="." instance=ExtResource("3_uwtrk")]
 position = Vector2(266, 305)
@@ -480,11 +481,11 @@ position = Vector2(191, 205)
 [node name="Door_principal" parent="Doors" instance=ExtResource("4_3r4ka")]
 position = Vector2(266, 353)
 prox_espaco = "res://cenas/ep_1/cenario1.tscn"
-saindo_de = "copa"
-indo_para = "principal"
+destination_level_tag = "principal"
+destination_door_tag = "copa"
 
 [node name="spawn" parent="Doors/Door_principal" index="0"]
-position = Vector2(0, -26)
+position = Vector2(0, -29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_principal"]
 position = Vector2(-1, 0.5)

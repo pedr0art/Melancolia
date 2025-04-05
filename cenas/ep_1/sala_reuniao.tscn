@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=4 uid="uid://cpf1mfvjmc52u"]
 
-[ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_6eixw"]
+[ext_resource type="Script" uid="uid://c7odgexkkpoqg" path="res://cenas/ep_1/sala_reuniao.gd" id="1_6eixw"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_ffl8y"]
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="2_w61lc"]
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="3_w61lc"]
@@ -431,6 +431,7 @@ tile_map_data = PackedByteArray("AAAGAAsAAAAZAAgAAAAGAAwAAAAZAAkAAAAHAAsAAAAaAAg
 tile_set = SubResource("TileSet_6eixw")
 
 [node name="character" parent="." instance=ExtResource("3_w61lc")]
+position = Vector2(322, 186)
 
 [node name="arrow_next_level" parent="." instance=ExtResource("2_w61lc")]
 position = Vector2(321, 188)
@@ -445,8 +446,9 @@ shape = SubResource("RectangleShape2D_ugl40")
 [node name="Door_principal" parent="Doors" instance=ExtResource("4_ugl40")]
 position = Vector2(321, 137)
 prox_espaco = "res://cenas/ep_1/cenario1.tscn"
-saindo_de = "reuniao"
-indo_para = "principal"
+destination_level_tag = "principal"
+destination_door_tag = "reuniao"
+spawn_direction = "down"
 
 [node name="spawn" parent="Doors/Door_principal" index="0"]
 position = Vector2(1, 38)
