@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c5porb4llemu0"]
+[gd_scene load_steps=15 format=4 uid="uid://c5porb4llemu0"]
 
 [ext_resource type="Script" uid="uid://baf64aqvomyb5" path="res://cenas/ep_1/copa.gd" id="1_3r4ka"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_457k2"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="3_uwtrk"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="4_3r4ka"]
 [ext_resource type="PackedScene" uid="uid://b6sooyboa2pds" path="res://cenas/npc.tscn" id="5_uwtrk"]
+[ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="7_jusnw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i1imd"]
 texture = ExtResource("1_457k2")
@@ -491,5 +492,7 @@ position = Vector2(0, -29)
 position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_nnrdw")
 debug_color = Color(0.969084, 0, 0.463677, 0.42)
+
+[node name="gabinete_pensamento" parent="." instance=ExtResource("7_jusnw")]
 
 [editable path="Doors/Door_principal"]

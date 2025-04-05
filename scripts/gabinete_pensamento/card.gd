@@ -2,8 +2,8 @@ extends Node2D
 
 
 # Define dois sinais personalizados:
-# - `hovered`: emitido quando o mouse entra na área da carta.
-# - `hovered_off`: emitido quando o mouse sai da área da carta.
+# - hovered: emitido quando o mouse entra na área da carta.
+# - hovered_off: emitido quando o mouse sai da área da carta.
 signal hovered
 signal hovered_off
 var was_placed_in_slot = false
@@ -25,12 +25,12 @@ func _process(delta: float) -> void:
 	$Area2D/CollisionShape2D.disabled = (Globals.is_dragging and self != Globals.carta_atual) or current_card_slot != null
 
 
-# Função chamada automaticamente quando o mouse entra na `Area2D` da carta.
-# Emite o sinal `hovered`, passando a própria carta como parâmetro.
+# Função chamada automaticamente quando o mouse entra na Area2D da carta.
+# Emite o sinal hovered, passando a própria carta como parâmetro.
 func _on_area_2d_mouse_entered() -> void:
 	emit_signal("hovered", self)
 
-# Função chamada automaticamente quando o mouse sai da `Area2D` da carta.
-# Emite o sinal `hovered_off`, também passando a própria carta.
+# Função chamada automaticamente quando o mouse sai da Area2D da carta.
+# Emite o sinal hovered_off, também passando a própria carta.
 func _on_area_2d_mouse_exited() -> void:
 	emit_signal("hovered_off", self)

@@ -1809,19 +1809,7 @@ position = Vector2(207, 144)
 [node name="gabinete_pensamento" parent="." instance=ExtResource("9_0rn6y")]
 
 [node name="item_coletavel" parent="." instance=ExtResource("9_i7mgd")]
-visible = true
 position = Vector2(464, 416)
-item = "enzo_yellow"
-
-[node name="item_coletavel2" parent="." instance=ExtResource("9_i7mgd")]
-visible = true
-position = Vector2(433, 367)
-item = "computador_red"
-
-[node name="item_coletavel3" parent="." instance=ExtResource("9_i7mgd")]
-visible = true
-position = Vector2(429, 289)
-item = "mesapcvazio_yellow"
 
 [editable path="Doors/Door_reuniao"]
 [editable path="Doors/Door_escritorio"]

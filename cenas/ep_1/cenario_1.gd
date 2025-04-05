@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var control: Control = $Control
 
 func _ready() -> void:
 	if NavigationManager.spawn_door_tag != null:

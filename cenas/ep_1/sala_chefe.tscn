@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dnar1xbxp7wvh"]
+[gd_scene load_steps=16 format=4 uid="uid://dnar1xbxp7wvh"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_bqwjn"]
 [ext_resource type="Script" uid="uid://bang0wswux02b" path="res://cenas/ep_1/sala_chefe.gd" id="1_ydfp7"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://fwn3fqs1u5go" path="res://cenas/npc_alessandra.tscn" id="3_ydfp7"]
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="5_pqdx7"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="6_tm107"]
+[ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="8_pqdx7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv3eq"]
 texture = ExtResource("1_bqwjn")
@@ -508,5 +509,7 @@ pos = "direita"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/arrow_next_level"]
 position = Vector2(31.5, 0)
 shape = SubResource("RectangleShape2D_d55ms")
+
+[node name="gabinete_pensamento" parent="." instance=ExtResource("8_pqdx7")]
 
 [editable path="Doors/Door_escritorio"]
