@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djv8offo6xuye"
-path="res://.godot/imported/espelho_grey.png-33261c63dc534a1eb5cebd3633dcbcf4.ctex"
+uid="uid://k3l0sva26df2"
+path="res://.godot/imported/espelho_gray.png-dae0ca9f2cf04c6665cc1053d7a124b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Cards/espelho_grey.png"
-dest_files=["res://.godot/imported/espelho_grey.png-33261c63dc534a1eb5cebd3633dcbcf4.ctex"]
+source_file="res://Images/Cards/espelho_gray.png"
+dest_files=["res://.godot/imported/espelho_gray.png-dae0ca9f2cf04c6665cc1053d7a124b9.ctex"]
 
 [params]
 

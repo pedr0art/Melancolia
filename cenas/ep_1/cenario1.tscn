@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cacih6dj0twvm"]
+[gd_scene load_steps=34 format=4 uid="uid://cacih6dj0twvm"]
 
 [ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_6o0oy"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_eay13"]
@@ -1653,6 +1653,18 @@ size = Vector2(29, 18)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rn6y"]
 size = Vector2(28, 19)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q4s5n"]
+size = Vector2(27, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjnjf"]
+size = Vector2(86, 33)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7h3n"]
+size = Vector2(35, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpl8m"]
+size = Vector2(39, 62)
+
 [node name="AreaCentral" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_6o0oy")
@@ -1757,6 +1769,7 @@ collision_mask = 5
 prox_espaco = "res://cenas/ep_1/escritorio_principal.tscn"
 destination_level_tag = "escritorio"
 destination_door_tag = "principal"
+spawn_direction = "down"
 
 [node name="spawn" parent="Doors/Door_escritorio" index="0"]
 position = Vector2(-2, 27)
@@ -1771,6 +1784,7 @@ position = Vector2(679, 191)
 prox_espaco = "res://cenas/ep_1/copa.tscn"
 destination_level_tag = "copa"
 destination_door_tag = "principal"
+spawn_direction = "down"
 
 [node name="spawn" parent="Doors/Door_copa" index="0"]
 position = Vector2(2, 30)
@@ -1807,23 +1821,49 @@ debug_color = Color(0.94902, 0, 0.568627, 0.419608)
 position = Vector2(207, 144)
 
 [node name="gabinete_pensamento" parent="." instance=ExtResource("9_0rn6y")]
+visible = false
 
-[node name="item_coletavel" parent="." instance=ExtResource("9_i7mgd")]
-visible = true
-position = Vector2(464, 416)
-item = "enzo_yellow"
+[node name="funcmes" parent="." instance=ExtResource("9_i7mgd")]
+position = Vector2(302, 221)
+item = "funcdomes_yellow"
 
-[node name="item_coletavel2" parent="." instance=ExtResource("9_i7mgd")]
-visible = true
-position = Vector2(433, 367)
-item = "computador_red"
+[node name="exclamation" parent="funcmes" index="0"]
+position = Vector2(15, -10)
 
-[node name="item_coletavel3" parent="." instance=ExtResource("9_i7mgd")]
-visible = true
-position = Vector2(429, 289)
-item = "mesapcvazio_yellow"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="funcmes"]
+position = Vector2(2.5, 16.5)
+shape = SubResource("RectangleShape2D_q4s5n")
+
+[node name="alice" parent="." instance=ExtResource("9_i7mgd")]
+position = Vector2(517, 334)
+item = "alice_red"
+
+[node name="exclamation" parent="alice" index="0"]
+position = Vector2(4, -24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="alice"]
+position = Vector2(1, -6.5)
+shape = SubResource("RectangleShape2D_bjnjf")
+
+[node name="ponto" parent="." instance=ExtResource("9_i7mgd")]
+position = Vector2(355, 217)
+item = "pontoeletronico_gray"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ponto"]
+position = Vector2(1.5, 22.5)
+shape = SubResource("RectangleShape2D_x7h3n")
+
+[node name="foto" parent="." instance=ExtResource("9_i7mgd")]
+position = Vector2(599, 223)
+item = "chefe_gray"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="foto"]
+position = Vector2(-0.5, 21)
+shape = SubResource("RectangleShape2D_fpl8m")
 
 [editable path="Doors/Door_reuniao"]
 [editable path="Doors/Door_escritorio"]
 [editable path="Doors/Door_copa"]
 [editable path="Doors/Door_banheiro fem"]
+[editable path="funcmes"]
+[editable path="alice"]

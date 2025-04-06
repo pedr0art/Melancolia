@@ -10,8 +10,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 		if player_in_area and !Globals.is_chatting:
-			if Input.is_action_just_pressed("ui_interact"):
-				run_dialogue("teste2")
+			pass
+			#if Input.is_action_just_pressed("ui_interact"):
+				#run_dialogue("teste2")
 			
 
 func run_dialogue(dialogue_string):

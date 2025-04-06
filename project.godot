@@ -25,6 +25,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 NavigationManager="*res://scripts/navigation_manager.gd"
 Cenario1="*res://cenas/ep_1/cenario_1.gd"
 GabinetePensamento="*res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd"
+CardDatabase="*res://scripts/gabinete_pensamento/card_database.gd"
 
 [dialogic]
 

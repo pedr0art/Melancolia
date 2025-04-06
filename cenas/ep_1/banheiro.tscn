@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://bvhtkcp4rvmuk"]
+[gd_scene load_steps=15 format=4 uid="uid://bvhtkcp4rvmuk"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_g8wcl"]
 [ext_resource type="Script" uid="uid://b3hrnex6qya30" path="res://cenas/ep_1/banheiro.gd" id="1_jp7df"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="3_xj03r"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="4_jp7df"]
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="6_7nfge"]
+[ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="7_vcd68"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1ewr"]
 texture = ExtResource("1_g8wcl")
@@ -428,6 +429,9 @@ region = Rect2(452, 240, 3, 44)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vcd68"]
 size = Vector2(30, 11)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2muam"]
+size = Vector2(53, 65)
+
 [node name="banheiro" type="Node2D"]
 script = ExtResource("1_jp7df")
 
@@ -499,5 +503,18 @@ shape = SubResource("RectangleShape2D_vcd68")
 debug_color = Color(0.977996, 0, 0.399711, 0.42)
 
 [node name="gabinete_pensamento" parent="." instance=ExtResource("6_7nfge")]
+visible = false
+
+[node name="espelho" parent="." instance=ExtResource("7_vcd68")]
+position = Vector2(255, 228)
+item = "espelho_gray"
+
+[node name="exclamation" parent="espelho" index="0"]
+position = Vector2(22, -6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="espelho"]
+position = Vector2(10.5, 18.5)
+shape = SubResource("RectangleShape2D_2muam")
 
 [editable path="Doors/Door_principal"]
+[editable path="espelho"]

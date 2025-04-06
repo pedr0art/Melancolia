@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://bdqcuf28vuk5v"]
+[gd_scene load_steps=41 format=4 uid="uid://bdqcuf28vuk5v"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_i4huj"]
 [ext_resource type="Script" uid="uid://bsk5l1sdfdap4" path="res://cenas/ep_1/escritorio_principal.gd" id="1_y2n54"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="4_gdk15"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="5_lwe2k"]
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="7_f227i"]
+[ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="8_sh4jg"]
+[ext_resource type="PackedScene" uid="uid://dcs03xv7bcq57" path="res://cenas/npc_francisco.tscn" id="9_a2mpx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2n54"]
 texture = ExtResource("1_i4huj")
@@ -2358,6 +2360,10 @@ sources/0 = SubResource("TileSetAtlasSource_e0rg2")
 atlas = ExtResource("1_i4huj")
 region = Rect2(144, 272, 16, 17)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7l8d"]
+atlas = ExtResource("1_i4huj")
+region = Rect2(161, 178, 14, 9)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvx13"]
 atlas = ExtResource("1_i4huj")
 region = Rect2(177, 177, 13, 14)
@@ -2762,6 +2768,21 @@ size = Vector2(28, 4)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2n54"]
 size = Vector2(3, 44)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7savp"]
+size = Vector2(64, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d87ap"]
+size = Vector2(64, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe33k"]
+size = Vector2(52.5, 46.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3xnh"]
+size = Vector2(29, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrpe5"]
+size = Vector2(41, 51.25)
+
 [node name="escritorio_principal" type="Node2D"]
 script = ExtResource("1_y2n54")
 
@@ -2781,11 +2802,11 @@ tile_set = SubResource("TileSet_h7l8d")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 position = Vector2(145, 87)
-tile_map_data = PackedByteArray("AAAKAAoAAAAHAAYAAAAKAAwAAAAHAAgAAAAKAA0AAAAHAAkAAAALAAoAAAAIAAYAAAALAAwAAAAIAAgAAAALAA0AAAAIAAkAAAAMAAoAAAAJAAYAAAAMAAwAAAAJAAgAAAAMAA0AAAAJAAkAAAANAAoAAAAKAAYAAAANAAwAAAAKAAgAAAANAA0AAAAKAAkAAAAOAAoAAAALAAYAAAAOAAwAAAALAAgAAAAOAA0AAAALAAkAAAAPAAoAAAAMAAYAAAAPAAwAAAAMAAgAAAAPAA0AAAAMAAkAAAAQAAoAAAANAAYAAAAQAAwAAAANAAgAAAAQAA0AAAANAAkAAAARAAoAAAAOAAYAAAARAAwAAAAOAAgAAAARAA0AAAAOAAkAAAASAAoAAAAPAAYAAAASAAwAAAAPAAgAAAASAA0AAAAPAAkAAAAKAAMAAAAHAAYAAAAKAAUAAAAHAAgAAAAKAAYAAAAHAAkAAAALAAMAAAAIAAYAAAALAAUAAAAIAAgAAAALAAYAAAAIAAkAAAAMAAMAAAAJAAYAAAAMAAUAAAAJAAgAAAAMAAYAAAAJAAkAAAANAAMAAAAKAAYAAAANAAUAAAAKAAgAAAANAAYAAAAKAAkAAAAOAAMAAAALAAYAAAAOAAUAAAALAAgAAAAOAAYAAAALAAkAAAAPAAMAAAAMAAYAAAAPAAUAAAAMAAgAAAAPAAYAAAAMAAkAAAAQAAMAAAANAAYAAAAQAAUAAAANAAgAAAAQAAYAAAANAAkAAAARAAMAAAAOAAYAAAARAAUAAAAOAAgAAAARAAYAAAAOAAkAAAASAAMAAAAPAAYAAAASAAUAAAAPAAgAAAASAAYAAAAPAAkAAAATAPz/AAAFAAkAAAAFAPz/AAAIAAwAAAAGAPz/AAAJAAwAAAAJAPz/AAAKAAwAAAAKAPz/AAALAAwAAAAYAP7/AAAIAAoAAAAYAP//AAAIAAsAAAAXAP7/AAAJAAoAAAAXAP//AAAJAAsAAAAGAA4AAAATAAoAAAAGAA8AAAATAAsAAAAHAA4AAAAUAAoAAAAHAA8AAAAUAAsAAAAHABAAAAAUAAwAAAAOAP3/AAAKABAAAAAOAP7/AAAKABEAAAAMAA4AAAAEABEAAAAQAA4AAAAEABEAAAAMAAcAAAAEABEAAAARAAcAAAAEABEAAAA=")
+tile_map_data = PackedByteArray("AAAKAAoAAAAHAAYAAAAKAAwAAAAHAAgAAAAKAA0AAAAHAAkAAAALAAoAAAAIAAYAAAALAAwAAAAIAAgAAAALAA0AAAAIAAkAAAAMAAoAAAAJAAYAAAAMAAwAAAAJAAgAAAAMAA0AAAAJAAkAAAANAAoAAAAKAAYAAAANAAwAAAAKAAgAAAANAA0AAAAKAAkAAAAOAAoAAAALAAYAAAAOAAwAAAALAAgAAAAOAA0AAAALAAkAAAAPAAoAAAAMAAYAAAAPAAwAAAAMAAgAAAAPAA0AAAAMAAkAAAAQAAoAAAANAAYAAAAQAAwAAAANAAgAAAAQAA0AAAANAAkAAAARAAoAAAAOAAYAAAARAAwAAAAOAAgAAAARAA0AAAAOAAkAAAASAAoAAAAPAAYAAAASAAwAAAAPAAgAAAASAA0AAAAPAAkAAAAKAAMAAAAHAAYAAAAKAAUAAAAHAAgAAAAKAAYAAAAHAAkAAAALAAMAAAAIAAYAAAALAAUAAAAIAAgAAAALAAYAAAAIAAkAAAAMAAMAAAAJAAYAAAAMAAUAAAAJAAgAAAAMAAYAAAAJAAkAAAANAAMAAAAKAAYAAAANAAUAAAAKAAgAAAANAAYAAAAKAAkAAAAOAAMAAAALAAYAAAAOAAUAAAALAAgAAAAOAAYAAAALAAkAAAAPAAMAAAAMAAYAAAAPAAUAAAAMAAgAAAAPAAYAAAAMAAkAAAAQAAMAAAANAAYAAAAQAAUAAAANAAgAAAAQAAYAAAANAAkAAAARAAMAAAAOAAYAAAARAAUAAAAOAAgAAAARAAYAAAAOAAkAAAASAAMAAAAPAAYAAAASAAUAAAAPAAgAAAASAAYAAAAPAAkAAAATAPz/AAAFAAkAAAAJAPz/AAAKAAwAAAAKAPz/AAALAAwAAAAYAP7/AAAIAAoAAAAYAP//AAAIAAsAAAAXAP7/AAAJAAoAAAAXAP//AAAJAAsAAAAGAA4AAAATAAoAAAAGAA8AAAATAAsAAAAHAA4AAAAUAAoAAAAHAA8AAAAUAAsAAAAHABAAAAAUAAwAAAAOAP3/AAAKABAAAAAOAP7/AAAKABEAAAAMAA4AAAAEABEAAAAQAA4AAAAEABEAAAAMAAcAAAAEABEAAAARAAcAAAAEABEAAAAFAPz/AAAHAA4AAAAFAP3/AAAHAA8AAAA=")
 tile_set = SubResource("TileSet_pe33k")
 
 [node name="papeis" type="Sprite2D" parent="."]
-position = Vector2(320, 295)
+position = Vector2(262, 319)
 texture = SubResource("AtlasTexture_xlycu")
 
 [node name="pc" type="Sprite2D" parent="."]
@@ -2798,6 +2819,9 @@ tile_set = SubResource("TileSet_nrpe5")
 
 [node name="character" parent="." instance=ExtResource("2_gdk15")]
 position = Vector2(496, 386)
+
+[node name="anim" parent="character/CharacterBody2D" index="2"]
+animation = &"idle_up"
 
 [node name="TileMapLayer7" type="TileMapLayer" parent="."]
 position = Vector2(145, 87)
@@ -2821,6 +2845,10 @@ texture = SubResource("AtlasTexture_uictf")
 [node name="pc_lado2" type="Sprite2D" parent="objs"]
 position = Vector2(390, 178)
 texture = SubResource("AtlasTexture_uictf")
+
+[node name="Sprite2D" type="Sprite2D" parent="objs"]
+position = Vector2(323, 291)
+texture = SubResource("AtlasTexture_h7l8d")
 
 [node name="foto" type="Sprite2D" parent="objs"]
 position = Vector2(323, 178)
@@ -2895,6 +2923,71 @@ shape = SubResource("RectangleShape2D_y2n54")
 debug_color = Color(0.951762, 3.27289e-06, 0.562032, 0.42)
 
 [node name="gabinete_pensamento" parent="." instance=ExtResource("7_f227i")]
+visible = false
 
+[node name="mesapcvazio" parent="." instance=ExtResource("8_sh4jg")]
+position = Vector2(403, 184)
+item = "mesapcvazio_yellow"
+
+[node name="exclamation" parent="mesapcvazio" index="0"]
+position = Vector2(9, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mesapcvazio"]
+position = Vector2(10, 9)
+shape = SubResource("RectangleShape2D_7savp")
+
+[node name="computador" parent="." instance=ExtResource("8_sh4jg")]
+position = Vector2(346, 303)
+item = "computador_red"
+
+[node name="exclamation" parent="computador" index="0"]
+position = Vector2(13, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="computador"]
+position = Vector2(-1, 4.5)
+shape = SubResource("RectangleShape2D_d87ap")
+
+[node name="papeis2" parent="." instance=ExtResource("8_sh4jg")]
+position = Vector2(307, 302)
+item = "pilhapapeis_orange"
+
+[node name="exclamation" parent="papeis2" index="0"]
+position = Vector2(-58, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="papeis2"]
+position = Vector2(-38.25, 15.75)
+shape = SubResource("RectangleShape2D_pe33k")
+
+[node name="poster" parent="." instance=ExtResource("8_sh4jg")]
+position = Vector2(224, 51)
+item = "poster_orange"
+
+[node name="exclamation" parent="poster" index="0"]
+position = Vector2(23, -23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="poster"]
+position = Vector2(9.5, 7)
+shape = SubResource("RectangleShape2D_f3xnh")
+
+[node name="npc_francisco" parent="." instance=ExtResource("9_a2mpx")]
+position = Vector2(432, 73)
+
+[node name="francisco" parent="." instance=ExtResource("8_sh4jg")]
+position = Vector2(431, 73)
+item = "francisco_blue"
+
+[node name="exclamation" parent="francisco" index="0"]
+position = Vector2(0, -22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="francisco"]
+position = Vector2(0, 13.375)
+shape = SubResource("RectangleShape2D_nrpe5")
+
+[editable path="character"]
 [editable path="Doors/Door_principal"]
 [editable path="Doors/Door_chefe"]
+[editable path="mesapcvazio"]
+[editable path="computador"]
+[editable path="papeis2"]
+[editable path="poster"]
+[editable path="francisco"]

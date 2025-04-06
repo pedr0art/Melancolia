@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_pnlqk"]
 [ext_resource type="Texture2D" uid="uid://dba202so0xaic" path="res://Images/Card Table.png" id="3_1rrn3"]
 [ext_resource type="Texture2D" uid="uid://bph54wajf3tr3" path="res://Images/tilesets/quarto-tile-export-export.png" id="3_1tfug"]
-[ext_resource type="PackedScene" uid="uid://b6sooyboa2pds" path="res://cenas/npc.tscn" id="3_imveq"]
+[ext_resource type="PackedScene" uid="uid://b6sooyboa2pds" path="res://Images/npc.tscn" id="3_imveq"]
 [ext_resource type="Texture2D" uid="uid://wnllxeo0oclg" path="res://Images/Coffee Maker.png" id="4_bnqqu"]
 [ext_resource type="Texture2D" uid="uid://cun0p0r4lj7b2" path="res://Images/Desk, Ornate.png" id="5_t1tsc"]
 [ext_resource type="Texture2D" uid="uid://dttt74rhhnegg" path="res://Images/Laptop.png" id="6_j6am3"]

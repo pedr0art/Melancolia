@@ -36,6 +36,8 @@ func finish_drag():
 			card_slot_found.card_in_slot = true
 			card_being_dragged.was_placed_in_slot = true
 			card_being_dragged.current_card_slot = card_slot_found
+			card_slot_found.certo = true
+			
 		else:
 			player_hand_reference.add_card_to_hand(card_being_dragged, DEFAULT_CARD_MOVE_SPEED)
 	else:

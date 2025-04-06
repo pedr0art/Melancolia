@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dnar1xbxp7wvh"]
+[gd_scene load_steps=18 format=4 uid="uid://dnar1xbxp7wvh"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_bqwjn"]
 [ext_resource type="Script" uid="uid://bang0wswux02b" path="res://cenas/ep_1/sala_chefe.gd" id="1_ydfp7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="5_pqdx7"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="6_tm107"]
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="8_pqdx7"]
+[ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="9_tm107"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv3eq"]
 texture = ExtResource("1_bqwjn")
@@ -438,6 +439,9 @@ size = Vector2(7, 42)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d55ms"]
 size = Vector2(25, 44)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xk06s"]
+size = Vector2(60, 82)
+
 [node name="sala_chefe" type="Node2D"]
 script = ExtResource("1_ydfp7")
 
@@ -477,6 +481,9 @@ tile_set = SubResource("TileSet_1bote")
 [node name="character" parent="." instance=ExtResource("2_vx0er")]
 position = Vector2(527, 239)
 
+[node name="anim" parent="character/CharacterBody2D" index="2"]
+animation = &"idle_left"
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(360, 153)
 texture = SubResource("AtlasTexture_6ph0m")
@@ -511,5 +518,19 @@ position = Vector2(31.5, 0)
 shape = SubResource("RectangleShape2D_d55ms")
 
 [node name="gabinete_pensamento" parent="." instance=ExtResource("8_pqdx7")]
+visible = false
 
+[node name="chefe" parent="." instance=ExtResource("9_tm107")]
+position = Vector2(392, 151)
+item = "placeholder_blue"
+
+[node name="exclamation" parent="chefe" index="0"]
+position = Vector2(-15, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chefe"]
+position = Vector2(19, 13)
+shape = SubResource("RectangleShape2D_xk06s")
+
+[editable path="character"]
 [editable path="Doors/Door_escritorio"]
+[editable path="chefe"]

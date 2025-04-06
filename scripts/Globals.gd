@@ -16,7 +16,7 @@ var hand_full = false
 var hand = []
 var classe_hand = []
 var classe_atual 
-
+var gabinete = false
 var player_deck =[
 	"funcdomes_yellow",
 	"enzo_yellow",

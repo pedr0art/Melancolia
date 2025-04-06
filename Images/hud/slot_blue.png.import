@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhhlmvotixb6v"
-path="res://.godot/imported/alice_red.png-dc4b9f1ff358823af5169ba4aa3f4ebc.ctex"
+uid="uid://uord5a5cbucn"
+path="res://.godot/imported/slot_blue.png-c216f8d0a2e09c10d16d8d1e45afc37f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Cards/alice_red.png"
-dest_files=["res://.godot/imported/alice_red.png-dc4b9f1ff358823af5169ba4aa3f4ebc.ctex"]
+source_file="res://Images/hud/slot_blue.png"
+dest_files=["res://.godot/imported/slot_blue.png-c216f8d0a2e09c10d16d8d1e45afc37f.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://cpf1mfvjmc52u"]
+[gd_scene load_steps=13 format=4 uid="uid://cpf1mfvjmc52u"]
 
 [ext_resource type="Script" uid="uid://c7odgexkkpoqg" path="res://cenas/ep_1/sala_reuniao.gd" id="1_6eixw"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_ffl8y"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="3_w61lc"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="4_ugl40"]
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="6_m42lh"]
+[ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="7_ki5f4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ugl40"]
 texture = ExtResource("1_ffl8y")
@@ -408,6 +409,9 @@ size = Vector2(27, 63)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6eixw"]
 size = Vector2(27, 7)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nyp7v"]
+size = Vector2(55, 48)
+
 [node name="sala_reuniao" type="Node2D"]
 script = ExtResource("1_6eixw")
 
@@ -460,5 +464,19 @@ shape = SubResource("RectangleShape2D_6eixw")
 debug_color = Color(0.966178, 7.70092e-07, 0.482141, 0.42)
 
 [node name="gabinete_pensamento" parent="." instance=ExtResource("6_m42lh")]
+visible = false
 
+[node name="selo" parent="." instance=ExtResource("7_ki5f4")]
+position = Vector2(278, 275)
+item = "seloqualidade_red"
+
+[node name="exclamation" parent="selo" index="0"]
+position = Vector2(14, -4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="selo"]
+position = Vector2(29, 8)
+shape = SubResource("RectangleShape2D_nyp7v")
+
+[editable path="character"]
 [editable path="Doors/Door_principal"]
+[editable path="selo"]

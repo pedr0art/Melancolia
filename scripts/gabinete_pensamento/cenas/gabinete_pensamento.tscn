@@ -1,59 +1,152 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdbowq2mdso3e"]
+[gd_scene load_steps=23 format=3 uid="uid://cdbowq2mdso3e"]
 
 [ext_resource type="Script" uid="uid://cxmf40je88d5n" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd" id="1_70gdi"]
 [ext_resource type="PackedScene" uid="uid://b13hdbg7myxtm" path="res://scripts/gabinete_pensamento/cenas/card_slot.tscn" id="2_05uvk"]
 [ext_resource type="PackedScene" uid="uid://dkrr7ghvrqpyp" path="res://scripts/gabinete_pensamento/cenas/card_manager.tscn" id="2_syefv"]
-[ext_resource type="Texture2D" uid="uid://cotnm6bvk5ubc" path="res://Images/hud/cardslots/card_slot_yellow.png" id="3_syefv"]
-[ext_resource type="Texture2D" uid="uid://duyp1l4igh4rl" path="res://Images/hud/cardslots/card_slot_red.png" id="4_70gdi"]
-[ext_resource type="Texture2D" uid="uid://dtn8dqso2t8fd" path="res://Images/hud/cardslots/card_slot_grey.png" id="5_1tydy"]
-[ext_resource type="Texture2D" uid="uid://de7ud3ov15rhh" path="res://Images/hud/cardslots/card_slot_blue.png" id="6_3wt6p"]
-[ext_resource type="Texture2D" uid="uid://blt4q73qtqfut" path="res://Images/hud/cardslots/card_slot_orange.png" id="7_80g7x"]
+[ext_resource type="Texture2D" uid="uid://dcd5fwu2r2jfa" path="res://Images/hud/slot_yellow.png" id="4_syefv"]
+[ext_resource type="Texture2D" uid="uid://ctyfqiwcb57q2" path="res://Images/hud/slot_red.png" id="5_70gdi"]
+[ext_resource type="Texture2D" uid="uid://cneb41426h8rw" path="res://Images/hud/slot_gray.png" id="6_70gdi"]
+[ext_resource type="Texture2D" uid="uid://uord5a5cbucn" path="res://Images/hud/slot_blue.png" id="7_1tydy"]
+[ext_resource type="Texture2D" uid="uid://ctfqpkihyvccc" path="res://Images/hud/slot_orange.png" id="8_3wt6p"]
 [ext_resource type="PackedScene" uid="uid://bhvxlsfyiwa3y" path="res://scripts/gabinete_pensamento/cenas/player_hand.tscn" id="9_70gdi"]
 [ext_resource type="PackedScene" uid="uid://dcvbhyda3nxx8" path="res://scripts/gabinete_pensamento/cenas/deck.tscn" id="10_1tydy"]
 [ext_resource type="PackedScene" uid="uid://dr7jgbj2xnp8l" path="res://scripts/gabinete_pensamento/cenas/input_manager.tscn" id="11_3wt6p"]
+[ext_resource type="Texture2D" uid="uid://jj2xr0kp0y3q" path="res://Images/hud/O QUE ACONTECEU_.png" id="12_80g7x"]
+[ext_resource type="Texture2D" uid="uid://bbrrn752fkwuv" path="res://Images/hud/COMO ERA_.png" id="13_nc6rs"]
+[ext_resource type="Texture2D" uid="uid://drcy5qrcm4mcx" path="res://Images/hud/POR QUÊ_.png" id="14_akk5g"]
+[ext_resource type="Texture2D" uid="uid://dxspksmvxqqe8" path="res://Images/hud/O QUE FAZER_.png" id="15_k22vt"]
+[ext_resource type="Texture2D" uid="uid://b5k4m2wvdugsk" path="res://Images/hud/POSSIBILIDADES_.png" id="16_sniuq"]
+[ext_resource type="Texture2D" uid="uid://ct8uhd8d77218" path="res://Images/icons/32/Play.png" id="17_akk5g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k22vt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sniuq"]
+bg_color = Color(0.479473, 0.102456, 0.619671, 1)
+border_width_left = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bt606"]
+bg_color = Color(0.360784, 0.0627451, 0.470588, 1)
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color(0.886262, 0.886262, 0.886261, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpd6f"]
+bg_color = Color(0.242874, 0.0293823, 0.321661, 1)
+border_width_left = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+
+[sub_resource type="Theme" id="Theme_6me08"]
+Button/styles/disabled = null
+Button/styles/focus = SubResource("StyleBoxEmpty_k22vt")
+Button/styles/hover = SubResource("StyleBoxFlat_sniuq")
+Button/styles/normal = SubResource("StyleBoxFlat_bt606")
+Button/styles/pressed = SubResource("StyleBoxFlat_gpd6f")
 
 [node name="gabinete_pensamento" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_70gdi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -12.0
+offset_top = -9.0
+offset_right = 655.0
+offset_bottom = 378.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.282353)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+offset_left = 410.0
+offset_top = 97.0
+offset_right = 487.0
+offset_bottom = 111.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.870588)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+offset_left = 333.0
+offset_top = 39.0
+offset_right = 398.0
+offset_bottom = 56.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.870588)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 245.0
+offset_top = 15.0
+offset_right = 292.0
+offset_bottom = 29.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.870588)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 147.0
+offset_top = 47.0
+offset_right = 203.0
+offset_bottom = 60.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.870588)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 46.0
+offset_top = 106.0
+offset_right = 136.0
+offset_bottom = 121.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.870588)
 
 [node name="CardManager" parent="." instance=ExtResource("2_syefv")]
 
 [node name="CardSlots" type="Node2D" parent="."]
 
 [node name="CardSlot" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(139, 149)
+position = Vector2(93, 161)
 classe = "yellow"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot" index="0"]
-texture = ExtResource("3_syefv")
+texture = ExtResource("4_syefv")
 
 [node name="CardSlot2" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(222, 90)
+position = Vector2(176, 102)
 classe = "red"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot2" index="0"]
-texture = ExtResource("4_70gdi")
+texture = ExtResource("5_70gdi")
 
 [node name="CardSlot3" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(314, 61)
-classe = "grey"
+position = Vector2(270, 73)
+classe = "gray"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot3" index="0"]
-texture = ExtResource("5_1tydy")
+texture = ExtResource("6_70gdi")
 
 [node name="CardSlot4" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(412, 86)
+position = Vector2(366, 98)
 classe = "blue"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot4" index="0"]
-texture = ExtResource("6_3wt6p")
+texture = ExtResource("7_1tydy")
 
 [node name="CardSlot5" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(494, 142)
+position = Vector2(448, 154)
 classe = "orange"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot5" index="0"]
-texture = ExtResource("7_80g7x")
+texture = ExtResource("8_3wt6p")
 
 [node name="PlayerHand" parent="." instance=ExtResource("9_70gdi")]
 
@@ -65,6 +158,43 @@ position = Vector2(37, 316)
 position = Vector2(9, 0)
 
 [node name="Node2D" type="Node2D" parent="."]
+
+[node name="OQueAconteceu" type="Sprite2D" parent="."]
+position = Vector2(91, 114)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_80g7x")
+
+[node name="ComoEra" type="Sprite2D" parent="."]
+position = Vector2(175, 54)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_nc6rs")
+
+[node name="PorQuê" type="Sprite2D" parent="."]
+position = Vector2(269, 22)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("14_akk5g")
+
+[node name="OQueFazer" type="Sprite2D" parent="."]
+position = Vector2(366, 49)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("15_k22vt")
+
+[node name="Possibilidades" type="Sprite2D" parent="."]
+position = Vector2(449, 104)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_sniuq")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 593.0
+offset_top = 248.0
+offset_right = 617.0
+offset_bottom = 284.0
+theme = SubResource("Theme_6me08")
+disabled = true
+icon = ExtResource("17_akk5g")
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 
 [editable path="CardSlots/CardSlot"]
 [editable path="CardSlots/CardSlot2"]

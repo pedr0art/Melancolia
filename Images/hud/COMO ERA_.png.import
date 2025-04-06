@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxc54fjptworq"
-path="res://.godot/imported/chefe_grey.png-8ed009da5c24d6c59e8e1556b566975c.ctex"
+uid="uid://bbrrn752fkwuv"
+path="res://.godot/imported/COMO ERA_.png-3742f3abdeee928f037993ba29326851.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Cards/chefe_grey.png"
-dest_files=["res://.godot/imported/chefe_grey.png-8ed009da5c24d6c59e8e1556b566975c.ctex"]
+source_file="res://Images/hud/COMO ERA_.png"
+dest_files=["res://.godot/imported/COMO ERA_.png-3742f3abdeee928f037993ba29326851.ctex"]
 
 [params]
 

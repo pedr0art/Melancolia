@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvs1od67a0jno"
-path="res://.godot/imported/pontoeletronico_grey.png-9227dbdb40bfd23132c80b27b35f0d91.ctex"
+uid="uid://ct8uhd8d77218"
+path="res://.godot/imported/Play.png-d05fddd2ff651ece14d0479dd55a26d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Cards/pontoeletronico_grey.png"
-dest_files=["res://.godot/imported/pontoeletronico_grey.png-9227dbdb40bfd23132c80b27b35f0d91.ctex"]
+source_file="res://Images/icons/32/Play.png"
+dest_files=["res://.godot/imported/Play.png-d05fddd2ff651ece14d0479dd55a26d3.ctex"]
 
 [params]
 
