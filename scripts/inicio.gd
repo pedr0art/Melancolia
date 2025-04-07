@@ -9,7 +9,6 @@ var resource = load("res://DialogueManager/psico.dialogue")
 func _ready():
 	color_rect.visible = true
 	transition.play("fade_in_cuts")
-	#Dialogic.start("conversapsico")
 	DialogueManager.show_dialogue_balloon(resource, "start")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

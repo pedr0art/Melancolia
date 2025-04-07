@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmxrvu51nbrg3"]
 
 [ext_resource type="Theme" uid="uid://7v24hlgiwmbw" path="res://exist_button.tres" id="1_jt6jy"]
-[ext_resource type="Texture2D" uid="uid://4unpdh7q67p1" path="res://Images/hud/hud_new/insighticon.png" id="2_2u1nf"]
+[ext_resource type="Texture2D" uid="uid://bvtw6747dh1uj" path="res://Images/hud/insighticon (1).png" id="2_jt6jy"]
 [ext_resource type="Script" uid="uid://c5eb5smwy6tfj" path="res://scripts/gabinete_pensamento/cenas/button.gd" id="3_8ewtq"]
 [ext_resource type="Texture2D" uid="uid://85jw2qunoy10" path="res://Images/hud/Ellipse 3.png" id="4_jt6jy"]
 
@@ -12,7 +12,7 @@ offset_right = 1671.0
 offset_bottom = 1656.0
 scale = Vector2(0.04, 0.04)
 theme = ExtResource("1_jt6jy")
-icon = ExtResource("2_2u1nf")
+icon = ExtResource("2_jt6jy")
 icon_alignment = 1
 script = ExtResource("3_8ewtq")
 

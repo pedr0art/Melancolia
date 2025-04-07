@@ -1,18 +1,71 @@
-[gd_scene load_steps=5 format=3 uid="uid://du5bgqknsnbka"]
+[gd_scene load_steps=5 format=3 uid="uid://b4pqr523knhgo"]
 
-[ext_resource type="Script" uid="uid://bqs02cq42cyjw" path="res://scripts/post-it.gd" id="1_73kax"]
-[ext_resource type="Texture2D" uid="uid://c5g4mepie4ahx" path="res://Images/insight/postit.png" id="2_hcjy1"]
 [ext_resource type="AudioStream" uid="uid://coqvdpni7bijq" path="res://sounds/sfx/Arcane Beacon.wav" id="3_5bof0"]
+
+[sub_resource type="GDScript" id="GDScript_ljx5t"]
+script/source = "extends Node2D
+
+var player_in_area = false
+var sprite_texture: Texture2D
+@export var ID = \"1\"
+var ja_foi = false
+@onready var sfx_item = $sfx_item
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	Dialogic.signal_event.connect(DialogicSignal)
+	sprite_texture = load(\"res://Images/insight/\" + ItemData.get_texture(ID))
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+		if player_in_area and !Globals.is_chatting: 
+			if Input.is_action_just_pressed(\"ui_interact\"):
+				run_dialogue(\"postit\")
+				if !ja_foi:
+					sfx_item.play()
+					get_parent().find_child(\"Inventory\").add_item(ID)
+					ja_foi = true
+			
+
+func run_dialogue(dialogue_string):
+	Globals.is_chatting = true
+	Dialogic.start(dialogue_string)
+
+func DialogicSignal(arg: String):
+	if arg == \"ande\":
+		Globals.is_chatting = false
+	elif arg == \"prim\" and Globals.primeiro:
+			run_dialogue(\"TAB\")
+			Globals.primeiro = false
+
+func _on_chat_detection_body_entered(body):
+	if body.has_method(\"player\"): 
+		player_in_area = true
+		var animated_sprite = body.get_node(\"AnimatedSprite2D\")
+		if animated_sprite and !Globals.is_chatting:
+			animated_sprite.visible = true # Torna a sprite visível
+
+
+func _on_chat_detection_body_exited(body):
+	if body.has_method(\"player\"): 
+		player_in_area = false
+		var animated_sprite = body.get_node(\"AnimatedSprite2D\")
+		if animated_sprite:
+			animated_sprite.visible = false
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2gyji"]
+load_path = "res://.godot/imported/postit.png-516d221a4beaee4312438bae37986746.ctex"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8bvj"]
 radius = 6.0
 
 [node name="postit" type="Node2D"]
-script = ExtResource("1_73kax")
+script = SubResource("GDScript_ljx5t")
 
 [node name="Postit" type="Sprite2D" parent="."]
 position = Vector2(-2, -24)
-texture = ExtResource("2_hcjy1")
+texture = SubResource("CompressedTexture2D_2gyji")
 
 [node name="chatDetection" type="Area2D" parent="Postit"]
 position = Vector2(2, 24)

@@ -1,6 +1,0 @@
-[wait time="1.5"]
-noone: Você coletou todos os itens de lembranças, agora você pode reordená-los da forma que achar correto. 
-noone: Ao clicar em CONFIRMAR você pode avançar para o próximo estágio...
-noone: Caso a ordem dos itens seja a mesma da linha de pensamento da Tabata, você libera um INSIGHT... 
-noone: Os insights são momentos extras da personagem refletindo sobre momentos da sua vida.
-[signal arg="ande"]

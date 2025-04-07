@@ -23,7 +23,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		avancar_tutorial()
 
 func avancar_tutorial():
-	if passo_atual < tutoriais.size():
+	if passo_atual < tutoriais.size() and Globals.primeiro_gabinete:
 		tutoriais[passo_atual].queue_free()
 		passo_atual += 1
 		if passo_atual < tutoriais.size():

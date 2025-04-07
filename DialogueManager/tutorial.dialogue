@@ -1,5 +1,5 @@
 ~ start
-do wait(2.0)
+do wait(1.5)
 set Globals.is_chatting = true
 Esse é o local de trabalho da Tábata, você deve explorar e encontrar itens que irão auxiliar Tábata a ter um insight
 

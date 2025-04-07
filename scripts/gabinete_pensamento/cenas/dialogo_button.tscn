@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://jwk7rcftlr3d"]
 
 [ext_resource type="Theme" uid="uid://7v24hlgiwmbw" path="res://exist_button.tres" id="1_c5ka0"]
-[ext_resource type="Texture2D" uid="uid://gpjnepkvj7a8" path="res://Images/hud/hud_new/historic icon.png" id="2_uhuok"]
+[ext_resource type="Texture2D" uid="uid://ypbg4n4jxd4v" path="res://Images/hud/historic icon (2).png" id="2_c5ka0"]
 [ext_resource type="Script" uid="uid://camul8u5rvm40" path="res://scripts/gabinete_pensamento/cenas/dialogo_button.gd" id="3_c5ka0"]
 
 [node name="dialogo_button" type="Button"]
@@ -11,7 +11,7 @@ offset_right = 1619.0
 offset_bottom = 1656.0
 scale = Vector2(0.04, 0.04)
 theme = ExtResource("1_c5ka0")
-icon = ExtResource("2_uhuok")
+icon = ExtResource("2_c5ka0")
 icon_alignment = 1
 script = ExtResource("3_c5ka0")
 

@@ -11,7 +11,6 @@ var TAB = load("res://DialogueManager/TAB.dialogue")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	NavigationManager.on_trigger_player_spawn.connect(_on_spawn)
-	Dialogic.signal_event.connect(DialogicSignal)
 	camera.zoom = camera_zoom
 	camera.limit_top = camera_limit_top
 	camera.limit_bottom = camera_limit_bottom
@@ -27,14 +26,9 @@ func _process(delta):
 		
 		
 
-func run_dialogue(dialogue_string):
-	Dialogic.start(dialogue_string)
+
 	
-func DialogicSignal(arg: String):
-	if arg == "segue":
-		Globals.segue = true
-	elif arg == "ande":
-		Globals.is_chatting = false
+
 func play_anim (anim_name) -> void:
 	animation.play(anim_name)
 
