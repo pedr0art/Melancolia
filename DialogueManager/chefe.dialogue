@@ -1,0 +1,9 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+Patricia: Ei Tabatinha, não conseguiu ser a colaboradora do mês, né? Fiquei surpresa, mas faz tempo que percebo que está muito “avoada”, um olhar distante, olha lá hein, você tem potencial, espero mais de você, só um feedback, tchau!
+Tábata: Certo chefe, irei me esforçar mais.
+Tábata: *Cacete, o problema não é esforço, não tem como ser, eu dou tudo de mim, mas eu não me sinto bem, eu recebo prestígio, mas isso não me dá orgulho, eu sei que trabalho não é fácil, mas será que deveria ser tão angustiante?*
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

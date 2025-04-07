@@ -1,0 +1,10 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+Enzo: E aí Tabatinha! Não te vi no churrasco da empresa!
+Tábata: Que churrasco?
+Enzo: Ihhh. Não te convidaram pra confra da firma? Foi nesse findi. Bebi todas. O pessoal estava muito louco. E tu sabe como eu sou, não perco uma festa!
+Tábata: * Eu sinceramente não me importo de não ser convidada pra confraternização da empresa, mas é estranho de qualquer forma *
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

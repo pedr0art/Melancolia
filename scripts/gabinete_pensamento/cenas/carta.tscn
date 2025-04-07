@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0o2hylpv8qr"]
+
+[ext_resource type="Texture2D" uid="uid://ddn36eoi51eoa" path="res://Images/Cards/pontoeletronico_gray.png" id="1_t7xav"]
+[ext_resource type="Script" uid="uid://kx5shytumisq" path="res://scripts/gabinete_pensamento/cenas/carta.gd" id="2_kpo38"]
+
+[sub_resource type="Animation" id="Animation_3o8ax"]
+resource_name = "item_novo"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1.98819, 4.53333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0.999203)]
+}
+
+[sub_resource type="Animation" id="Animation_t7xav"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kpo38"]
+_data = {
+&"RESET": SubResource("Animation_t7xav"),
+&"item_novo": SubResource("Animation_3o8ax")
+}
+
+[node name="carta" type="Sprite2D"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_t7xav")
+script = ExtResource("2_kpo38")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kpo38")
+}
+
+[connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]

@@ -52,5 +52,15 @@ Psicóloga: Quer falar mais sobre?
 - Na verdade não
 	Tábata: Acho que é irrelevante, às vezes estou sem energia, só isso, não tem profundidade. 
 	Psicóloga: Se é como sente, tudo bem, podemos falar sobre o que quiser. 
+Psicóloga: Acho que exploramos bastante hoje. Como você se sente em relação ao que conversamos?
+- Foi...ok
+	Tábata: Acho que já falei tudo o que tinha para falar. Não sei se preciso de mais sessões, mas se você achar necessário...
+- Foi interessante!
+	Tábata: Me sinto desinteressante por ter uma vida tão parada, mas é isso né.
+- Foi bom conversar
+	Tábata: Me senti ouvida. Obrigada...
+- Ah, foi...normal.
+Tábata: Sabe, bom para tirar umas coisas da cabeça. Mas no geral, não sinto que mudou muita coisa.
+Psicóloga: Foi uma sessão significativa. Agradeço sua abertura, saiba que estou aqui. Até a próxima consulta.
 set avanco = true
 => END

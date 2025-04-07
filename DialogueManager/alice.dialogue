@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : Alice é uma das únicas mulheres da empresa junto com Tabata e a Chefe.
+Tábata: *Alice é uma pessoa boa, alguém que eu poderia me conectar, talvez, mas não há espaço pra isso, e não quero nem pensar em colegas depois da minha última experiência, é melhor deixar só no convívio profissional.* 
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

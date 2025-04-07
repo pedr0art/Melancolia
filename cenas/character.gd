@@ -34,3 +34,17 @@ func play_anim (anim_name) -> void:
 
 func _on_spawn(position: Vector2, direction: String):
 	global_position = position
+
+	match direction:
+		"up":
+			get_node("CharacterBody2D").last_dir = Vector2(0, -1)
+			get_node("CharacterBody2D").animation.play("idle_up")
+		"down":
+			get_node("CharacterBody2D").last_dir = Vector2(0, 1)
+			get_node("CharacterBody2D").animation.play("idle_front")
+		"left":
+			get_node("CharacterBody2D").last_dir = Vector2(-1, 0)
+			get_node("CharacterBody2D").animation.play("idle_left")
+		"right":
+			get_node("CharacterBody2D").last_dir = Vector2(1, 0)
+			get_node("CharacterBody2D").animation.play("idle_right")

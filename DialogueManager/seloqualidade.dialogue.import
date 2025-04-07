@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://wiai5vmi7g7u"
+path="res://.godot/imported/seloqualidade.dialogue-73ef2f9175d73f55a51e21abc8b81f56.tres"
+
+[deps]
+
+source_file="res://DialogueManager/seloqualidade.dialogue"
+dest_files=["res://.godot/imported/seloqualidade.dialogue-73ef2f9175d73f55a51e21abc8b81f56.tres"]
+
+[params]
+
+defaults=true

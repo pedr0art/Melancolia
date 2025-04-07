@@ -14,6 +14,13 @@ func _process(delta):
 func _on_rejogar_pressed():
 	get_tree().change_scene_to_packed(prox_level)
 	Globals.restart = true
+	GabinetePensamento.slots_salvos = {}  # Exemplo: {0: "carta1", 1: "carta2"}
+
+	GabinetePensamento.player_hand = []
+	GabinetePensamento.mao_string = []
+	GabinetePensamento.slots_certos = 0
+	Globals.cuts = false
+	Globals.segue = false
 
 
 func _on_sair_pressed():

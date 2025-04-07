@@ -1,0 +1,10 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+: Mais uma marmita elaborada da tabata
+Tábata: Finalmente, melhor momento do dia, hora do almoço, eu sempre me esforço muito com a minha comida, meio que sempre gostei de cozinhar...
+Tábata: Às vezes até penso que nasci pra isso. Será que faz sentido ? Eu sempre ouvi que fazer comida é hobby, não profissão, mas quando eu tô na cozinha é tão diferente de estar aqui...
+set Globals.is_chatting = false
+set Globals.mostra = ""
+set Globals.marmita = true
+=> END

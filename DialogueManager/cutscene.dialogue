@@ -1,0 +1,6 @@
+~ start
+do wait(0.2)
+Tábata: "Inscrições para turma de confeitaria abertas!"
+Tábata: É... acho que é bom guardar isso.
+set Globals.segue = true
+=> END

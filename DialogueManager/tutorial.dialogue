@@ -1,0 +1,10 @@
+~ start
+do wait(1.0)
+set Globals.is_chatting = true
+Esse é o local de trabalho da Tábata, você deve explorar e encontrar itens que irão auxiliar Tábata a ter um insight
+
+Ao encontrar um item coletável você deve pressionar a tecla E para interagir com ele.
+
+set Globals.is_chatting = false
+
+=> END

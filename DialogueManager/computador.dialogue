@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : O computador que usa todo dia, com várias planilhas abertas e o email com um número cada vez maior de mensagens não respondidas.
+Tábata: Meu computador, aqui é o lugar onde passo a maior parte do tempo. Olhar pra essa tela todos os dias... é algo que tenho que lidar, não tenho outra opção mesmo. 
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

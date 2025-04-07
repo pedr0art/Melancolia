@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dqopjxj6ublw4"
+path="res://.godot/imported/pontoeletronico.dialogue-70b850594d3b2b205d5ac4de2c911d81.tres"
+
+[deps]
+
+source_file="res://DialogueManager/pontoeletronico.dialogue"
+dest_files=["res://.godot/imported/pontoeletronico.dialogue-70b850594d3b2b205d5ac4de2c911d81.tres"]
+
+[params]
+
+defaults=true

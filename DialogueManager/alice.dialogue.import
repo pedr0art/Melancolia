@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://b2sp8lvlvoc4t"
+path="res://.godot/imported/alice.dialogue-132fe372ff75bbd65adcae18843b4bc8.tres"
+
+[deps]
+
+source_file="res://DialogueManager/alice.dialogue"
+dest_files=["res://.godot/imported/alice.dialogue-132fe372ff75bbd65adcae18843b4bc8.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://dcoia54i761tm"
+path="res://.godot/imported/fotochefe.dialogue-2a2ae50c2c364732fba52a40694c1257.tres"
+
+[deps]
+
+source_file="res://DialogueManager/fotochefe.dialogue"
+dest_files=["res://.godot/imported/fotochefe.dialogue-2a2ae50c2c364732fba52a40694c1257.tres"]
+
+[params]
+
+defaults=true

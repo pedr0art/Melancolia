@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://bvhtkcp4rvmuk"]
+[gd_scene load_steps=19 format=4 uid="uid://bvhtkcp4rvmuk"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_g8wcl"]
 [ext_resource type="Script" uid="uid://b3hrnex6qya30" path="res://cenas/ep_1/banheiro.gd" id="1_jp7df"]
@@ -7,6 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="4_jp7df"]
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="6_7nfge"]
 [ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="7_vcd68"]
+[ext_resource type="PackedScene" uid="uid://cmxrvu51nbrg3" path="res://scripts/gabinete_pensamento/cenas/button.tscn" id="8_2muam"]
+[ext_resource type="PackedScene" uid="uid://d0o2hylpv8qr" path="res://scripts/gabinete_pensamento/cenas/carta.tscn" id="9_5xoyq"]
+[ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="10_dyr6w"]
+[ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="11_mvprn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f1ewr"]
 texture = ExtResource("1_g8wcl")
@@ -507,6 +511,7 @@ visible = false
 
 [node name="espelho" parent="." instance=ExtResource("7_vcd68")]
 position = Vector2(255, 228)
+dialogo = "espelho"
 item = "espelho_gray"
 
 [node name="exclamation" parent="espelho" index="0"]
@@ -515,6 +520,19 @@ position = Vector2(22, -6)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="espelho"]
 position = Vector2(10.5, 18.5)
 shape = SubResource("RectangleShape2D_2muam")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gabinete_button" parent="CanvasLayer" instance=ExtResource("8_2muam")]
+
+[node name="carta" parent="CanvasLayer" instance=ExtResource("9_5xoyq")]
+position = Vector2(555, 149)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_dyr6w")
+autoplay = true
+
+[node name="pause_menu" parent="." instance=ExtResource("11_mvprn")]
 
 [editable path="Doors/Door_principal"]
 [editable path="espelho"]

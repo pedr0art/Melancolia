@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://x7oq2df01ga5"]
+
+[ext_resource type="FontFile" uid="uid://bbv3csbmwha31" path="res://fonts/Cinematografica-Extrabold-trial.ttf" id="1_bhya8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s6un7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhya8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ygbli"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4on2k"]
+
+[resource]
+Button/colors/font_hover_color = Color(0.473968, 0.0153074, 0.596292, 1)
+Button/colors/font_pressed_color = Color(0.279919, 0.00464209, 0.357435, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_bhya8")
+Button/styles/focus = SubResource("StyleBoxEmpty_s6un7")
+Button/styles/hover = SubResource("StyleBoxEmpty_bhya8")
+Button/styles/normal = SubResource("StyleBoxEmpty_ygbli")
+Button/styles/pressed = SubResource("StyleBoxEmpty_4on2k")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://bp820jia3hfyi"
+path="res://.godot/imported/enzo.dialogue-e0c02f67c31abb1c00ac3999b18d8b86.tres"
+
+[deps]
+
+source_file="res://DialogueManager/enzo.dialogue"
+dest_files=["res://.godot/imported/enzo.dialogue-e0c02f67c31abb1c00ac3999b18d8b86.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,5 @@
+~ start
+set Globals.is_chatting = true
+Tábata: Banheiro masculino...
+set Globals.is_chatting = false
+=> END

@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : O ponto eletrônico, portal para a rotina inescapável de uma jornada laboral monótona
+Tábata: É aqui que recomeça o ciclo, a mesma coisa todo dia, bater ponto, le planilha, fazer negócios e conseguir mais clientes para empresa, está longe de ser um trabalho prazeroso...
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

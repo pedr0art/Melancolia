@@ -1,7 +1,7 @@
 extends Control
 
 
-var prox_level = preload("res://cenas/inicio.tscn")
+var prox_level = preload("res://cenas/insight/inicio.tscn")
 
 @onready var transition = $Transition
 

@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : O quadro de funcionário do mês com a foto de Alice, pela primeira vez. Ela parece estar feliz na foto.
+Tábata: Nunca havia me importado em ser funcionária do mês. Parecia algo natural para mim. Mas agora vendo Alice sinto algo que me deixa estranha.
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

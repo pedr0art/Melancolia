@@ -1,13 +1,18 @@
-[gd_scene load_steps=20 format=4 uid="uid://c5porb4llemu0"]
+[gd_scene load_steps=26 format=4 uid="uid://c5porb4llemu0"]
 
 [ext_resource type="Script" uid="uid://baf64aqvomyb5" path="res://cenas/ep_1/copa.gd" id="1_3r4ka"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_457k2"]
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_356v1"]
+[ext_resource type="Texture2D" uid="uid://dpc8u7ggbqafo" path="res://Images/tilesets/escritorio-tile-novo.png" id="3_nnrdw"]
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="3_uwtrk"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="4_3r4ka"]
 [ext_resource type="PackedScene" uid="uid://b6sooyboa2pds" path="res://Images/npc.tscn" id="5_uwtrk"]
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="7_jusnw"]
 [ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="8_35uek"]
+[ext_resource type="PackedScene" uid="uid://cmxrvu51nbrg3" path="res://scripts/gabinete_pensamento/cenas/button.tscn" id="9_ls4uo"]
+[ext_resource type="PackedScene" uid="uid://d0o2hylpv8qr" path="res://scripts/gabinete_pensamento/cenas/carta.tscn" id="10_55eip"]
+[ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="12_2kpot"]
+[ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="13_bhuty"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i1imd"]
 texture = ExtResource("1_457k2")
@@ -427,6 +432,10 @@ region = Rect2(178, 256, 13, 16)
 atlas = ExtResource("1_457k2")
 region = Rect2(176, 208, 16, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kpot"]
+atlas = ExtResource("3_nnrdw")
+region = Rect2(33, 130, 14, 11)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55eip"]
 size = Vector2(108, 53)
 
@@ -466,7 +475,7 @@ tile_map_data = PackedByteArray("AAAEAAkAAAAKAAoAAAAIAAMAAAAKAAoAAAAEAAEAAAAEAAk
 tile_set = SubResource("TileSet_726a0")
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(333, 141)
+position = Vector2(333, 137)
 scale = Vector2(1.5, 1.5)
 texture = SubResource("AtlasTexture_55eip")
 
@@ -482,11 +491,17 @@ texture = SubResource("AtlasTexture_35uek")
 position = Vector2(304, 144)
 texture = SubResource("AtlasTexture_ls4uo")
 
+[node name="marmita2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(217, 250)
+texture = SubResource("AtlasTexture_2kpot")
+
 [node name="character" parent="." instance=ExtResource("2_356v1")]
 position = Vector2(267, 309)
 
 [node name="anim" parent="character/CharacterBody2D" index="2"]
 animation = &"idle_up"
+frame_progress = 0.0
 
 [node name="arrow_next_level" parent="." instance=ExtResource("3_uwtrk")]
 position = Vector2(266, 305)
@@ -520,6 +535,7 @@ visible = false
 
 [node name="enzo" parent="." instance=ExtResource("8_35uek")]
 position = Vector2(191, 207)
+dialogo = "enzo"
 item = "enzo_yellow"
 
 [node name="exclamation" parent="enzo" index="0"]
@@ -531,6 +547,7 @@ shape = SubResource("RectangleShape2D_2kpot")
 
 [node name="cafeteira" parent="." instance=ExtResource("8_35uek")]
 position = Vector2(265, 134)
+dialogo = "cafeteira"
 item = "cafeteira_blue"
 
 [node name="exclamation" parent="cafeteira" index="0"]
@@ -542,6 +559,7 @@ shape = SubResource("RectangleShape2D_bhuty")
 
 [node name="marmita" parent="." instance=ExtResource("8_35uek")]
 position = Vector2(334, 143)
+dialogo = "marmita"
 item = "folheto_orange"
 
 [node name="exclamation" parent="marmita" index="0"]
@@ -550,6 +568,19 @@ position = Vector2(-1, -36)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="marmita"]
 position = Vector2(-2, 9)
 shape = SubResource("RectangleShape2D_j6urd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gabinete_button" parent="CanvasLayer" instance=ExtResource("9_ls4uo")]
+
+[node name="carta" parent="CanvasLayer" instance=ExtResource("10_55eip")]
+position = Vector2(555, 149)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_2kpot")
+autoplay = true
+
+[node name="pause_menu" parent="." instance=ExtResource("13_bhuty")]
 
 [editable path="character"]
 [editable path="Doors/Door_principal"]

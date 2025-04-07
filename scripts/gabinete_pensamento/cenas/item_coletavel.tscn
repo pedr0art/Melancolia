@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dypcr3wv6887r"]
+[gd_scene load_steps=7 format=3 uid="uid://dypcr3wv6887r"]
 
 [ext_resource type="Script" uid="uid://gkx44cr1s1fj" path="res://scripts/gabinete_pensamento/item_coletavel.gd" id="1_ucf1n"]
 [ext_resource type="Texture2D" uid="uid://dnfvc4hct7502" path="res://Images/icons/16/Exclamation-Mark.png" id="2_8qn8p"]
+[ext_resource type="AudioStream" uid="uid://coqvdpni7bijq" path="res://sounds/sfx/Arcane Beacon.wav" id="3_1tlg8"]
 
 [sub_resource type="Animation" id="Animation_qfo3d"]
 length = 0.001
@@ -50,6 +51,9 @@ texture = ExtResource("2_8qn8p")
 libraries = {
 &"": SubResource("AnimationLibrary_cu1em")
 }
+
+[node name="sfx_item" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_1tlg8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

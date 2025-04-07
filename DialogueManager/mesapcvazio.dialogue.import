@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://d2puyaag84bti"
+path="res://.godot/imported/mesapcvazio.dialogue-ab8dd5ad476a70c02d82262147c18735.tres"
+
+[deps]
+
+source_file="res://DialogueManager/mesapcvazio.dialogue"
+dest_files=["res://.godot/imported/mesapcvazio.dialogue-ab8dd5ad476a70c02d82262147c18735.tres"]
+
+[params]
+
+defaults=true

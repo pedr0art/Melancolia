@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmxrvu51nbrg3"]
+
+[ext_resource type="Theme" uid="uid://be6sblnyfrrmc" path="res://scripts/gabinete_pensamento/cenas/button - Copia.tres" id="1_gsaag"]
+[ext_resource type="Texture2D" uid="uid://cx3gn1svq0vy" path="res://Images/icons/16/icon_light_bulb.png" id="2_8ewtq"]
+[ext_resource type="Script" uid="uid://c5eb5smwy6tfj" path="res://scripts/gabinete_pensamento/cenas/button.gd" id="3_8ewtq"]
+[ext_resource type="Texture2D" uid="uid://85jw2qunoy10" path="res://Images/hud/Ellipse 3.png" id="4_jt6jy"]
+
+[node name="gabinete_button" type="Button"]
+offset_left = 604.0
+offset_top = 331.0
+offset_right = 620.0
+offset_bottom = 347.0
+theme = ExtResource("1_gsaag")
+icon = ExtResource("2_8ewtq")
+icon_alignment = 1
+script = ExtResource("3_8ewtq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(17, -1)
+texture = ExtResource("4_jt6jy")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://y26iiuk2qmfh"
+path="res://.godot/imported/banheiro_masc.dialogue-26272f1843b46700bb052104973e1412.tres"
+
+[deps]
+
+source_file="res://DialogueManager/banheiro_masc.dialogue"
+dest_files=["res://.godot/imported/banheiro_masc.dialogue-26272f1843b46700bb052104973e1412.tres"]
+
+[params]
+
+defaults=true

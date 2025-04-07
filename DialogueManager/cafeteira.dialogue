@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+: A única cafeteira elétrica disponível pra gente, que está quebrada há meses. 
+Tábata: A cafeteira quebrada. Como uma repartição pública pode funcionar sem café? Agora temos apenas café instantâneo. Provavelmente nunca irão arrumar essa cafeteira. É sempre assim, algo quebra e nunca é arrumado, só colocam algo pior no lugar.
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://djg5ylg36tqjf"
+path="res://.godot/imported/marmita.dialogue-814bcbbf5dca4d23a45aa00172735aa4.tres"
+
+[deps]
+
+source_file="res://DialogueManager/marmita.dialogue"
+dest_files=["res://.godot/imported/marmita.dialogue-814bcbbf5dca4d23a45aa00172735aa4.tres"]
+
+[params]
+
+defaults=true

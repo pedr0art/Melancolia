@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://lau0d7kdyteq"
+path="res://.godot/imported/funcdomes.dialogue-c81d651cde2c312016f483dcc4a5c6f6.tres"
+
+[deps]
+
+source_file="res://DialogueManager/funcdomes.dialogue"
+dest_files=["res://.godot/imported/funcdomes.dialogue-c81d651cde2c312016f483dcc4a5c6f6.tres"]
+
+[params]
+
+defaults=true

@@ -1,64 +1,28 @@
-[gd_scene load_steps=23 format=3 uid="uid://cdbowq2mdso3e"]
+[gd_scene load_steps=22 format=3 uid="uid://cdbowq2mdso3e"]
 
 [ext_resource type="Script" uid="uid://cxmf40je88d5n" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd" id="1_70gdi"]
 [ext_resource type="PackedScene" uid="uid://b13hdbg7myxtm" path="res://scripts/gabinete_pensamento/cenas/card_slot.tscn" id="2_05uvk"]
 [ext_resource type="PackedScene" uid="uid://dkrr7ghvrqpyp" path="res://scripts/gabinete_pensamento/cenas/card_manager.tscn" id="2_syefv"]
-[ext_resource type="Texture2D" uid="uid://dcd5fwu2r2jfa" path="res://Images/hud/slot_yellow.png" id="4_syefv"]
-[ext_resource type="Texture2D" uid="uid://ctyfqiwcb57q2" path="res://Images/hud/slot_red.png" id="5_70gdi"]
-[ext_resource type="Texture2D" uid="uid://cneb41426h8rw" path="res://Images/hud/slot_gray.png" id="6_70gdi"]
-[ext_resource type="Texture2D" uid="uid://uord5a5cbucn" path="res://Images/hud/slot_blue.png" id="7_1tydy"]
-[ext_resource type="Texture2D" uid="uid://ctfqpkihyvccc" path="res://Images/hud/slot_orange.png" id="8_3wt6p"]
+[ext_resource type="Texture2D" uid="uid://bqv7s2uo63j4v" path="res://Images/hud/hud_new/card_slot_oqueaconteceu.png" id="4_sniuq"]
+[ext_resource type="Texture2D" uid="uid://bjdlexdxw1ko1" path="res://Images/hud/hud_new/card_slot_comoera.png" id="5_bt606"]
+[ext_resource type="Texture2D" uid="uid://86wayrce77qu" path="res://Images/hud/hud_new/card_slot_porque.png" id="6_gpd6f"]
+[ext_resource type="Texture2D" uid="uid://bya6sxjmlhk4h" path="res://Images/hud/hud_new/card_slot_oquefazer.png" id="7_6me08"]
+[ext_resource type="Texture2D" uid="uid://dsxyfvkk20emp" path="res://Images/hud/hud_new/card_slot_possibilidades.png" id="8_ldede"]
 [ext_resource type="PackedScene" uid="uid://bhvxlsfyiwa3y" path="res://scripts/gabinete_pensamento/cenas/player_hand.tscn" id="9_70gdi"]
 [ext_resource type="PackedScene" uid="uid://dcvbhyda3nxx8" path="res://scripts/gabinete_pensamento/cenas/deck.tscn" id="10_1tydy"]
 [ext_resource type="PackedScene" uid="uid://dr7jgbj2xnp8l" path="res://scripts/gabinete_pensamento/cenas/input_manager.tscn" id="11_3wt6p"]
-[ext_resource type="Texture2D" uid="uid://jj2xr0kp0y3q" path="res://Images/hud/O QUE ACONTECEU_.png" id="12_80g7x"]
-[ext_resource type="Texture2D" uid="uid://bbrrn752fkwuv" path="res://Images/hud/COMO ERA_.png" id="13_nc6rs"]
-[ext_resource type="Texture2D" uid="uid://drcy5qrcm4mcx" path="res://Images/hud/POR QUÊ_.png" id="14_akk5g"]
-[ext_resource type="Texture2D" uid="uid://dxspksmvxqqe8" path="res://Images/hud/O QUE FAZER_.png" id="15_k22vt"]
-[ext_resource type="Texture2D" uid="uid://b5k4m2wvdugsk" path="res://Images/hud/POSSIBILIDADES_.png" id="16_sniuq"]
 [ext_resource type="Texture2D" uid="uid://ct8uhd8d77218" path="res://Images/icons/32/Play.png" id="17_akk5g"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k22vt"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sniuq"]
-bg_color = Color(0.479473, 0.102456, 0.619671, 1)
-border_width_left = 2
-border_width_bottom = 2
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-expand_margin_left = 3.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bt606"]
-bg_color = Color(0.360784, 0.0627451, 0.470588, 1)
-border_width_left = 2
-border_width_bottom = 2
-border_color = Color(0.886262, 0.886262, 0.886261, 1)
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-expand_margin_left = 3.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpd6f"]
-bg_color = Color(0.242874, 0.0293823, 0.321661, 1)
-border_width_left = 2
-border_width_bottom = 2
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-expand_margin_left = 3.0
-
-[sub_resource type="Theme" id="Theme_6me08"]
-Button/styles/disabled = null
-Button/styles/focus = SubResource("StyleBoxEmpty_k22vt")
-Button/styles/hover = SubResource("StyleBoxFlat_sniuq")
-Button/styles/normal = SubResource("StyleBoxFlat_bt606")
-Button/styles/pressed = SubResource("StyleBoxFlat_gpd6f")
+[ext_resource type="Theme" uid="uid://dd5jrs4dq67op" path="res://scripts/gabinete_pensamento/cenas/button.tres" id="17_k22vt"]
+[ext_resource type="FontFile" uid="uid://owlqqxcyoncl" path="res://fonts/Cinematografica-Bold-trial.ttf" id="19_bt606"]
+[ext_resource type="Script" uid="uid://d0mchicwv84ma" path="res://scripts/gabinete_pensamento/cenas/botao_avanco.gd" id="19_sniuq"]
+[ext_resource type="FontFile" uid="uid://bbv3csbmwha31" path="res://fonts/Cinematografica-Extrabold-trial.ttf" id="20_bt606"]
+[ext_resource type="Theme" uid="uid://be6sblnyfrrmc" path="res://scripts/gabinete_pensamento/cenas/button - Copia.tres" id="20_gpd6f"]
+[ext_resource type="Texture2D" uid="uid://bl5rxaalfojvd" path="res://Images/icons/32/Chevron-Arrow-Left.png" id="21_6me08"]
+[ext_resource type="FontFile" uid="uid://c2dil1swrouoh" path="res://fonts/Coolvetica Rg Cond.otf" id="21_gpd6f"]
+[ext_resource type="Texture2D" uid="uid://dnxded7m18hgw" path="res://Images/hud/hud_new/cardroll.png" id="22_6me08"]
+[ext_resource type="Texture2D" uid="uid://okb4iija2vbp" path="res://Images/hud/hud_new/description.png" id="23_ldede"]
 
 [node name="gabinete_pensamento" type="CanvasLayer"]
-process_mode = 3
 script = ExtResource("1_70gdi")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -69,84 +33,44 @@ offset_bottom = 378.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0.282353)
 
-[node name="ColorRect6" type="ColorRect" parent="."]
-offset_left = 410.0
-offset_top = 97.0
-offset_right = 487.0
-offset_bottom = 111.0
-mouse_filter = 2
-color = Color(0, 0, 0, 0.870588)
-
-[node name="ColorRect5" type="ColorRect" parent="."]
-offset_left = 333.0
-offset_top = 39.0
-offset_right = 398.0
-offset_bottom = 56.0
-mouse_filter = 2
-color = Color(0, 0, 0, 0.870588)
-
-[node name="ColorRect4" type="ColorRect" parent="."]
-offset_left = 245.0
-offset_top = 15.0
-offset_right = 292.0
-offset_bottom = 29.0
-mouse_filter = 2
-color = Color(0, 0, 0, 0.870588)
-
-[node name="ColorRect3" type="ColorRect" parent="."]
-offset_left = 147.0
-offset_top = 47.0
-offset_right = 203.0
-offset_bottom = 60.0
-mouse_filter = 2
-color = Color(0, 0, 0, 0.870588)
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-offset_left = 46.0
-offset_top = 106.0
-offset_right = 136.0
-offset_bottom = 121.0
-mouse_filter = 2
-color = Color(0, 0, 0, 0.870588)
-
 [node name="CardManager" parent="." instance=ExtResource("2_syefv")]
 
 [node name="CardSlots" type="Node2D" parent="."]
 
 [node name="CardSlot" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(93, 161)
+position = Vector2(75, 161)
 classe = "yellow"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot" index="0"]
-texture = ExtResource("4_syefv")
+texture = ExtResource("4_sniuq")
 
 [node name="CardSlot2" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(176, 102)
+position = Vector2(158, 102)
 classe = "red"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot2" index="0"]
-texture = ExtResource("5_70gdi")
+texture = ExtResource("5_bt606")
 
 [node name="CardSlot3" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(270, 73)
+position = Vector2(252, 73)
 classe = "gray"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot3" index="0"]
-texture = ExtResource("6_70gdi")
+texture = ExtResource("6_gpd6f")
 
 [node name="CardSlot4" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(366, 98)
+position = Vector2(348, 98)
 classe = "blue"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot4" index="0"]
-texture = ExtResource("7_1tydy")
+texture = ExtResource("7_6me08")
 
 [node name="CardSlot5" parent="CardSlots" groups=["card_slots"] instance=ExtResource("2_05uvk")]
-position = Vector2(448, 154)
+position = Vector2(430, 154)
 classe = "orange"
 
 [node name="CardSlotImage" parent="CardSlots/CardSlot5" index="0"]
-texture = ExtResource("8_3wt6p")
+texture = ExtResource("8_ldede")
 
 [node name="PlayerHand" parent="." instance=ExtResource("9_70gdi")]
 
@@ -159,42 +83,169 @@ position = Vector2(9, 0)
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="OQueAconteceu" type="Sprite2D" parent="."]
-position = Vector2(91, 114)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("12_80g7x")
-
-[node name="ComoEra" type="Sprite2D" parent="."]
-position = Vector2(175, 54)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("13_nc6rs")
-
-[node name="PorQuê" type="Sprite2D" parent="."]
-position = Vector2(269, 22)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("14_akk5g")
-
-[node name="OQueFazer" type="Sprite2D" parent="."]
-position = Vector2(366, 49)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("15_k22vt")
-
-[node name="Possibilidades" type="Sprite2D" parent="."]
-position = Vector2(449, 104)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("16_sniuq")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 593.0
-offset_top = 248.0
-offset_right = 617.0
-offset_bottom = 284.0
-theme = SubResource("Theme_6me08")
+[node name="botao_avanco" type="Button" parent="."]
+offset_left = 240.0
+offset_top = 169.0
+offset_right = 264.0
+offset_bottom = 205.0
+theme = ExtResource("17_k22vt")
 disabled = true
 icon = ExtResource("17_akk5g")
+script = ExtResource("19_sniuq")
+
+[node name="botao_voltar" type="Button" parent="."]
+offset_left = 17.0
+offset_top = 19.0
+offset_right = 35.0
+offset_bottom = 47.0
+theme = ExtResource("20_gpd6f")
+icon = ExtResource("21_6me08")
 icon_alignment = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -6.0
+offset_right = 1594.0
+offset_bottom = 900.0
+scale = Vector2(0.4, 0.5)
+mouse_filter = 2
+texture = ExtResource("23_ldede")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -39.0
+offset_top = -37.0
+offset_right = 1561.0
+offset_bottom = 863.0
+scale = Vector2(0.45, 0.45)
+mouse_filter = 2
+texture = ExtResource("22_6me08")
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 42.0
+offset_top = 180.0
+offset_right = 108.0
+offset_bottom = 192.0
+color = Color(0.905882, 0.894118, 0.882353, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 125.0
+offset_top = 121.0
+offset_right = 191.0
+offset_bottom = 133.0
+mouse_filter = 2
+color = Color(0.905882, 0.894118, 0.882353, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 219.0
+offset_top = 93.0
+offset_right = 285.0
+offset_bottom = 105.0
+mouse_filter = 2
+color = Color(0.905882, 0.894118, 0.882353, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 315.0
+offset_top = 117.0
+offset_right = 381.0
+offset_bottom = 129.0
+mouse_filter = 2
+color = Color(0.905882, 0.894118, 0.882353, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+z_index = 10
+offset_left = 397.0
+offset_top = 174.0
+offset_right = 463.0
+offset_bottom = 186.0
+mouse_filter = 2
+color = Color(0.905882, 0.894118, 0.882353, 1)
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+offset_left = 47.0
+offset_top = 182.0
+offset_right = 105.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_bt606")
+theme_override_font_sizes/font_size = 14
+text = "O QUE ACONTECEU?"
+
+[node name="Label2" type="Label" parent="."]
+z_index = 10
+offset_left = 141.0
+offset_top = 123.0
+offset_right = 176.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_bt606")
+theme_override_font_sizes/font_size = 14
+text = "COMO ERA?"
+
+[node name="Label3" type="Label" parent="."]
+z_index = 10
+offset_left = 237.0
+offset_top = 95.0
+offset_right = 272.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_bt606")
+theme_override_font_sizes/font_size = 14
+text = "POR QUE?"
+
+[node name="Label4" type="Label" parent="."]
+z_index = 10
+offset_left = 329.0
+offset_top = 119.0
+offset_right = 370.0
+offset_bottom = 129.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_bt606")
+theme_override_font_sizes/font_size = 14
+text = "O QUE FAZER?"
+
+[node name="Label5" type="Label" parent="."]
+z_index = 10
+offset_left = 404.0
+offset_top = 176.0
+offset_right = 457.0
+offset_bottom = 186.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_bt606")
+theme_override_font_sizes/font_size = 14
+text = "POSSIBILIDADES?"
+
+[node name="descrição" type="Label" parent="."]
+offset_left = 535.0
+offset_top = 9.0
+offset_right = 590.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("20_bt606")
+theme_override_font_sizes/font_size = 20
+text = "Descrição"
+
+[node name="conteudo_item" type="RichTextLabel" parent="."]
+offset_left = 503.0
+offset_top = 60.0
+offset_right = 617.0
+offset_bottom = 273.0
+theme_override_fonts/normal_font = ExtResource("21_gpd6f")
+theme_override_font_sizes/normal_font_size = 12
+
+[node name="nome_item" type="RichTextLabel" parent="."]
+offset_left = 504.0
+offset_top = 31.0
+offset_right = 615.0
+offset_bottom = 61.0
+theme_override_fonts/normal_font = ExtResource("21_gpd6f")
+theme_override_font_sizes/normal_font_size = 12
+horizontal_alignment = 1
+
+[connection signal="pressed" from="botao_avanco" to="." method="_on_botao_avanco_pressed"]
+[connection signal="pressed" from="botao_voltar" to="." method="_on_botao_voltar_pressed"]
 
 [editable path="CardSlots/CardSlot"]
 [editable path="CardSlots/CardSlot2"]

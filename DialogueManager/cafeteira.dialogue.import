@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cl25giktipqv"
+path="res://.godot/imported/cafeteira.dialogue-af5315a1084e13508604178c06c345de.tres"
+
+[deps]
+
+source_file="res://DialogueManager/cafeteira.dialogue"
+dest_files=["res://.godot/imported/cafeteira.dialogue-af5315a1084e13508604178c06c345de.tres"]
+
+[params]
+
+defaults=true

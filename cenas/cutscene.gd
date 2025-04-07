@@ -1,7 +1,11 @@
 extends Node2D
 @onready var cutscene = $cutscene
 @onready var transition = $Transition
-var prox_level = preload("res://cenas/main_menu.gd")
+var resource = load("res://DialogueManager/cutscene.dialogue")
+var prox_level = preload("res://sounds/musics/fim.tscn")
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var player_cutscene: Sprite2D = $player_cutscene
+
 # Called when the node enters the scene tree for the first time.
 var comeca = false
 func _ready():
@@ -16,12 +20,12 @@ func _process(delta):
 	if Globals.segue:
 		cutscene.play("cutscene_2")
 
-func run_dialogue(dialogue_string):
-	Globals.is_chatting = true
-	Dialogic.start(dialogue_string)
+func dialogue():
+	DialogueManager.show_dialogue_balloon(resource, "start")
 
 
-
+func play_anim(animation_name) -> void:
+	animation_player.play(animation_name)
 
 func _on_cutscene_animation_finished(anim_name):
 	if anim_name == "cutscene_2":

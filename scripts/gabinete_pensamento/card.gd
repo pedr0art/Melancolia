@@ -11,7 +11,7 @@ var current_card_slot = null
 var card_slot_reference
 var classe = ""
 var certo_errado = ""
-var nome
+var nome : String
 # Armazena a posição inicial da carta. Pode ser usada para restaurar a posição caso o movimento seja cancelado.
 var starting_position
 # Função chamada quando o nó entra na árvore de cena pela primeira vez.

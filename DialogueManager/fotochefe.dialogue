@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : Patricia, e seu nariz empinado... A Chefe da empresa, herdeira, óbvio.
+Tábata: Parece muito simpática e calorosa, mas com o tempo fica claro que ela tem seus preferidos e que sempre se coloca em primeiro lugar.
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

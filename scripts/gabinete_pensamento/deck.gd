@@ -17,7 +17,6 @@ func _process(delta: float) -> void:
 func draw_card():
 	var card_drawn_name = GabinetePensamento.item_atual
 	if not GabinetePensamento.player_deck.has(card_drawn_name):
-		print("Carta não está no baralho: ", card_drawn_name)
 		return
 
 	GabinetePensamento.player_deck.erase(card_drawn_name)
@@ -38,6 +37,7 @@ func draw_card():
 	new_card.name = "Card"
 	$"../PlayerHand".add_card_to_hand(new_card, CARD_DRAW_SPEED)
 	new_card.get_node("CardImage").scale = Vector2(0.05, 0.05)
+	new_card.get_node("CardImage").z_index = 2
 
 	GabinetePensamento.compra = false
 
@@ -62,3 +62,4 @@ func draw_cards_from_mao_string():
 		$"../PlayerHand".add_card_to_hand(new_card, CARD_DRAW_SPEED)
 
 		new_card.get_node("CardImage").scale = Vector2(0.05, 0.05)
+		new_card.get_node("CardImage").z_index = 2

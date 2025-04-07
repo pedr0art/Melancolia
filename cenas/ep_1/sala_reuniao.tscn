@@ -1,12 +1,17 @@
-[gd_scene load_steps=13 format=4 uid="uid://cpf1mfvjmc52u"]
+[gd_scene load_steps=20 format=4 uid="uid://cpf1mfvjmc52u"]
 
 [ext_resource type="Script" uid="uid://c7odgexkkpoqg" path="res://cenas/ep_1/sala_reuniao.gd" id="1_6eixw"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_ffl8y"]
 [ext_resource type="PackedScene" uid="uid://c6lat4wkh3sqh" path="res://Management/arrow_next_level.tscn" id="2_w61lc"]
+[ext_resource type="Texture2D" uid="uid://dpc8u7ggbqafo" path="res://Images/tilesets/escritorio-tile-novo.png" id="3_biet8"]
 [ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="3_w61lc"]
 [ext_resource type="PackedScene" uid="uid://cj8ko65w1l52v" path="res://Management/next_space.tscn" id="4_ugl40"]
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="6_m42lh"]
 [ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="7_ki5f4"]
+[ext_resource type="PackedScene" uid="uid://cmxrvu51nbrg3" path="res://scripts/gabinete_pensamento/cenas/button.tscn" id="8_nyp7v"]
+[ext_resource type="PackedScene" uid="uid://d0o2hylpv8qr" path="res://scripts/gabinete_pensamento/cenas/carta.tscn" id="9_ggq82"]
+[ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="11_drs6r"]
+[ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="12_0wvgg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ugl40"]
 texture = ExtResource("1_ffl8y")
@@ -398,10 +403,408 @@ texture = ExtResource("1_ffl8y")
 16:17/0 = 0
 28:17/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_drs6r"]
+texture = ExtResource("3_biet8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+16:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+16:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+12:3/0 = 0
+16:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+0:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.13675, 8, 3.95689, 8, 8, -8, 8)
+5:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+17:6/0 = 0
+18:6/0 = 0
+19:6/0 = 0
+20:6/0 = 0
+21:6/0 = 0
+22:6/0 = 0
+23:6/0 = 0
+24:6/0 = 0
+25:6/0 = 0
+26:6/0 = 0
+27:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.2159, -8, 5.39576, -8, 5.57562, 8, -5.03605, 8)
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+12:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+17:7/0 = 0
+18:7/0 = 0
+19:7/0 = 0
+20:7/0 = 0
+21:7/0 = 0
+22:7/0 = 0
+23:7/0 = 0
+24:7/0 = 0
+25:7/0 = 0
+26:7/0 = 0
+27:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+12:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+18:8/0 = 0
+19:8/0 = 0
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:8/0 = 0
+26:8/0 = 0
+27:8/0 = 0
+28:8/0 = 0
+29:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+12:9/0 = 0
+13:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+17:9/0 = 0
+18:9/0 = 0
+19:9/0 = 0
+20:9/0 = 0
+21:9/0 = 0
+22:9/0 = 0
+25:9/0 = 0
+26:9/0 = 0
+27:9/0 = 0
+28:9/0 = 0
+29:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+12:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+18:10/0 = 0
+19:10/0 = 0
+20:10/0 = 0
+21:10/0 = 0
+22:10/0 = 0
+23:10/0 = 0
+24:10/0 = 0
+25:10/0 = 0
+26:10/0 = 0
+27:10/0 = 0
+28:10/0 = 0
+29:10/0 = 0
+30:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+12:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+15:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+18:11/0 = 0
+19:11/0 = 0
+20:11/0 = 0
+21:11/0 = 0
+22:11/0 = 0
+23:11/0 = 0
+24:11/0 = 0
+25:11/0 = 0
+26:11/0 = 0
+27:11/0 = 0
+28:11/0 = 0
+29:11/0 = 0
+30:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+5:12/0 = 0
+6:12/0 = 0
+7:12/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+12:12/0 = 0
+13:12/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+17:12/0 = 0
+18:12/0 = 0
+19:12/0 = 0
+20:12/0 = 0
+21:12/0 = 0
+22:12/0 = 0
+23:12/0 = 0
+24:12/0 = 0
+25:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+6:13/0 = 0
+7:13/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+12:13/0 = 0
+13:13/0 = 0
+14:13/0 = 0
+15:13/0 = 0
+16:13/0 = 0
+17:13/0 = 0
+18:13/0 = 0
+19:13/0 = 0
+21:13/0 = 0
+22:13/0 = 0
+23:13/0 = 0
+24:13/0 = 0
+27:13/0 = 0
+29:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+5:14/0 = 0
+6:14/0 = 0
+7:14/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+12:14/0 = 0
+13:14/0 = 0
+14:14/0 = 0
+15:14/0 = 0
+16:14/0 = 0
+17:14/0 = 0
+18:14/0 = 0
+19:14/0 = 0
+20:14/0 = 0
+21:14/0 = 0
+22:14/0 = 0
+23:14/0 = 0
+24:14/0 = 0
+25:14/0 = 0
+26:14/0 = 0
+27:14/0 = 0
+28:14/0 = 0
+29:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+4:15/0 = 0
+5:15/0 = 0
+6:15/0 = 0
+7:15/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+12:15/0 = 0
+13:15/0 = 0
+14:15/0 = 0
+15:15/0 = 0
+16:15/0 = 0
+18:15/0 = 0
+19:15/0 = 0
+20:15/0 = 0
+21:15/0 = 0
+22:15/0 = 0
+23:15/0 = 0
+24:15/0 = 0
+25:15/0 = 0
+26:15/0 = 0
+27:15/0 = 0
+28:15/0 = 0
+29:15/0 = 0
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+8:16/0 = 0
+9:16/0 = 0
+10:16/0 = 0
+11:16/0 = 0
+12:16/0 = 0
+13:16/0 = 0
+14:16/0 = 0
+15:16/0 = 0
+16:16/0 = 0
+18:16/0 = 0
+19:16/0 = 0
+20:16/0 = 0
+21:16/0 = 0
+22:16/0 = 0
+23:16/0 = 0
+24:16/0 = 0
+25:16/0 = 0
+26:16/0 = 0
+27:16/0 = 0
+28:16/0 = 0
+29:16/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+8:17/0 = 0
+9:17/0 = 0
+10:17/0 = 0
+11:17/0 = 0
+12:17/0 = 0
+15:17/0 = 0
+16:17/0 = 0
+28:17/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_6eixw"]
 physics_layer_0/collision_layer = 7
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_ugl40")
+sources/1 = SubResource("TileSetAtlasSource_drs6r")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wvgg"]
+atlas = ExtResource("3_biet8")
+region = Rect2(5, 97, 22, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ugl40"]
 size = Vector2(27, 63)
@@ -410,7 +813,7 @@ size = Vector2(27, 63)
 size = Vector2(27, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nyp7v"]
-size = Vector2(55, 48)
+size = Vector2(58.5, 48)
 
 [node name="sala_reuniao" type="Node2D"]
 script = ExtResource("1_6eixw")
@@ -427,13 +830,18 @@ tile_set = SubResource("TileSet_6eixw")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="."]
 position = Vector2(145, 84)
-tile_map_data = PackedByteArray("AAAGAAUAAAAQAAYAAAAGAAYAAAAQAAcAAAAHAAUAAAARAAYAAAAHAAYAAAARAAcAAAAIAAUAAAASAAYAAAAIAAYAAAASAAcAAAANAAUAAAAEAAkAAAAHAA0AAAANAA0AAAAJAA0AAAANAA0AAAAHAAoAAAATAAkAAAAJAAoAAAATAAkAAAA=")
+tile_map_data = PackedByteArray("AAAGAAUAAAAQAAYAAAAGAAYAAAAQAAcAAAAHAAUAAAARAAYAAAAHAAYAAAARAAcAAAAIAAUAAAASAAYAAAAIAAYAAAASAAcAAAANAAUAAAAEAAkAAAAHAAkAAQAFAAYAAAAHAAoAAQAFAAcAAAAJAAkAAQAFAAYAAAAJAAoAAQAFAAcAAAAHAAwAAQAEAAYAAAAHAA0AAQAEAAcAAAAJAAwAAQAEAAYAAAAJAA0AAQAEAAcAAAA=")
 tile_set = SubResource("TileSet_6eixw")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="."]
 position = Vector2(145, 84)
 tile_map_data = PackedByteArray("AAAGAAsAAAAZAAgAAAAGAAwAAAAZAAkAAAAHAAsAAAAaAAgAAAAHAAwAAAAaAAkAAAAIAAsAAAAbAAgAAAAIAAwAAAAbAAkAAAAJAAsAAAAcAAgAAAAJAAwAAAAcAAkAAAAKAAsAAAAdAAgAAAAKAAwAAAAdAAkAAAA=")
 tile_set = SubResource("TileSet_6eixw")
+
+[node name="selo2" type="Sprite2D" parent="."]
+position = Vector2(301, 274)
+rotation = -1.5708
+texture = SubResource("AtlasTexture_0wvgg")
 
 [node name="character" parent="." instance=ExtResource("3_w61lc")]
 position = Vector2(322, 186)
@@ -468,14 +876,28 @@ visible = false
 
 [node name="selo" parent="." instance=ExtResource("7_ki5f4")]
 position = Vector2(278, 275)
+dialogo = "seloqualidade"
 item = "seloqualidade_red"
 
 [node name="exclamation" parent="selo" index="0"]
-position = Vector2(14, -4)
+position = Vector2(6, -17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="selo"]
-position = Vector2(29, 8)
+position = Vector2(30.75, 8)
 shape = SubResource("RectangleShape2D_nyp7v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gabinete_button" parent="CanvasLayer" instance=ExtResource("8_nyp7v")]
+
+[node name="carta" parent="CanvasLayer" instance=ExtResource("9_ggq82")]
+position = Vector2(555, 149)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_drs6r")
+autoplay = true
+
+[node name="pause_menu" parent="." instance=ExtResource("12_0wvgg")]
 
 [editable path="character"]
 [editable path="Doors/Door_principal"]

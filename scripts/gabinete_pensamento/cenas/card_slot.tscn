@@ -42,12 +42,10 @@ position = Vector2(-0.25, -0.5)
 shape = SubResource("RectangleShape2D_e4yjj")
 
 [node name="ReturnButton" type="Button" parent="."]
-visible = false
 z_index = 1000
 offset_left = -7.0
-offset_top = 17.0
 offset_right = 13.0
-offset_bottom = 39.0
+offset_bottom = 22.0
 scale = Vector2(0.7, 0.7)
 theme = SubResource("Theme_mwym0")
 icon = ExtResource("3_mwym0")

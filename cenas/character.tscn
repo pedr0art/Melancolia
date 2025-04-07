@@ -207,7 +207,8 @@ frame_progress = 0.681989
 
 [node name="anim" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_nwqpf")
-animation = &"idle_front"
+animation = &"walk_right"
+frame_progress = 0.896417
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 light_mask = 2

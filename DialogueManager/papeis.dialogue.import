@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://blj0c4c3qqep4"
+path="res://.godot/imported/papeis.dialogue-f48b54ec0858e4fa61024aa09d487e86.tres"
+
+[deps]
+
+source_file="res://DialogueManager/papeis.dialogue"
+dest_files=["res://.godot/imported/papeis.dialogue-f48b54ec0858e4fa61024aa09d487e86.tres"]
+
+[params]
+
+defaults=true

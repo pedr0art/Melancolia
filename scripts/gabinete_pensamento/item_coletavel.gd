@@ -8,15 +8,26 @@ extends Node2D
 
 var jogador_na_area: bool = false
 var item_coletado: bool = false
+var resource
+@onready var sfx_item: AudioStreamPlayer2D = $sfx_item
 
 func _ready() -> void:
 	visible = false
-
+	resource = load("res://DialogueManager/" + dialogo + ".dialogue")
+	if item in GabinetePensamento.itens_coletados:
+		queue_free()  # Destrói o item antes mesmo de aparecer
 func _process(_delta):
 	if jogador_na_area and Input.is_action_just_pressed("ui_interact"):
+		sfx_item.play()
 		GabinetePensamento.compra = true
 		GabinetePensamento.item_atual = item
 		add_card_to_mao_string(item)
+		Globals.mostra = str("res://Images/Cards/" + item + ".png")
+		DialogueManager.show_dialogue_balloon(resource, "start")
+		Globals.novo = true
+		if item != "" and item not in GabinetePensamento.itens_coletados:
+			GabinetePensamento.itens_coletados.append(item)
+		await sfx_item.finished
 		queue_free()
 
 

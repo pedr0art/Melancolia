@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://bdqcuf28vuk5v"]
+[gd_scene load_steps=46 format=4 uid="uid://bdqcuf28vuk5v"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_i4huj"]
 [ext_resource type="Script" uid="uid://bsk5l1sdfdap4" path="res://cenas/ep_1/escritorio_principal.gd" id="1_y2n54"]
@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://cdbowq2mdso3e" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.tscn" id="7_f227i"]
 [ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="8_sh4jg"]
 [ext_resource type="PackedScene" uid="uid://dcs03xv7bcq57" path="res://cenas/npc_francisco.tscn" id="9_a2mpx"]
+[ext_resource type="PackedScene" uid="uid://cmxrvu51nbrg3" path="res://scripts/gabinete_pensamento/cenas/button.tscn" id="10_a2mpx"]
+[ext_resource type="PackedScene" uid="uid://d0o2hylpv8qr" path="res://scripts/gabinete_pensamento/cenas/carta.tscn" id="11_h7l8d"]
+[ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="12_d87ap"]
+[ext_resource type="AudioStream" uid="uid://c3ru1evlexui8" path="res://sounds/musics/office-ambience-24734.mp3" id="13_pe33k"]
+[ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="14_pe33k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y2n54"]
 texture = ExtResource("1_i4huj")
@@ -2822,6 +2827,7 @@ position = Vector2(496, 386)
 
 [node name="anim" parent="character/CharacterBody2D" index="2"]
 animation = &"idle_up"
+frame_progress = 0.0
 
 [node name="TileMapLayer7" type="TileMapLayer" parent="."]
 position = Vector2(145, 87)
@@ -2927,6 +2933,7 @@ visible = false
 
 [node name="mesapcvazio" parent="." instance=ExtResource("8_sh4jg")]
 position = Vector2(403, 184)
+dialogo = "mesapcvazio"
 item = "mesapcvazio_yellow"
 
 [node name="exclamation" parent="mesapcvazio" index="0"]
@@ -2938,6 +2945,7 @@ shape = SubResource("RectangleShape2D_7savp")
 
 [node name="computador" parent="." instance=ExtResource("8_sh4jg")]
 position = Vector2(346, 303)
+dialogo = "computador"
 item = "computador_red"
 
 [node name="exclamation" parent="computador" index="0"]
@@ -2949,6 +2957,7 @@ shape = SubResource("RectangleShape2D_d87ap")
 
 [node name="papeis2" parent="." instance=ExtResource("8_sh4jg")]
 position = Vector2(307, 302)
+dialogo = "papeis"
 item = "pilhapapeis_orange"
 
 [node name="exclamation" parent="papeis2" index="0"]
@@ -2960,6 +2969,7 @@ shape = SubResource("RectangleShape2D_pe33k")
 
 [node name="poster" parent="." instance=ExtResource("8_sh4jg")]
 position = Vector2(224, 51)
+dialogo = "poster"
 item = "poster_orange"
 
 [node name="exclamation" parent="poster" index="0"]
@@ -2974,6 +2984,7 @@ position = Vector2(432, 73)
 
 [node name="francisco" parent="." instance=ExtResource("8_sh4jg")]
 position = Vector2(431, 73)
+dialogo = "francisco"
 item = "francisco_blue"
 
 [node name="exclamation" parent="francisco" index="0"]
@@ -2982,6 +2993,23 @@ position = Vector2(0, -22)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="francisco"]
 position = Vector2(0, 13.375)
 shape = SubResource("RectangleShape2D_nrpe5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="gabinete_button" parent="CanvasLayer" instance=ExtResource("10_a2mpx")]
+
+[node name="carta" parent="CanvasLayer" instance=ExtResource("11_h7l8d")]
+position = Vector2(555, 149)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_d87ap")
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_pe33k")
+autoplay = true
+
+[node name="pause_menu" parent="." instance=ExtResource("14_pe33k")]
 
 [editable path="character"]
 [editable path="Doors/Door_principal"]

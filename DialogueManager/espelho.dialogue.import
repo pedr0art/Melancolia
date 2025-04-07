@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://blvljsegs56j7"
+path="res://.godot/imported/espelho.dialogue-f53cc809fb977d00e12ebc56c469dda7.tres"
+
+[deps]
+
+source_file="res://DialogueManager/espelho.dialogue"
+dest_files=["res://.godot/imported/espelho.dialogue-f53cc809fb977d00e12ebc56c469dda7.tres"]
+
+[params]
+
+defaults=true

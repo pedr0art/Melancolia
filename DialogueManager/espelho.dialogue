@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : O espelho, testemunha silenciosa do meu estado mental. 
+Tábata: Estou exausta, meu rosto está péssimo, ir no banheiro da empresa perceber isso se tornou rotina, o que diabos está acontecendo comigo?
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

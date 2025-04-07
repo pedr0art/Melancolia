@@ -14,11 +14,24 @@ enum States { IDLE, MOVE }
 var currentState = States.IDLE
 
 func _physics_process(delta):
-	if !Globals.cuts and !Globals.is_chatting:
+	if not Globals.is_chatting and not Globals.gabinete and not Globals.paused:
 		handle_state_transitions()
 		perform_state_actions(delta)
 		move_and_slide()
-	
+	else:
+		# Impede qualquer movimentação
+		velocity = Vector2.ZERO
+		
+		# Força animação idle com base na última direção
+		if last_dir.x < 0:
+			animation.play("idle_left")
+		elif last_dir.x > 0:
+			animation.play("idle_right")
+		elif last_dir.y < 0:
+			animation.play("idle_up")
+		else:
+			animation.play("idle_front")
+
 func handle_state_transitions():
 	if Input.is_action_pressed("Left") or Input.is_action_pressed("Right") or Input.is_action_pressed("Up") or Input.is_action_pressed("Down"):
 		currentState = States.MOVE

@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : A mesa de Henrique. Está praticamente vazia, se não fosse por um monitor desconectado.
+Tábata: Faz duas semanas que Henrique se demitiu. Nunca falei direito com ele, mas fazia tempo que ele parecia distante e cansado. 
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END

@@ -1,45 +1,23 @@
-[gd_scene load_steps=12 format=3 uid="uid://cy81r6hvwwn6d"]
+[gd_scene load_steps=16 format=3 uid="uid://cy81r6hvwwn6d"]
 
 [ext_resource type="Texture2D" uid="uid://brq7hlw5kjs6y" path="res://Images/cidade2.png" id="1_6t3no"]
 [ext_resource type="Script" uid="uid://ce81vjyswib2" path="res://cenas/cutscene.gd" id="1_rkjmb"]
-[ext_resource type="PackedScene" uid="uid://6ugkmcfjp3qp" path="res://cenas/character.tscn" id="2_p56k6"]
 [ext_resource type="AudioStream" uid="uid://d33decy8ndw7x" path="res://sounds/musics/birds-and-city-ambience-65651.mp3" id="3_vp1lp"]
+[ext_resource type="Texture2D" uid="uid://lvkn4fbwk5q2" path="res://Images/tabata-Sheet.png" id="4_xinj7"]
 
 [sub_resource type="Animation" id="Animation_u7yga"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../character:position")
+tracks/0/path = NodePath("../player_cutscene:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(414.361, 224.222)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../character")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../character")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
+"values": [Vector2(22, 225)]
 }
 
 [sub_resource type="Animation" id="Animation_rigk2"]
@@ -48,23 +26,23 @@ length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../character:position")
+tracks/0/path = NodePath("../player_cutscene:position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = false
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.5),
+"times": PackedFloat32Array(0, 2.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(18.0587, 224.222), Vector2(203.849, 224.222)]
+"values": [Vector2(22, 225), Vector2(209, 225)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../character")
+tracks/1/path = NodePath("..")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.5),
+"times": PackedFloat32Array(0, 2.2),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": ["walk_right"],
@@ -77,15 +55,15 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../character")
+tracks/2/path = NodePath("..")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(2.5),
+"times": PackedFloat32Array(2.4),
 "transitions": PackedFloat32Array(1),
 "values": [{
-"args": ["cutscene_cidade"],
-"method": &"run_dialogue"
+"args": [],
+"method": &"dialogue"
 }]
 }
 
@@ -95,61 +73,23 @@ length = 9.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../character:position")
+tracks/0/path = NodePath("../player_cutscene:position")
 tracks/0/interp = 1
-tracks/0/loop_wrap = false
+tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 6, 9),
+"times": PackedFloat32Array(0, 3.5, 5.5031, 9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(203.849, 224.222), Vector2(421.665, 224.222), Vector2(421.665, 224.222), Vector2(651.094, 224.222)]
+"values": [Vector2(209, 225), Vector2(405, 225), Vector2(405, 225), Vector2(654, 225)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
-tracks/1/enabled = false
+tracks/1/enabled = true
 tracks/1/path = NodePath("..")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(8),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": ["fade_out"],
-"method": &"_play_fade_out"
-}]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = false
-tracks/2/path = NodePath("../character:camera_zoom")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(3),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1.1, 1.1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = false
-tracks/3/path = NodePath("../character:camera_limit_bottom")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(3),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [200]
-}
-tracks/4/type = "method"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("../character")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 3, 6),
+"times": PackedFloat32Array(0, 3.5, 5.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "values": [{
 "args": ["walk_right"],
@@ -230,6 +170,60 @@ _data = {
 &"fade_out_cuts": SubResource("Animation_s3sy8")
 }
 
+[sub_resource type="Animation" id="Animation_xinj7"]
+resource_name = "walk_right"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_cutscene:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 7, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_8dw4w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_cutscene:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_8ug67"]
+resource_name = "idle_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_cutscene:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [10]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a8hyk"]
+_data = {
+&"RESET": SubResource("Animation_8dw4w"),
+&"idle_up": SubResource("Animation_8ug67"),
+&"walk_right": SubResource("Animation_xinj7")
+}
+
 [node name="cutscene" type="Node2D"]
 script = ExtResource("1_rkjmb")
 
@@ -246,12 +240,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_cem8t")
 }
 
-[node name="character" parent="." instance=ExtResource("2_p56k6")]
-position = Vector2(203.849, 224.222)
-camera_zoom = Vector2(1, 1)
-camera_limit_top = 0
-camera_limit_bottom = 360
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_vp1lp")
 autoplay = true
@@ -264,7 +252,6 @@ libraries = {
 
 [node name="ColorRect" type="ColorRect" parent="Transition"]
 visible = false
-self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -275,6 +262,18 @@ offset_bottom = 35.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_a8hyk")
+}
+autoplay = "walk_right"
+
+[node name="player_cutscene" type="Sprite2D" parent="."]
+position = Vector2(209, 225)
+texture = ExtResource("4_xinj7")
+hframes = 12
+frame = 7
 
 [connection signal="animation_finished" from="cutscene" to="." method="_on_cutscene_animation_finished"]
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

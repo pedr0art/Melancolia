@@ -17,6 +17,12 @@ var hand = []
 var classe_hand = []
 var classe_atual 
 var gabinete = false
+var apertou = false
+var novo = false
+var mostra = ""
+var marmita = false
+var first_turorial = true
+var paused = false
 var player_deck =[
 	"funcdomes_yellow",
 	"enzo_yellow",

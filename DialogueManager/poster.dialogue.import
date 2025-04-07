@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://b7nvnwyaoq01c"
+path="res://.godot/imported/poster.dialogue-d4745ba96ebe779f93a7c192b286a8d4.tres"
+
+[deps]
+
+source_file="res://DialogueManager/poster.dialogue"
+dest_files=["res://.godot/imported/poster.dialogue-d4745ba96ebe779f93a7c192b286a8d4.tres"]
+
+[params]
+
+defaults=true

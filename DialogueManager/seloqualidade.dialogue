@@ -1,0 +1,8 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+ : O selo de qualidade da empresa, um símbolo de excelência e orgulho para a chefe.
+Tábata: É, trabalhar em uma das empresas de maior prestígio da cidade não é algo que estava exatamente nos meus planos, mas foi algo que me concedeu estabilidade e uma folga das cobranças dos meus pais. 
+set Globals.is_chatting = false
+set Globals.mostra = ""
+=> END
