@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cdbowq2mdso3e"]
+[gd_scene load_steps=24 format=3 uid="uid://cdbowq2mdso3e"]
 
 [ext_resource type="Script" uid="uid://cxmf40je88d5n" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd" id="1_70gdi"]
 [ext_resource type="PackedScene" uid="uid://b13hdbg7myxtm" path="res://scripts/gabinete_pensamento/cenas/card_slot.tscn" id="2_05uvk"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://bl5rxaalfojvd" path="res://Images/icons/32/Chevron-Arrow-Left.png" id="21_6me08"]
 [ext_resource type="FontFile" uid="uid://c2dil1swrouoh" path="res://fonts/Coolvetica Rg Cond.otf" id="21_gpd6f"]
 [ext_resource type="Texture2D" uid="uid://dnxded7m18hgw" path="res://Images/hud/hud_new/cardroll.png" id="22_6me08"]
+[ext_resource type="Script" uid="uid://bvwccc582rrvd" path="res://scripts/gabinete_pensamento/cenas/control_tutorial.gd" id="22_ldede"]
+[ext_resource type="Texture2D" uid="uid://b4mywq8yqrgl6" path="res://Images/hud/hud_new/Arrow 1.png" id="23_2fip0"]
 [ext_resource type="Texture2D" uid="uid://okb4iija2vbp" path="res://Images/hud/hud_new/description.png" id="23_ldede"]
 
 [node name="gabinete_pensamento" type="CanvasLayer"]
@@ -120,7 +122,7 @@ mouse_filter = 2
 texture = ExtResource("22_6me08")
 
 [node name="ColorRect6" type="ColorRect" parent="."]
-z_index = 10
+z_index = 3000
 offset_left = 42.0
 offset_top = 180.0
 offset_right = 108.0
@@ -128,7 +130,7 @@ offset_bottom = 192.0
 color = Color(0.905882, 0.894118, 0.882353, 1)
 
 [node name="ColorRect7" type="ColorRect" parent="."]
-z_index = 10
+z_index = 3000
 offset_left = 125.0
 offset_top = 121.0
 offset_right = 191.0
@@ -137,7 +139,7 @@ mouse_filter = 2
 color = Color(0.905882, 0.894118, 0.882353, 1)
 
 [node name="ColorRect8" type="ColorRect" parent="."]
-z_index = 10
+z_index = 3000
 offset_left = 219.0
 offset_top = 93.0
 offset_right = 285.0
@@ -146,7 +148,7 @@ mouse_filter = 2
 color = Color(0.905882, 0.894118, 0.882353, 1)
 
 [node name="ColorRect9" type="ColorRect" parent="."]
-z_index = 10
+z_index = 3000
 offset_left = 315.0
 offset_top = 117.0
 offset_right = 381.0
@@ -155,16 +157,16 @@ mouse_filter = 2
 color = Color(0.905882, 0.894118, 0.882353, 1)
 
 [node name="ColorRect10" type="ColorRect" parent="."]
-z_index = 10
+z_index = 3000
 offset_left = 397.0
-offset_top = 174.0
+offset_top = 173.0
 offset_right = 463.0
-offset_bottom = 186.0
+offset_bottom = 185.0
 mouse_filter = 2
 color = Color(0.905882, 0.894118, 0.882353, 1)
 
 [node name="Label" type="Label" parent="."]
-z_index = 10
+z_index = 3001
 offset_left = 47.0
 offset_top = 182.0
 offset_right = 105.0
@@ -175,7 +177,7 @@ theme_override_font_sizes/font_size = 14
 text = "O QUE ACONTECEU?"
 
 [node name="Label2" type="Label" parent="."]
-z_index = 10
+z_index = 3001
 offset_left = 141.0
 offset_top = 123.0
 offset_right = 176.0
@@ -186,7 +188,7 @@ theme_override_font_sizes/font_size = 14
 text = "COMO ERA?"
 
 [node name="Label3" type="Label" parent="."]
-z_index = 10
+z_index = 3001
 offset_left = 237.0
 offset_top = 95.0
 offset_right = 272.0
@@ -197,7 +199,7 @@ theme_override_font_sizes/font_size = 14
 text = "POR QUE?"
 
 [node name="Label4" type="Label" parent="."]
-z_index = 10
+z_index = 3001
 offset_left = 329.0
 offset_top = 119.0
 offset_right = 370.0
@@ -208,11 +210,11 @@ theme_override_font_sizes/font_size = 14
 text = "O QUE FAZER?"
 
 [node name="Label5" type="Label" parent="."]
-z_index = 10
+z_index = 3001
 offset_left = 404.0
-offset_top = 176.0
+offset_top = 175.0
 offset_right = 457.0
-offset_bottom = 186.0
+offset_bottom = 185.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("19_bt606")
 theme_override_font_sizes/font_size = 14
@@ -243,6 +245,191 @@ offset_bottom = 61.0
 theme_override_fonts/normal_font = ExtResource("21_gpd6f")
 theme_override_font_sizes/normal_font_size = 12
 horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("22_ldede")
+
+[node name="tutorial1" type="Control" parent="Control"]
+visible = false
+z_index = 4096
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/tutorial1"]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 257.0
+offset_right = 535.0
+offset_bottom = 348.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/tutorial1"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 264.0
+offset_right = 523.0
+offset_bottom = 339.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("21_gpd6f")
+theme_override_font_sizes/normal_font_size = 21
+text = "Essa é a área de insight da Tábata, aqui você poderá gerenciar os itens e ajudar Tábata a ter um insight sobre sua vida."
+horizontal_alignment = 1
+
+[node name="tutorial2" type="Control" parent="Control"]
+visible = false
+z_index = 4096
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/tutorial2"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 151.0
+offset_right = 478.0
+offset_bottom = 220.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/tutorial2"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 157.0
+offset_right = 467.0
+offset_bottom = 239.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("21_gpd6f")
+theme_override_font_sizes/normal_font_size = 21
+text = "Aqui ficam os itens encontrados, em forma de cartas."
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/tutorial2"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 287.0
+offset_right = 407.0
+offset_bottom = 538.0
+rotation = 3.14159
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_2fip0")
+
+[node name="tutorial3" type="Control" parent="Control"]
+visible = false
+z_index = 4096
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/tutorial3"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 165.0
+offset_right = 395.0
+offset_bottom = 237.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/tutorial3"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 172.0
+offset_right = 384.0
+offset_bottom = 233.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("21_gpd6f")
+theme_override_font_sizes/normal_font_size = 20
+text = "Aqui fica o conteúdo dos itens. O que foi exposto ao encontrá-lo."
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/tutorial3"]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 194.0
+offset_right = 541.0
+offset_bottom = 445.0
+rotation = 1.5708
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_2fip0")
+
+[node name="tutorial4" type="Control" parent="Control"]
+visible = false
+z_index = 4096
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/tutorial4"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 192.0
+offset_right = 382.0
+offset_bottom = 292.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/tutorial4"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 204.0
+offset_right = 377.0
+offset_bottom = 283.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("21_gpd6f")
+theme_override_font_sizes/normal_font_size = 15
+text = "Você deve posicionar os itens nos slots de mesma cor. Esses slots são aspectos que ajudarão Tábata a entender seu estado mental atual e a construir um insight sobre sua vida."
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/tutorial4"]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 124.0
+offset_right = 315.0
+offset_bottom = 375.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("23_2fip0")
+
+[node name="tutorial5" type="Control" parent="Control"]
+visible = false
+z_index = 4096
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/tutorial5"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 254.0
+offset_right = 393.0
+offset_bottom = 325.0
+mouse_filter = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/tutorial5"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 259.0
+offset_right = 385.0
+offset_bottom = 321.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("21_gpd6f")
+theme_override_font_sizes/normal_font_size = 15
+text = "Ao posicionar todos os itens que levam a refelxão correta da Tábata, o botão de avanço ficará liberado e você poderá descobrir o insighit da Tábata."
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control/tutorial5"]
+layout_mode = 0
+offset_left = 243.0
+offset_top = 210.0
+offset_right = 317.0
+offset_bottom = 461.0
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("23_2fip0")
 
 [connection signal="pressed" from="botao_avanco" to="." method="_on_botao_avanco_pressed"]
 [connection signal="pressed" from="botao_voltar" to="." method="_on_botao_voltar_pressed"]

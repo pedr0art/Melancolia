@@ -29,6 +29,7 @@ func _process(_delta):
 			GabinetePensamento.itens_coletados.append(item)
 		await sfx_item.finished
 		queue_free()
+	
 
 
 		

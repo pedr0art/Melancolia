@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://c0h862m1w5hh7"
+path="res://.godot/imported/TAB.dialogue-55b3561cae0c69bbf9586271e19596f6.tres"
+
+[deps]
+
+source_file="res://DialogueManager/TAB.dialogue"
+dest_files=["res://.godot/imported/TAB.dialogue-55b3561cae0c69bbf9586271e19596f6.tres"]
+
+[params]
+
+defaults=true

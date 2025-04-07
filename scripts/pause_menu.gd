@@ -12,6 +12,6 @@ func _on_quit_btn_pressed() -> void:
 	get_tree().quit()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		visible = true
-		Globals.paused = true
+	if event.is_action_pressed("ui_cancel") and not Globals.texto_psico:
+		visible = not visible
+		Globals.paused = visible

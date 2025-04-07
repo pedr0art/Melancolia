@@ -1,0 +1,6 @@
+~ start
+set Globals.is_chatting = true
+do wait(1.5)
+ : Você coletou um item, aperte TAB ou o botão de luz no canto inferior direito para entrar na área de insight da Tábata.
+set Globals.is_chatting = false
+=> END

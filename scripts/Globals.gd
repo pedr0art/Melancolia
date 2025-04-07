@@ -23,6 +23,8 @@ var mostra = ""
 var marmita = false
 var first_turorial = true
 var paused = false
+var texto_psico = false
+var primeiro_gabinete = true
 var player_deck =[
 	"funcdomes_yellow",
 	"enzo_yellow",

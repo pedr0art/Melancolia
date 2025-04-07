@@ -14,7 +14,7 @@ enum States { IDLE, MOVE }
 var currentState = States.IDLE
 
 func _physics_process(delta):
-	if not Globals.is_chatting and not Globals.gabinete and not Globals.paused:
+	if not Globals.is_chatting and not Globals.gabinete and not Globals.paused and not Globals.texto_psico:
 		handle_state_transitions()
 		perform_state_actions(delta)
 		move_and_slide()

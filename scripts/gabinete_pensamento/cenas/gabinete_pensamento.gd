@@ -34,7 +34,7 @@ var itens_coletados: Array = []
 func _ready():
 	visible = false
 func _process(_delta):
-	if Input.is_action_just_pressed("tab") and not Globals.is_chatting and not Globals.paused:
+	if Input.is_action_just_pressed("tab") and not Globals.is_chatting and not Globals.paused and not Globals.texto_psico:
 		alternar_gabinete()
 		Globals.apertou = false
 		Globals.novo = false

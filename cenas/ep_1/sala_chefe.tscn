@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dnar1xbxp7wvh"]
+[gd_scene load_steps=25 format=4 uid="uid://dnar1xbxp7wvh"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_bqwjn"]
 [ext_resource type="Script" uid="uid://bang0wswux02b" path="res://cenas/ep_1/sala_chefe.gd" id="1_ydfp7"]
@@ -11,9 +11,11 @@
 [ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="9_tm107"]
 [ext_resource type="PackedScene" uid="uid://cmxrvu51nbrg3" path="res://scripts/gabinete_pensamento/cenas/button.tscn" id="10_xk06s"]
 [ext_resource type="PackedScene" uid="uid://d0o2hylpv8qr" path="res://scripts/gabinete_pensamento/cenas/carta.tscn" id="11_6ph0m"]
+[ext_resource type="PackedScene" uid="uid://jwk7rcftlr3d" path="res://scripts/gabinete_pensamento/cenas/dialogo_button.tscn" id="11_73o2s"]
 [ext_resource type="AudioStream" uid="uid://c3ru1evlexui8" path="res://sounds/musics/office-ambience-24734.mp3" id="12_d55ms"]
 [ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="13_0prqg"]
 [ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="14_0prqg"]
+[ext_resource type="PackedScene" uid="uid://dj0iiiatx1qi1" path="res://scripts/gabinete_pensamento/cenas/dialogo_psico.tscn" id="16_x2a1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv3eq"]
 texture = ExtResource("1_bqwjn")
@@ -538,11 +540,14 @@ position = Vector2(-15, -20)
 position = Vector2(19, 13)
 shape = SubResource("RectangleShape2D_xk06s")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Control" type="CanvasLayer" parent="."]
 
-[node name="gabinete_button" parent="CanvasLayer" instance=ExtResource("10_xk06s")]
+[node name="gabinete_button" parent="Control" instance=ExtResource("10_xk06s")]
 
-[node name="carta" parent="CanvasLayer" instance=ExtResource("11_6ph0m")]
+[node name="dialogo_button" parent="Control" instance=ExtResource("11_73o2s")]
+
+[node name="carta" parent="Control" instance=ExtResource("11_6ph0m")]
+visible = false
 position = Vector2(555, 149)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -554,6 +559,8 @@ stream = ExtResource("13_0prqg")
 autoplay = true
 
 [node name="pause_menu" parent="." instance=ExtResource("14_0prqg")]
+
+[node name="dialogo_psico" parent="." instance=ExtResource("16_x2a1d")]
 
 [editable path="character"]
 [editable path="Doors/Door_escritorio"]

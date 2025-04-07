@@ -17,7 +17,9 @@ func _ready() -> void:
 	player_hand_reference = $"../PlayerHand"
 	deck_reference = $"../Deck"
 	$"../InputManager".connect("left_mouse_button_released", on_left_click_released)
-
+	if Globals.restart:
+		resetar_slots()
+		Globals.restart = false
 func _process(delta: float) -> void:
 	if card_being_dragged:
 		var mouse_pos = get_global_mouse_position()
@@ -157,3 +159,7 @@ func get_color_from_name(color_name: String) -> Color:
 		"orange": return Color(1, 0.5, 0.1)
 		_:
 			return Color(1, 1, 1)  # branco padrão se não encontrar
+func resetar_slots():
+	for slot in get_tree().get_nodes_in_group("card_slots"):
+		slot.card_in_slot = false
+		slot.card_armazenado = null

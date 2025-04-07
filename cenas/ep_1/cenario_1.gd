@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var resource = load("res://DialogueManager/tutorial.dialogue")
 func _ready() -> void:
 	if NavigationManager.spawn_door_tag != null:
@@ -9,7 +10,6 @@ func _ready() -> void:
 		Globals.first_turorial = false
 	else:
 		pass
-		
 
 func _on_level_spawn(destination_tag: String):
 	var door_path = "Doors/Door_" + destination_tag

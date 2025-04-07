@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://cacih6dj0twvm"]
+[gd_scene load_steps=46 format=4 uid="uid://cacih6dj0twvm"]
 
 [ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_6o0oy"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_eay13"]
@@ -12,9 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://dypcr3wv6887r" path="res://scripts/gabinete_pensamento/cenas/item_coletavel.tscn" id="9_i7mgd"]
 [ext_resource type="PackedScene" uid="uid://cmxrvu51nbrg3" path="res://scripts/gabinete_pensamento/cenas/button.tscn" id="10_0rn6y"]
 [ext_resource type="PackedScene" uid="uid://d0o2hylpv8qr" path="res://scripts/gabinete_pensamento/cenas/carta.tscn" id="11_q4s5n"]
+[ext_resource type="PackedScene" uid="uid://jwk7rcftlr3d" path="res://scripts/gabinete_pensamento/cenas/dialogo_button.tscn" id="12_ykiru"]
 [ext_resource type="AudioStream" uid="uid://c3ru1evlexui8" path="res://sounds/musics/office-ambience-24734.mp3" id="13_fpl8m"]
 [ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="14_ennf2"]
 [ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="15_ennf2"]
+[ext_resource type="PackedScene" uid="uid://dj0iiiatx1qi1" path="res://scripts/gabinete_pensamento/cenas/dialogo_psico.tscn" id="17_a58ve"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lqx0e"]
 texture = ExtResource("1_eay13")
@@ -2685,15 +2687,11 @@ shape = SubResource("RectangleShape2D_fpl8m")
 
 [node name="gabinete_button" parent="Control" instance=ExtResource("10_0rn6y")]
 
+[node name="dialogo_button" parent="Control" instance=ExtResource("12_ykiru")]
+
 [node name="carta" parent="Control" instance=ExtResource("11_q4s5n")]
 visible = false
 position = Vector2(555, 149)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-offset_left = 186.0
-offset_top = 46.0
-offset_right = 226.0
-offset_bottom = 86.0
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_fpl8m")
@@ -2704,6 +2702,10 @@ stream = ExtResource("14_ennf2")
 autoplay = true
 
 [node name="pause_menu" parent="." instance=ExtResource("15_ennf2")]
+visible = false
+
+[node name="dialogo_psico" parent="." instance=ExtResource("17_a58ve")]
+visible = false
 
 [editable path="Doors/Door_reuniao"]
 [editable path="Doors/Door_escritorio"]

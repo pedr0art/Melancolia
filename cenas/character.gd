@@ -1,5 +1,7 @@
 extends Node2D
 
+var TAB = load("res://DialogueManager/TAB.dialogue")
+
 @export var camera_zoom: Vector2 = Vector2(1.5, 1.5)
 @export var camera_limit_top: int = -87
 @export var camera_limit_bottom: int = 446
@@ -19,7 +21,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if GabinetePensamento.itens_coletados.size() == 1 and not Globals.is_chatting and Globals.primeiro:
+		DialogueManager.show_dialogue_balloon(TAB, "start")
+		Globals.primeiro = false
+		
+		
 
 func run_dialogue(dialogue_string):
 	Dialogic.start(dialogue_string)
