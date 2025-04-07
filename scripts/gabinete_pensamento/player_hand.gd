@@ -19,7 +19,7 @@ func add_card_to_hand(card, speed):
 
 func update_hand_positions(speed):
 	var total_width = (player_hand.size() - 1) * CARD_WIDTH
-	var base_x = max(LEFT_LIMIT_X, 640 / 2 - total_width / 2)
+	var base_x = max(LEFT_LIMIT_X, 640.0 / 2 - total_width / 2)
 
 	for i in range(player_hand.size()):
 		var new_position = Vector2(base_x + i * CARD_WIDTH + scroll_offset, HAND_Y_POSITION)

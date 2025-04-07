@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cdbowq2mdso3e"]
+[gd_scene load_steps=26 format=3 uid="uid://cdbowq2mdso3e"]
 
 [ext_resource type="Script" uid="uid://cxmf40je88d5n" path="res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd" id="1_70gdi"]
 [ext_resource type="PackedScene" uid="uid://b13hdbg7myxtm" path="res://scripts/gabinete_pensamento/cenas/card_slot.tscn" id="2_05uvk"]
@@ -11,18 +11,77 @@
 [ext_resource type="PackedScene" uid="uid://bhvxlsfyiwa3y" path="res://scripts/gabinete_pensamento/cenas/player_hand.tscn" id="9_70gdi"]
 [ext_resource type="PackedScene" uid="uid://dcvbhyda3nxx8" path="res://scripts/gabinete_pensamento/cenas/deck.tscn" id="10_1tydy"]
 [ext_resource type="PackedScene" uid="uid://dr7jgbj2xnp8l" path="res://scripts/gabinete_pensamento/cenas/input_manager.tscn" id="11_3wt6p"]
-[ext_resource type="Texture2D" uid="uid://ct8uhd8d77218" path="res://Images/icons/32/Play.png" id="17_akk5g"]
-[ext_resource type="Theme" uid="uid://dd5jrs4dq67op" path="res://scripts/gabinete_pensamento/cenas/button.tres" id="17_k22vt"]
+[ext_resource type="Theme" uid="uid://b86p0g4pt4kcc" path="res://botoes.tres" id="12_6me08"]
+[ext_resource type="Theme" uid="uid://7v24hlgiwmbw" path="res://exist_button.tres" id="14_6me08"]
+[ext_resource type="Texture2D" uid="uid://cvwcj6eoxvr4n" path="res://Images/hud/483366.png" id="14_gpd6f"]
 [ext_resource type="FontFile" uid="uid://owlqqxcyoncl" path="res://fonts/Cinematografica-Bold-trial.ttf" id="19_bt606"]
 [ext_resource type="Script" uid="uid://d0mchicwv84ma" path="res://scripts/gabinete_pensamento/cenas/botao_avanco.gd" id="19_sniuq"]
 [ext_resource type="FontFile" uid="uid://bbv3csbmwha31" path="res://fonts/Cinematografica-Extrabold-trial.ttf" id="20_bt606"]
-[ext_resource type="Theme" uid="uid://be6sblnyfrrmc" path="res://scripts/gabinete_pensamento/cenas/button - Copia.tres" id="20_gpd6f"]
-[ext_resource type="Texture2D" uid="uid://bl5rxaalfojvd" path="res://Images/icons/32/Chevron-Arrow-Left.png" id="21_6me08"]
 [ext_resource type="FontFile" uid="uid://c2dil1swrouoh" path="res://fonts/Coolvetica Rg Cond.otf" id="21_gpd6f"]
 [ext_resource type="Texture2D" uid="uid://dnxded7m18hgw" path="res://Images/hud/hud_new/cardroll.png" id="22_6me08"]
 [ext_resource type="Script" uid="uid://bvwccc582rrvd" path="res://scripts/gabinete_pensamento/cenas/control_tutorial.gd" id="22_ldede"]
 [ext_resource type="Texture2D" uid="uid://b4mywq8yqrgl6" path="res://Images/hud/hud_new/Arrow 1.png" id="23_2fip0"]
 [ext_resource type="Texture2D" uid="uid://okb4iija2vbp" path="res://Images/hud/hud_new/description.png" id="23_ldede"]
+
+[sub_resource type="Animation" id="Animation_ldede"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("transition/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2fip0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("transition/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cm2ah"]
+_data = {
+&"RESET": SubResource("Animation_2fip0"),
+&"fade_out": SubResource("Animation_ldede")
+}
 
 [node name="gabinete_pensamento" type="CanvasLayer"]
 script = ExtResource("1_70gdi")
@@ -86,22 +145,23 @@ position = Vector2(9, 0)
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="botao_avanco" type="Button" parent="."]
-offset_left = 240.0
-offset_top = 169.0
-offset_right = 264.0
-offset_bottom = 205.0
-theme = ExtResource("17_k22vt")
+offset_left = 219.0
+offset_top = 172.0
+offset_right = 290.0
+offset_bottom = 198.0
+theme = ExtResource("12_6me08")
 disabled = true
-icon = ExtResource("17_akk5g")
+text = "CONFIRMAR"
 script = ExtResource("19_sniuq")
 
 [node name="botao_voltar" type="Button" parent="."]
-offset_left = 17.0
-offset_top = 19.0
-offset_right = 35.0
-offset_bottom = 47.0
-theme = ExtResource("20_gpd6f")
-icon = ExtResource("21_6me08")
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 518.0
+offset_bottom = 519.0
+scale = Vector2(0.05, 0.05)
+theme = ExtResource("14_6me08")
+icon = ExtResource("14_gpd6f")
 icon_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
@@ -431,8 +491,24 @@ offset_bottom = 461.0
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("23_2fip0")
 
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cm2ah")
+}
+
+[node name="ColorRect" type="ColorRect" parent="transition"]
+modulate = Color(1, 1, 1, 0)
+z_index = 3002
+offset_left = -25.0
+offset_top = -14.0
+offset_right = 664.0
+offset_bottom = 387.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="botao_avanco" to="." method="_on_botao_avanco_pressed"]
 [connection signal="pressed" from="botao_voltar" to="." method="_on_botao_voltar_pressed"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]
 
 [editable path="CardSlots/CardSlot"]
 [editable path="CardSlots/CardSlot2"]

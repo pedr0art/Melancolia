@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ddq5eaab3b1rf" path="res://scripts/gabinete_pensamento/dialogo_psico.gd" id="1_jr1yd"]
 [ext_resource type="FontFile" uid="uid://c2dil1swrouoh" path="res://fonts/Coolvetica Rg Cond.otf" id="2_4o680"]
-[ext_resource type="Theme" uid="uid://be6sblnyfrrmc" path="res://scripts/gabinete_pensamento/cenas/button - Copia.tres" id="3_snjfe"]
-[ext_resource type="Texture2D" uid="uid://bl5rxaalfojvd" path="res://Images/icons/32/Chevron-Arrow-Left.png" id="4_voppg"]
+[ext_resource type="Texture2D" uid="uid://cvwcj6eoxvr4n" path="res://Images/hud/483366.png" id="3_4o680"]
+[ext_resource type="Theme" uid="uid://7v24hlgiwmbw" path="res://exist_button.tres" id="3_snjfe"]
 
 [node name="dialogo_psico" type="CanvasLayer"]
 script = ExtResource("1_jr1yd")
@@ -41,12 +41,13 @@ theme_override_font_sizes/font_size = 20
 text = "Histórico de diálogo - Psicóloga"
 
 [node name="botao_voltar" type="Button" parent="."]
-offset_left = 17.0
-offset_top = 13.0
-offset_right = 35.0
-offset_bottom = 41.0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 518.0
+offset_bottom = 517.0
+scale = Vector2(0.05, 0.05)
 theme = ExtResource("3_snjfe")
-icon = ExtResource("4_voppg")
+icon = ExtResource("3_4o680")
 icon_alignment = 1
 
 [connection signal="pressed" from="botao_voltar" to="." method="_on_botao_voltar_pressed"]

@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://nvrsubyf3jra"]
+
+[ext_resource type="FontFile" uid="uid://c2dil1swrouoh" path="res://fonts/Coolvetica Rg Cond.otf" id="1_fupdk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75ky0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_idcwk"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjgaj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fykv"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mjq4j"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vnnc"]
+bg_color = Color(0, 0, 0, 1)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_focus_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 12
+Button/fonts/font = ExtResource("1_fupdk")
+Button/styles/disabled = SubResource("StyleBoxFlat_75ky0")
+Button/styles/focus = SubResource("StyleBoxFlat_idcwk")
+Button/styles/hover = SubResource("StyleBoxFlat_bjgaj")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_4fykv")
+Button/styles/normal = SubResource("StyleBoxFlat_mjq4j")
+Button/styles/pressed = SubResource("StyleBoxFlat_8vnnc")

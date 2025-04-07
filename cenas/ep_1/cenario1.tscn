@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://cacih6dj0twvm"]
+[gd_scene load_steps=49 format=4 uid="uid://cacih6dj0twvm"]
 
 [ext_resource type="Script" uid="uid://6drwd5jqh1io" path="res://cenas/ep_1/cenario_1.gd" id="1_6o0oy"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_eay13"]
@@ -2468,6 +2468,66 @@ size = Vector2(35, 65)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpl8m"]
 size = Vector2(39, 62)
 
+[sub_resource type="Animation" id="Animation_ykiru"]
+resource_name = "fade_in_cuts"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/transition/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a58ve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/transition/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xejb6"]
+_data = {
+&"RESET": SubResource("Animation_a58ve"),
+&"fade_in": SubResource("Animation_ykiru")
+}
+
 [node name="AreaCentral" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_6o0oy")
@@ -2693,6 +2753,20 @@ shape = SubResource("RectangleShape2D_fpl8m")
 visible = false
 position = Vector2(555, 149)
 
+[node name="transition" type="AnimationPlayer" parent="Control"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_xejb6")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/transition"]
+z_index = 1000
+offset_left = -10.0
+offset_top = -13.0
+offset_right = 650.0
+offset_bottom = 377.0
+color = Color(0, 0, 0, 1)
+
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_fpl8m")
 autoplay = true
@@ -2706,6 +2780,8 @@ visible = false
 
 [node name="dialogo_psico" parent="." instance=ExtResource("17_a58ve")]
 visible = false
+
+[connection signal="animation_finished" from="Control/transition" to="." method="_on_transition_animation_finished"]
 
 [editable path="Doors/Door_reuniao"]
 [editable path="Doors/Door_escritorio"]

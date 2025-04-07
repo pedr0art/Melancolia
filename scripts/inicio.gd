@@ -21,4 +21,4 @@ func _on_transition_animation_finished(anim_name):
 		get_tree().change_scene_to_packed(prox_level)
 		avanco = false
 	elif anim_name == "fade_in_cuts":
-		pass
+		color_rect.visible = false

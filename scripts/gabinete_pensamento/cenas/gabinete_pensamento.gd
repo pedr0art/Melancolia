@@ -25,6 +25,8 @@ var player_hand = []
 var mao_string = []
 var pode_avancar = false
 var slots_certos = 0
+@onready var transition: AnimationPlayer = $transition
+@onready var color_rect: ColorRect = $transition/ColorRect
 
 var card_database = CardDatabase.CARDS
 
@@ -67,10 +69,15 @@ func verificar_se_tudo_certo():
 
 
 func _on_botao_avanco_pressed() -> void:
-	get_tree().change_scene_to_file("res://cenas/cutscene.tscn")
+	transition.play("fade_out")
 
 
 func _on_botao_voltar_pressed() -> void:
 	visible = false
 	Globals.gabinete = false
 	Globals.apertou = false
+
+
+func _on_transition_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "fade_out":
+		get_tree().change_scene_to_file("res://cenas/cutscene.tscn")
