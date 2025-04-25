@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://cy81r6hvwwn6d"]
 
-[ext_resource type="Texture2D" uid="uid://brq7hlw5kjs6y" path="res://Images/cidade2.png" id="1_6t3no"]
 [ext_resource type="Script" uid="uid://ce81vjyswib2" path="res://cenas/cutscene.gd" id="1_rkjmb"]
+[ext_resource type="Texture2D" uid="uid://b6xqiqk6hw7jc" path="res://Images/cidade.png" id="2_xinj7"]
 [ext_resource type="AudioStream" uid="uid://d33decy8ndw7x" path="res://sounds/musics/birds-and-city-ambience-65651.mp3" id="3_vp1lp"]
 [ext_resource type="Texture2D" uid="uid://lvkn4fbwk5q2" path="res://Images/tabata-Sheet.png" id="4_xinj7"]
 
@@ -33,7 +33,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(22, 225), Vector2(209, 225)]
+"values": [Vector2(22, 222), Vector2(209, 222)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -80,7 +80,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 3.5, 5.5031, 9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(209, 225), Vector2(405, 225), Vector2(405, 225), Vector2(654, 225)]
+"values": [Vector2(209, 222), Vector2(405, 222), Vector2(405, 222), Vector2(654, 222)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -108,6 +108,21 @@ _data = {
 &"RESET": SubResource("Animation_u7yga"),
 &"cutscene_1": SubResource("Animation_rigk2"),
 &"cutscene_2": SubResource("Animation_o7fkj")
+}
+
+[sub_resource type="Animation" id="Animation_a8hyk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_8d0x7"]
@@ -162,21 +177,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_a8hyk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]
@@ -247,7 +247,7 @@ script = ExtResource("1_rkjmb")
 offset_left = -1.0
 offset_right = 639.0
 offset_bottom = 360.0
-texture = ExtResource("1_6t3no")
+texture = ExtResource("2_xinj7")
 
 [node name="cutscene" type="AnimationPlayer" parent="."]
 reset_on_save = false
@@ -285,7 +285,7 @@ libraries = {
 autoplay = "walk_right"
 
 [node name="player_cutscene" type="Sprite2D" parent="."]
-position = Vector2(209, 225)
+position = Vector2(209, 222)
 texture = ExtResource("4_xinj7")
 hframes = 12
 frame = 7

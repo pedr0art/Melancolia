@@ -25,11 +25,17 @@ offset_top = -10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(3, 5)
 
 [node name="resume_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
 theme = ExtResource("2_ux4mk")
 text = "Continuar"
+
+[node name="menu_btn" type="Button" parent="menu_holder"]
+layout_mode = 2
+theme = ExtResource("2_ux4mk")
+text = "Voltar para menu"
 
 [node name="quit_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
@@ -37,4 +43,5 @@ theme = ExtResource("2_ux4mk")
 text = "Sair do jogo"
 
 [connection signal="pressed" from="menu_holder/resume_btn" to="." method="_on_resume_btn_pressed"]
+[connection signal="pressed" from="menu_holder/menu_btn" to="." method="_on_menu_btn_pressed"]
 [connection signal="pressed" from="menu_holder/quit_btn" to="." method="_on_quit_btn_pressed"]

@@ -11,7 +11,6 @@ func _ready() -> void:
 		color_rect.visible = true
 		transition.play("fade_in")
 		DialogueManager.show_dialogue_balloon(resource, "start")
-		Globals.first_turorial = false
 	else:
 		color_rect.visible = false
 

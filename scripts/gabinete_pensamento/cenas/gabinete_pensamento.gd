@@ -27,7 +27,6 @@ var pode_avancar = false
 var slots_certos = 0
 @onready var transition: AnimationPlayer = $transition
 @onready var color_rect: ColorRect = $transition/ColorRect
-
 var card_database = CardDatabase.CARDS
 
 var avanco = false

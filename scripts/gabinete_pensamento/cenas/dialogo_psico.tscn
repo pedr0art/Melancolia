@@ -29,7 +29,6 @@ offset_right = 485.0
 offset_bottom = 346.0
 theme_override_fonts/normal_font = ExtResource("2_4o680")
 theme_override_font_sizes/normal_font_size = 12
-text = "AAAAAAAAAAAAAAAAAAAAA"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 230.0

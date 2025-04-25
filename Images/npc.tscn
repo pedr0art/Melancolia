@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6sooyboa2pds"]
+[gd_scene load_steps=6 format=3 uid="uid://b6sooyboa2pds"]
 
-[ext_resource type="Script" uid="uid://b5lah6sdqjfuj" path="res://scripts/npc.gd" id="1_76c6m"]
+[ext_resource type="Script" uid="uid://bt5mjr7tyqsj3" path="res://scripts/npc_enzo.gd" id="1_fjia2"]
 [ext_resource type="Texture2D" uid="uid://cnn2v5ctpo45x" path="res://Images/ENZO.png" id="2_b63gl"]
+[ext_resource type="Texture2D" uid="uid://cmrtb8k4bay5b" path="res://Images/icons/16/Message-Three-Dots.png" id="3_k85i7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whfto"]
 size = Vector2(6, 15)
@@ -11,7 +12,7 @@ radius = 10.0499
 
 [node name="npc" type="Node2D"]
 scale = Vector2(1.5, 1.5)
-script = ExtResource("1_76c6m")
+script = ExtResource("1_fjia2")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 4
@@ -30,6 +31,11 @@ texture = ExtResource("2_b63gl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/chatDetection"]
 shape = SubResource("CircleShape2D_njreh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9.33333, -10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_k85i7")
 
 [connection signal="body_entered" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_exited"]

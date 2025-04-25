@@ -25,19 +25,42 @@ var first_turorial = true
 var paused = false
 var texto_psico = false
 var primeiro_gabinete = true
-var player_deck =[
-	"funcdomes_yellow",
-	"enzo_yellow",
-	"mesapcvazio_yellow",
-	"computador_red",
-	"seloqualidade_red",
-	"alice_red",
-	"chefe_grey",
-	"pontoeletronico_grey",
-	"espelho_grey",
-	"cafeteira_blue",
-	"francisco_blue",
-	"placeholder_blue",
-	"folheto_orange",
-	"poster_orange",
-	"pilhapapeis_orange"]
+func reiniciar():
+	Globals.restart = true
+	GabinetePensamento.slots_salvos = {}  # Exemplo: {0: "carta1", 1: "carta2"}
+	GabinetePensamento.itens_coletados = []
+	GabinetePensamento.player_hand = []
+	GabinetePensamento.mao_string = []
+	GabinetePensamento.slots_certos = 0
+	Globals.cuts = false
+	Globals.segue = false
+	GabinetePensamento.avanco = false
+	NavigationManager.spawn_door_tag = null
+	Globals.is_chatting = false
+	Globals.gabinete = false
+	Globals.paused = false
+	Globals.marmita = false
+	DialogoTracker.primeiraescolha = ""
+	DialogoTracker.segundaescolha = ""
+	DialogoTracker.terceiraescolha = ""
+	DialogoTracker.quartaescolha = ""
+	DialogoTracker.textofinal = ""
+	DialogoTracker.juntetextos = false
+	DialogoTracker.quintaescolha = ""
+	DialogoTracker.sextaescolha = ""
+	DialogoTracker.setimaescolha = ""
+	DialogoTracker.oitavaescolha = ""
+	DialogoTracker.nonaescolha = ""
+	DialogoTracker.decimaescolha = ""
+	DialogoTracker.decimaprimeiraescolha = ""
+	DialogoTracker.decimasegundaescolha = ""
+	DialogoTracker.decimaterceiraescolha = ""
+	DialogoTracker.prim_1 = false
+	DialogoTracker.prim_2 = false
+	DialogoTracker.prim_3 = false
+	DialogoTracker.seg_1 = false
+	DialogoTracker.seg_2 = false
+	DialogoTracker.seg_3 = false
+	DialogoTracker.tri_1 = false
+	DialogoTracker.tri_2 = false
+	DialogoTracker.tri_3 = false

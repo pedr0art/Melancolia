@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcs03xv7bcq57"]
+[gd_scene load_steps=6 format=3 uid="uid://dcs03xv7bcq57"]
 
 [ext_resource type="Script" uid="uid://b5lah6sdqjfuj" path="res://scripts/npc.gd" id="1_ypypk"]
 [ext_resource type="Texture2D" uid="uid://blinflrthpmk5" path="res://Images/francisco.png" id="2_aaeys"]
+[ext_resource type="Texture2D" uid="uid://cmrtb8k4bay5b" path="res://Images/icons/16/Message-Three-Dots.png" id="3_aaeys"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whfto"]
 size = Vector2(6, 15)
@@ -30,6 +31,11 @@ texture = ExtResource("2_aaeys")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/chatDetection"]
 shape = SubResource("CircleShape2D_njreh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(10, -9.33333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_aaeys")
 
 [connection signal="body_entered" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D/chatDetection" to="." method="_on_chat_detection_body_exited"]

@@ -3,22 +3,44 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hofca"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hofca"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(1, 1, 1, 1)
 border_width_left = 15
 border_width_top = 15
-border_color = Color(0.8, 0.8, 0.8, 0)
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snjfe"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhww6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yppqp"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 25
-border_width_top = 25
-border_color = Color(0.8, 0.8, 0.8, 0)
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
 expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
@@ -27,5 +49,5 @@ expand_margin_bottom = 5.0
 [resource]
 Button/styles/focus = SubResource("StyleBoxEmpty_hofca")
 Button/styles/hover = SubResource("StyleBoxFlat_hofca")
-Button/styles/normal = SubResource("StyleBoxEmpty_snjfe")
+Button/styles/normal = SubResource("StyleBoxFlat_uhww6")
 Button/styles/pressed = SubResource("StyleBoxFlat_yppqp")

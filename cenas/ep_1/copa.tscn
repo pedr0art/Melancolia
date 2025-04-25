@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://c5porb4llemu0"]
+[gd_scene load_steps=29 format=4 uid="uid://c5porb4llemu0"]
 
 [ext_resource type="Script" uid="uid://baf64aqvomyb5" path="res://cenas/ep_1/copa.gd" id="1_3r4ka"]
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_457k2"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://jwk7rcftlr3d" path="res://scripts/gabinete_pensamento/cenas/dialogo_button.tscn" id="11_7p34c"]
 [ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="12_2kpot"]
 [ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="13_bhuty"]
+[ext_resource type="PackedScene" uid="uid://c8n8ilyww40b7" path="res://Images/hud/hud_new/E.tscn" id="13_isvpr"]
 [ext_resource type="PackedScene" uid="uid://dj0iiiatx1qi1" path="res://scripts/gabinete_pensamento/cenas/dialogo_psico.tscn" id="15_isvpr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i1imd"]
@@ -580,6 +581,8 @@ shape = SubResource("RectangleShape2D_j6urd")
 [node name="carta" parent="Control" instance=ExtResource("10_55eip")]
 visible = false
 position = Vector2(555, 149)
+
+[node name="Control" parent="Control" instance=ExtResource("13_isvpr")]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_2kpot")

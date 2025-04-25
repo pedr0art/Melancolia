@@ -42,7 +42,10 @@ func draw_card():
 	GabinetePensamento.compra = false
 
 func draw_cards_from_mao_string():
-	for card_name in GabinetePensamento.mao_string:
+	var mao = GabinetePensamento.mao_string
+	for i in range(mao.size() - 1, -1, -1):  # do último ao primeiro
+		var card_name = mao[i]
+
 		# 🛑 Pula a carta se ela já estiver nos slots restaurados
 		if GabinetePensamento.slots_salvos.values().has(card_name):
 			continue

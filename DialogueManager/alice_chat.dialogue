@@ -1,0 +1,7 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+Tábata : Oi Alice, parabéns por ser a funcionária do mês.
+Alice : Nossa, Obrigada! Significa muito pra mim vindo de você.
+set Globals.is_chatting = false
+=> END

@@ -15,3 +15,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel") and not Globals.texto_psico:
 		visible = not visible
 		Globals.paused = visible
+
+
+func _on_menu_btn_pressed() -> void:
+	Globals.first_turorial = true
+	Globals.reiniciar()
+	get_tree().change_scene_to_file("res://cenas/main_menu.tscn")

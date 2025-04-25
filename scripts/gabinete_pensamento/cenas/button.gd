@@ -1,7 +1,7 @@
 extends Button
 
 func _process(delta: float) -> void:
-	if Globals.gabinete or Globals.is_chatting or Globals.texto_psico:
+	if Globals.gabinete or Globals.is_chatting or Globals.texto_psico or Globals.first_turorial:
 		visible = false
 	else:
 		visible = true

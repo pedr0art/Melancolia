@@ -66,7 +66,7 @@ MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sdwfl"]
-bg_color = Color(0, 0, 0, 0.894118)
+bg_color = Color(0, 0, 0, 0.945098)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1td10"]
 
@@ -94,7 +94,7 @@ bg_color = Color(1, 1, 1, 1)
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_idcwk"]
-Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_color = Color(0.180005, 0.180005, 0.180005, 1)
 Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
@@ -182,9 +182,18 @@ theme_override_fonts/normal_font = ExtResource("2_idcwk")
 theme_override_font_sizes/bold_italics_font_size = 12
 theme_override_font_sizes/italics_font_size = 12
 theme_override_font_sizes/mono_font_size = 12
-theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/normal_font_size = 16
 theme_override_font_sizes/bold_font_size = 12
 text = "Dialogue..."
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_idcwk")
+theme_override_font_sizes/normal_font_size = 6
+text = "Aperte ESPAÇO para continuar."
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="ColorRect" type="ColorRect" parent="Balloon"]
 layout_mode = 2

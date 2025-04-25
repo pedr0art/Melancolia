@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmxrvu51nbrg3"]
 
-[ext_resource type="Theme" uid="uid://7v24hlgiwmbw" path="res://exist_button.tres" id="1_jt6jy"]
+[ext_resource type="Theme" uid="uid://c8it856xs2gy1" path="res://buttons.tres" id="1_jt6jy"]
 [ext_resource type="Texture2D" uid="uid://bvtw6747dh1uj" path="res://Images/hud/insighticon (1).png" id="2_jt6jy"]
 [ext_resource type="Script" uid="uid://c5eb5smwy6tfj" path="res://scripts/gabinete_pensamento/cenas/button.gd" id="3_8ewtq"]
 [ext_resource type="Texture2D" uid="uid://85jw2qunoy10" path="res://Images/hud/Ellipse 3.png" id="4_jt6jy"]

@@ -4,6 +4,21 @@
 [ext_resource type="AudioStream" uid="uid://chrdpbdq0skn6" path="res://sounds/musics/Meditative Moment (mp3cut.net) (1).mp3" id="2_ub3xp"]
 [ext_resource type="Texture2D" uid="uid://cpj4n48sbcd1h" path="res://Images/hud/cenapsico.png" id="3_ug1jg"]
 
+[sub_resource type="Animation" id="Animation_c2cgn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transition/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_8d0x7"]
 resource_name = "fade_in"
 tracks/0/type = "value"
@@ -56,21 +71,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_c2cgn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Transition/ColorRect:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6r25w"]

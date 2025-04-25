@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://es6mb8hixibf"
+path="res://.godot/imported/chefe_chat.dialogue-1f48eb44c9640d18ff77325282235b41.tres"
+
+[deps]
+
+source_file="res://DialogueManager/chefe_chat.dialogue"
+dest_files=["res://.godot/imported/chefe_chat.dialogue-1f48eb44c9640d18ff77325282235b41.tres"]
+
+[params]
+
+defaults=true

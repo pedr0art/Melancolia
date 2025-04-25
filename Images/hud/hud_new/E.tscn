@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8n8ilyww40b7"]
+
+[ext_resource type="Script" uid="uid://5n7upnyb1d8o" path="res://Images/hud/hud_new/e.gd" id="1_bn71c"]
+[ext_resource type="Texture2D" uid="uid://dnxded7m18hgw" path="res://Images/hud/hud_new/cardroll.png" id="1_d26q3"]
+[ext_resource type="FontFile" uid="uid://c2dil1swrouoh" path="res://fonts/Coolvetica Rg Cond.otf" id="2_bn71c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqpa2"]
+atlas = ExtResource("1_d26q3")
+region = Rect2(278, 818, 70, 18)
+
+[node name="Control" type="CanvasLayer"]
+script = ExtResource("1_bn71c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.705882)
+position = Vector2(35, 294)
+texture = SubResource("AtlasTexture_gqpa2")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+modulate = Color(1, 1, 1, 0.72549)
+offset_left = 6.0
+offset_top = 286.0
+offset_right = 60.0
+offset_bottom = 301.0
+theme_override_fonts/normal_font = ExtResource("2_bn71c")
+theme_override_font_sizes/normal_font_size = 12
+text = "Interagir:  E"
+horizontal_alignment = 1
+vertical_alignment = 1

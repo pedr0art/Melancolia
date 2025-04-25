@@ -153,14 +153,25 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 166.0
-offset_top = 97.0
+offset_top = 70.0
 offset_right = 263.0
-offset_bottom = 122.0
+offset_bottom = 95.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("5_um4lk")
 text = "Jogar"
+
+[node name="creditos" type="Button" parent="."]
+layout_mode = 2
+offset_left = 486.0
+offset_top = 284.0
+offset_right = 583.0
+offset_bottom = 309.0
+size_flags_vertical = 3
+theme = ExtResource("5_um4lk")
+text = "Créditos
+"
 
 [node name="sair" type="Button" parent="."]
 layout_mode = 2
@@ -198,5 +209,6 @@ mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]

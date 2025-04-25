@@ -4,6 +4,7 @@ extends CanvasLayer
 ## The action to use for advancing the dialogue
 @export var next_action: StringName = &"ui_accept"
 
+
 ## The action to use to skip typing the dialogue
 @export var skip_action: StringName = &"ui_cancel"
 
@@ -96,7 +97,14 @@ func apply_dialogue_line() -> void:
 	balloon.grab_focus()
 
 	character_label.visible = not dialogue_line.character.is_empty()
-	character_label.text = tr(dialogue_line.character, "dialogue")
+
+	# Exibir nome com estilo especial para Tábata
+	if dialogue_line.character == "Tábata":
+		character_label.bbcode_enabled = true
+		character_label.text = "[right][color=purple]" + tr(dialogue_line.character, "dialogue") + "[/color][/right]"
+	else:
+		character_label.bbcode_enabled = false
+		character_label.text = tr(dialogue_line.character, "dialogue")
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line
@@ -104,7 +112,6 @@ func apply_dialogue_line() -> void:
 	responses_menu.hide()
 	responses_menu.responses = dialogue_line.responses
 
-	# Show our balloon
 	balloon.show()
 	will_hide_balloon = false
 
@@ -113,7 +120,6 @@ func apply_dialogue_line() -> void:
 		dialogue_label.type_out()
 		await dialogue_label.finished_typing
 
-	# Wait for input
 	if dialogue_line.responses.size() > 0:
 		balloon.focus_mode = Control.FOCUS_NONE
 		responses_menu.show()
@@ -125,7 +131,6 @@ func apply_dialogue_line() -> void:
 		is_waiting_for_input = true
 		balloon.focus_mode = Control.FOCUS_ALL
 		balloon.grab_focus()
-
 
 ## Go to the next line
 func next(next_id: String) -> void:

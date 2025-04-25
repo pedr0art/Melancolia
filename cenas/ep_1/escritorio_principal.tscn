@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://bdqcuf28vuk5v"]
+[gd_scene load_steps=49 format=4 uid="uid://bdqcuf28vuk5v"]
 
 [ext_resource type="Texture2D" uid="uid://cvk6uit3u2mwa" path="res://Images/tilesets/escritorio-tile_aseprite-export.png" id="1_i4huj"]
 [ext_resource type="Script" uid="uid://bsk5l1sdfdap4" path="res://cenas/ep_1/escritorio_principal.gd" id="1_y2n54"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d0o2hylpv8qr" path="res://scripts/gabinete_pensamento/cenas/carta.tscn" id="11_h7l8d"]
 [ext_resource type="AudioStream" uid="uid://wvbsekmlvr73" path="res://sounds/musics/room-tone-office-12-59350.mp3" id="12_d87ap"]
 [ext_resource type="PackedScene" uid="uid://jwk7rcftlr3d" path="res://scripts/gabinete_pensamento/cenas/dialogo_button.tscn" id="12_nrpe5"]
+[ext_resource type="PackedScene" uid="uid://c8n8ilyww40b7" path="res://Images/hud/hud_new/E.tscn" id="13_e0rg2"]
 [ext_resource type="AudioStream" uid="uid://c3ru1evlexui8" path="res://sounds/musics/office-ambience-24734.mp3" id="13_pe33k"]
 [ext_resource type="PackedScene" uid="uid://cd1q37552u3rc" path="res://cenas/pause_menu.tscn" id="14_pe33k"]
 [ext_resource type="PackedScene" uid="uid://dj0iiiatx1qi1" path="res://scripts/gabinete_pensamento/cenas/dialogo_psico.tscn" id="16_e0rg2"]
@@ -2824,6 +2825,9 @@ texture = SubResource("AtlasTexture_yvb8n")
 tile_map_data = PackedByteArray("AAAVABAAAAAIABEAAAAZABAAAAAIABEAAAAZAAkAAAAIABEAAAAVAAkAAAAIABEAAAAUABAAAAAJABAAAAAYAAkAAAAJABAAAAAUAAkAAAAIABAAAAAPABQAAAAFAAoAAAAPABUAAAAFAAsAAAAeAAMAAAALAA0AAAAeAAQAAAALAA4AAAAQABUAAAAGABEAAAAdAAQAAAAMABAAAAA=")
 tile_set = SubResource("TileSet_nrpe5")
 
+[node name="npc_francisco" parent="." instance=ExtResource("9_a2mpx")]
+position = Vector2(432, 73)
+
 [node name="character" parent="." instance=ExtResource("2_gdk15")]
 position = Vector2(496, 386)
 
@@ -2981,9 +2985,6 @@ position = Vector2(23, -23)
 position = Vector2(9.5, 7)
 shape = SubResource("RectangleShape2D_f3xnh")
 
-[node name="npc_francisco" parent="." instance=ExtResource("9_a2mpx")]
-position = Vector2(432, 73)
-
 [node name="francisco" parent="." instance=ExtResource("8_sh4jg")]
 position = Vector2(431, 73)
 dialogo = "francisco"
@@ -3005,6 +3006,8 @@ visible = false
 position = Vector2(555, 149)
 
 [node name="dialogo_button" parent="Control" instance=ExtResource("12_nrpe5")]
+
+[node name="Control" parent="Control" instance=ExtResource("13_e0rg2")]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_d87ap")

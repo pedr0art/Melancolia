@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://djnkhuugkgcm7"
+path="res://.godot/imported/francisco_chat.dialogue-ce96d97d7bda1303b37869fb7cdac013.tres"
+
+[deps]
+
+source_file="res://DialogueManager/francisco_chat.dialogue"
+dest_files=["res://.godot/imported/francisco_chat.dialogue-ce96d97d7bda1303b37869fb7cdac013.tres"]
+
+[params]
+
+defaults=true

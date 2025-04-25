@@ -36,3 +36,7 @@ func sair_do_jogo() -> void:
 func _on_transition_animation_finished(anim_name):
 	if anim_name == "fade_out_cuts":
 		get_tree().change_scene_to_packed(prox_level)
+
+
+func _on_creditos_pressed() -> void:
+	get_tree().change_scene_to_file("res://cenas/creditos.tscn")

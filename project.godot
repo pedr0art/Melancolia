@@ -17,9 +17,7 @@ config/icon="uid://ci60g16kh1kan"
 
 [autoload]
 
-StaticData="*res://Dados/Singetons/StaticData.gd"
 Globals="*res://scripts/Globals.gd"
-ItemData="*res://scripts/database.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 NavigationManager="*res://scripts/navigation_manager.gd"
 GabinetePensamento="*res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd"
@@ -108,6 +106,7 @@ window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://cxbmxqs3y0fdp"
 
 [editor_plugins]
 
@@ -191,7 +190,7 @@ ENTER={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://DialogueManager/psico.dialogue", "res://DialogueManager/funcdomes.dialogue", "res://DialogueManager/alice.dialogue", "res://DialogueManager/pontoeletronico.dialogue", "res://DialogueManager/fotochefe.dialogue", "res://DialogueManager/mesapcvazio.dialogue", "res://DialogueManager/computador.dialogue", "res://DialogueManager/papeis.dialogue", "res://DialogueManager/poster.dialogue", "res://DialogueManager/francisco.dialogue", "res://DialogueManager/chefe.dialogue", "res://DialogueManager/espelho.dialogue", "res://DialogueManager/seloqualidade.dialogue", "res://DialogueManager/enzo.dialogue", "res://DialogueManager/cafeteira.dialogue", "res://DialogueManager/marmita.dialogue", "res://DialogueManager/banheiro_masc.dialogue", "res://DialogueManager/tutorial.dialogue", "res://DialogueManager/cutscene.dialogue", "res://DialogueManager/TAB.dialogue")
+locale/translations_pot_files=PackedStringArray("res://DialogueManager/psico.dialogue", "res://DialogueManager/funcdomes.dialogue", "res://DialogueManager/alice.dialogue", "res://DialogueManager/pontoeletronico.dialogue", "res://DialogueManager/fotochefe.dialogue", "res://DialogueManager/mesapcvazio.dialogue", "res://DialogueManager/computador.dialogue", "res://DialogueManager/papeis.dialogue", "res://DialogueManager/poster.dialogue", "res://DialogueManager/francisco.dialogue", "res://DialogueManager/chefe.dialogue", "res://DialogueManager/espelho.dialogue", "res://DialogueManager/seloqualidade.dialogue", "res://DialogueManager/enzo.dialogue", "res://DialogueManager/cafeteira.dialogue", "res://DialogueManager/marmita.dialogue", "res://DialogueManager/banheiro_masc.dialogue", "res://DialogueManager/tutorial.dialogue", "res://DialogueManager/cutscene.dialogue", "res://DialogueManager/TAB.dialogue", "res://DialogueManager/francisco_chat.dialogue", "res://DialogueManager/alice_chat.dialogue", "res://DialogueManager/enzo_chat.dialogue", "res://DialogueManager/chefe_chat.dialogue")
 
 [layer_names]
 

@@ -1,0 +1,6 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+Enzo : Vi sua marmita na geladeira e me deu água na boca, caprichada como sempre
+set Globals.is_chatting = false
+=> END

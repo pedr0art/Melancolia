@@ -6,5 +6,5 @@ Esse é o local de trabalho da Tábata, você deve explorar e encontrar itens qu
 Ao encontrar um item coletável você deve pressionar a tecla E para interagir com ele.
 
 set Globals.is_chatting = false
-
+set Globals.first_turorial = false
 => END

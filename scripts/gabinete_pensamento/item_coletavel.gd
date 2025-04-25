@@ -16,23 +16,24 @@ func _ready() -> void:
 	resource = load("res://DialogueManager/" + dialogo + ".dialogue")
 	if item in GabinetePensamento.itens_coletados:
 		queue_free()  # Destrói o item antes mesmo de aparecer
+
 func _process(_delta):
-	if jogador_na_area and Input.is_action_just_pressed("ui_interact"):
+	if jogador_na_area and Input.is_action_just_pressed("ui_interact") and not item_coletado:
+		item_coletado = true  # impede múltiplas execuções
 		sfx_item.play()
 		GabinetePensamento.compra = true
 		GabinetePensamento.item_atual = item
 		add_card_to_mao_string(item)
-		Globals.mostra = str("res://Images/Cards/" + item + ".png")
+		Globals.mostra = "res://Images/Cards/" + item + ".png"
 		DialogueManager.show_dialogue_balloon(resource, "start")
 		Globals.novo = true
 		if item != "" and item not in GabinetePensamento.itens_coletados:
 			GabinetePensamento.itens_coletados.append(item)
 		await sfx_item.finished
 		queue_free()
-	
 
 
-		
+
 func add_card_to_mao_string(card):
 	if card not in GabinetePensamento.mao_string:
 		GabinetePensamento.mao_string.insert(0, card)  # Insere a carta no início da lista

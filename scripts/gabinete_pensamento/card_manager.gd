@@ -27,18 +27,7 @@ func _process(delta: float) -> void:
 			clamp(mouse_pos.x, 0, screen_size.x),
 			clamp(mouse_pos.y, 0, screen_size.y)
 		)
-	elif current_hovered_card:
-		var key = current_hovered_card.nome
-		if key in conteudo_database.CONTEUDO:
-			var data = conteudo_database.CONTEUDO[key]
-			conteudo_item.text = data[2]
-			
-			# Atualiza os textos
-			var cor_hex = get_color_from_name(data[1]).to_html()
-
-			nome_item.bbcode_enabled = true
-
-			nome_item.bbcode_text = "[color=" + cor_hex + "]" + data[0] + "[/color]"
+	
 			
 
 func start_drag(card):
@@ -85,7 +74,7 @@ func on_hovered_over_card(card):
 	is_hovering_on_card = true
 	highlight_card(card, true)
 	current_hovered_card = card
-
+	descricao()
 func on_hovered_off_card(card):
 	if !card_being_dragged:
 		highlight_card(card, false)
@@ -93,6 +82,7 @@ func on_hovered_off_card(card):
 		if new_card_hovered:
 			highlight_card(new_card_hovered, true)
 			current_hovered_card = new_card_hovered
+			descricao()
 		else:
 			is_hovering_on_card = false
 			current_hovered_card = null
@@ -136,6 +126,7 @@ func raycast_check_for_card():
 	var result = space_state.intersect_point(parameters)
 	if result.size() > 0:
 		return get_card_with_highest_z_index(result)
+		
 	return null
 
 func get_card_with_highest_z_index(cards):
@@ -163,3 +154,17 @@ func resetar_slots():
 	for slot in get_tree().get_nodes_in_group("card_slots"):
 		slot.card_in_slot = false
 		slot.card_armazenado = null
+
+func descricao():
+	if current_hovered_card:
+		var key = current_hovered_card.nome
+		if key in conteudo_database.CONTEUDO:
+			var data = conteudo_database.CONTEUDO[key]
+			conteudo_item.text = data[2]
+			
+			# Atualiza os textos
+			var cor_hex = get_color_from_name(data[1]).to_html()
+
+			nome_item.bbcode_enabled = true
+
+			nome_item.bbcode_text = "[color=" + cor_hex + "]" + data[0] + "[/color]"

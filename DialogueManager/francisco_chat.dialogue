@@ -1,0 +1,7 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+Tábata : E ai, já está se acostumando com o trabalho?
+Francisco: Já sim, só a cafeteira quebrada que ainda me deixa louco.
+set Globals.is_chatting = false
+=> END

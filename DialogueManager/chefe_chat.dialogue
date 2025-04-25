@@ -1,0 +1,6 @@
+~ start
+set Globals.is_chatting = true
+do wait(0.2)
+Patricia : Foco Tabatinha, foco!
+set Globals.is_chatting = false
+=> END

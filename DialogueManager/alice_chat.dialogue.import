@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://crgxkf11uchs7"
+path="res://.godot/imported/alice_chat.dialogue-8288014514ff7306576177149402ed27.tres"
+
+[deps]
+
+source_file="res://DialogueManager/alice_chat.dialogue"
+dest_files=["res://.godot/imported/alice_chat.dialogue-8288014514ff7306576177149402ed27.tres"]
+
+[params]
+
+defaults=true
