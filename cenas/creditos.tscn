@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxphlbyjt34oo"]
+[gd_scene load_steps=4 format=3 uid="uid://cxphlbyjt34oo"]
 
 [ext_resource type="Script" uid="uid://devi1jpxaxbya" path="res://scripts/creditos.gd" id="1_dmlrq"]
+[ext_resource type="FontFile" uid="uid://cx03vlgdp4cm" path="res://fonts/OldNewspaperTypes.ttf" id="2_f7osg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7osg"]
 bg_color = Color(0, 0, 0, 1)
@@ -15,7 +16,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_f7osg")
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 script = ExtResource("1_dmlrq")
-credits_time = 50.0
+credits_time = 10.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -26,6 +27,7 @@ theme_override_constants/margin_bottom = 360
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_f7osg")
 bbcode_enabled = true
 text = "Créditos
 Game Design & Direção
@@ -45,16 +47,11 @@ Roteiro & Diálogos
 Carol, Lorena, Gabriel
 
 Testes & Feedback
-Equipe de Testes \"Pixel Hunters\"
 Pedro, Osvaldo, Carlos
 
 Feito com
 Godot Engine 4.4
 Aseprite, Photoshop, Itch.io
-
-Agradecimentos Especiais
-Aos amigos, familiares e todas as pessoas que acreditaram no projeto desde o começo.
-E a você, jogador(a), por viver essa aventura com a gente.
 
 © 2025 Grupo de Pesquisa Metis"
 fit_content = true

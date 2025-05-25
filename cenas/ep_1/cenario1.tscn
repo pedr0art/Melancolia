@@ -2766,6 +2766,7 @@ offset_left = -10.0
 offset_top = -13.0
 offset_right = 650.0
 offset_bottom = 377.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Control" parent="Control" instance=ExtResource("15_xejb6")]

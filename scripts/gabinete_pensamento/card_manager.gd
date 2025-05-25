@@ -168,3 +168,13 @@ func descricao():
 			nome_item.bbcode_enabled = true
 
 			nome_item.bbcode_text = "[color=" + cor_hex + "]" + data[0] + "[/color]"
+
+func padronizar_carta_para_mao(card):
+	# “Desfaz” qualquer escala que o card node possa ter ganhado
+	card.scale = Vector2(1, 1)
+	# Aplica o tamanho certo da imagem
+	card.get_node("CardImage").scale = Vector2(0.05, 0.05)
+	card.z_index = 2
+	card.get_node("Area2D/CollisionShape2D").disabled = false
+	card.was_placed_in_slot = false
+	card.current_card_slot = null

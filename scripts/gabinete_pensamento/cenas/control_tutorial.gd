@@ -19,7 +19,7 @@ func _ready():
 		tutoriais[passo_atual].visible = true
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Globals.primeiro_gabinete and (event.is_action_pressed("ui_select") or (event.is_action_pressed("mb"))):
+	if Globals.primeiro_gabinete and Globals.gabinete and (event.is_action_pressed("ui_select") or (event.is_action_pressed("mb"))):
 		avancar_tutorial()
 
 func avancar_tutorial():

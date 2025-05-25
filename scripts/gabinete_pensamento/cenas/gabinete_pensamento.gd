@@ -43,7 +43,10 @@ func _process(_delta):
 		visible = true
 		Globals.gabinete = true
 		Globals.novo = false
-
+	if Input.is_action_just_pressed("ui_cancel"):
+		visible = false
+		Globals.gabinete = false
+		Globals.apertou = false
 
 func alternar_gabinete():
 	visible = not visible
@@ -80,3 +83,7 @@ func _on_botao_voltar_pressed() -> void:
 func _on_transition_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "fade_out":
 		get_tree().change_scene_to_file("res://cenas/cutscene.tscn")
+
+
+func _on_botao_voltar_mouse_entered() -> void:
+	print("entrou")

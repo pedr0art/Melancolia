@@ -4,6 +4,8 @@ extends Node2D
 # Define dois sinais personalizados:
 # - hovered: emitido quando o mouse entra na área da carta.
 # - hovered_off: emitido quando o mouse sai da área da carta.
+const ESCALA_PADRAO_MAO = Vector2(0.2, 0.2)
+const ESCALA_PADRAO_SLOT = Vector2(0.05, 0.05)
 signal hovered
 signal hovered_off
 var was_placed_in_slot = false

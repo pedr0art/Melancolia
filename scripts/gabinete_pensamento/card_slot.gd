@@ -71,7 +71,5 @@ func _on_return_button_pressed() -> void:
 			if card_armazenado.certo_errado == "certo":
 				GabinetePensamento.slots_certos -= 1
 
-		card_armazenado.was_placed_in_slot = false
-		card_armazenado.current_card_slot = null
-		card_armazenado.get_node("Area2D/CollisionShape2D").disabled = false
+		card_manager_reference.padronizar_carta_para_mao(card_armazenado)
 		card_manager_reference.player_hand_reference.add_card_to_hand(card_armazenado, 0.2)

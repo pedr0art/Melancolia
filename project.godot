@@ -20,9 +20,9 @@ config/icon="uid://ci60g16kh1kan"
 Globals="*res://scripts/Globals.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 NavigationManager="*res://scripts/navigation_manager.gd"
-GabinetePensamento="*res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd"
 CardDatabase="*res://scripts/gabinete_pensamento/card_database.gd"
 DialogoTracker="*res://DialogueManager/DialogoTracker.gd"
+GabinetePensamento="*res://scripts/gabinete_pensamento/cenas/gabinete_pensamento.gd"
 
 [dialogic]
 
